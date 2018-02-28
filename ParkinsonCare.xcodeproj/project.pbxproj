@@ -76,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9627BDE72046B5EB00081F32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A1768D612046AECD007A76D6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +106,7 @@
 		A1768D6C2046AECD007A76D6 /* ParkinsonCare */ = {
 			isa = PBXGroup;
 			children = (
+				9627BDE72046B5EB00081F32 /* Models */,
 				A1768D6D2046AECD007A76D6 /* AppDelegate.swift */,
 				A1768D6F2046AECD007A76D6 /* ViewController.swift */,
 				A1768D712046AECD007A76D6 /* Main.storyboard */,
@@ -511,6 +519,7 @@
 				A1768D972046AECD007A76D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1768D982046AECD007A76D6 /* Build configuration list for PBXNativeTarget "ParkinsonCareTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +528,7 @@
 				A1768D9A2046AECD007A76D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1768D9B2046AECD007A76D6 /* Build configuration list for PBXNativeTarget "ParkinsonCareUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +537,7 @@
 				A1768D9D2046AECD007A76D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
