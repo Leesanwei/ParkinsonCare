@@ -17,4 +17,6 @@ class BusinessLogicFacade {
     static func getInstance() -> BusinessLogicFacade{
         return sharedBusinessLogicFacade
     }
+    
+    // MARK : - Properties
 }

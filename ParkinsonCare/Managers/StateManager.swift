@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class StateManager{
+    
+    // MARK : Singleton implemention
+    private static let sharedStateManager : StateManager = StateManager()
+    private init(){}
+    
+    static func getInstance() -> StateManager{
+        return sharedStateManager
+    }
+}

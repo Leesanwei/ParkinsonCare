@@ -11,8 +11,12 @@ import Foundation
 class FacadeFactory {
     
     // MARK: Singleton implementation
-    static let sharedFacadeFacory : FacadeFactory = FacadeFactory()
+    static let sharedFacadeFactory : FacadeFactory = FacadeFactory()
     private init(){}
+    
+    static func getInstance() -> FacadeFactory{
+        return sharedFacadeFactory
+    }
     
     // MARK: - Properties
     private let businessLogicFacade : BusinessLogicFacade = BusinessLogicFacade.getInstance()

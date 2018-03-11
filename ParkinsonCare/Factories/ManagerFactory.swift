@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class ManagerFactory {
+    
+    // MARK : Singleton implementation
+    private static let sharedManagerFactory : ManagerFactory = ManagerFactory()
+    private init(){}
+    
+    static func getInstance() -> ManagerFactory {
+            return sharedManagerFactory
+    }
+}

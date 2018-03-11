@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class ActivityManager{
+    
+    // MARK : Singleton implemention
+    private static let sharedActivityManager : ActivityManager = ActivityManager()
+    private init(){}
+    
+    static func getInstance() -> ActivityManager{
+        return sharedActivityManager
+    }
+}
