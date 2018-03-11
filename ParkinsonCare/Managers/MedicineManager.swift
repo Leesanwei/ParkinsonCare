@@ -10,7 +10,7 @@ import Foundation
 
 class MedicineManager {
     
-    // MARK : Singleton implemention
+    // MARK: Singleton implemention
     private static let sharedMedicineManager : MedicineManager = MedicineManager()
     private init(){}
     

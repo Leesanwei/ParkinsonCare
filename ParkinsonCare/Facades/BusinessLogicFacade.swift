@@ -18,5 +18,5 @@ class BusinessLogicFacade {
         return sharedBusinessLogicFacade
     }
     
-    // MARK : - Properties
+    // MARK: - Properties
 }

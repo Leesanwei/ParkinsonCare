@@ -10,7 +10,7 @@ import Foundation
 
 class StateManager{
     
-    // MARK : Singleton implemention
+    // MARK: Singleton implemention
     private static let sharedStateManager : StateManager = StateManager()
     private init(){}
     

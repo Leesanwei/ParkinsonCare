@@ -10,7 +10,7 @@ import Foundation
 
 class ActivityManager{
     
-    // MARK : Singleton implemention
+    // MARK: Singleton implemention
     private static let sharedActivityManager : ActivityManager = ActivityManager()
     private init(){}
     

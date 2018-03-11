@@ -10,7 +10,7 @@ import Foundation
 
 class MeetingManager{
     
-    // MARK : Singleton implemention
+    // MARK: Singleton implemention
     private static let sharedMeetingManager : MeetingManager = MeetingManager()
     private init(){}
     
