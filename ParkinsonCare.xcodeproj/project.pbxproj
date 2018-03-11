@@ -7,14 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		960897882055515F00211064 /* FacadeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897872055515F00211064 /* FacadeFactory.swift */; };
-		9608978C2055523800211064 /* BusinessLogicFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608978B2055523800211064 /* BusinessLogicFacade.swift */; };
-		96089795205558DB00211064 /* MedicineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96089794205558DB00211064 /* MedicineManager.swift */; };
-		96089797205558EE00211064 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96089796205558EE00211064 /* ActivityManager.swift */; };
-		960897992055591100211064 /* MeetingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897982055591100211064 /* MeetingManager.swift */; };
-		9608979B2055594000211064 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608979A2055594000211064 /* StateManager.swift */; };
 		9608979D2055599D00211064 /* ManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608979C2055599D00211064 /* ManagerFactory.swift */; };
-		9608979F20555A4500211064 /* DoctorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608979E20555A4500211064 /* DoctorManager.swift */; };
+		960897A920556EBF00211064 /* MedicineCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897A820556EBF00211064 /* MedicineCollection.swift */; };
 		A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6D2046AECD007A76D6 /* AppDelegate.swift */; };
 		A1768D702046AECD007A76D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6F2046AECD007A76D6 /* ViewController.swift */; };
 		A1768D732046AECD007A76D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1768D712046AECD007A76D6 /* Main.storyboard */; };
@@ -43,14 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		960897872055515F00211064 /* FacadeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeFactory.swift; sourceTree = "<group>"; };
-		9608978B2055523800211064 /* BusinessLogicFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLogicFacade.swift; sourceTree = "<group>"; };
-		96089794205558DB00211064 /* MedicineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineManager.swift; sourceTree = "<group>"; };
-		96089796205558EE00211064 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
-		960897982055591100211064 /* MeetingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingManager.swift; sourceTree = "<group>"; };
-		9608979A2055594000211064 /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		9608979C2055599D00211064 /* ManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFactory.swift; sourceTree = "<group>"; };
-		9608979E20555A4500211064 /* DoctorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorManager.swift; sourceTree = "<group>"; };
+		960897A820556EBF00211064 /* MedicineCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollection.swift; sourceTree = "<group>"; };
 		A1768D6A2046AECD007A76D6 /* ParkinsonCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinsonCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1768D6D2046AECD007A76D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1768D6F2046AECD007A76D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,30 +83,17 @@
 		960897862055513D00211064 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				960897872055515F00211064 /* FacadeFactory.swift */,
 				9608979C2055599D00211064 /* ManagerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
 		};
-		960897892055516C00211064 /* Facades */ = {
+		960897A720556E6500211064 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				9608978B2055523800211064 /* BusinessLogicFacade.swift */,
+				960897A820556EBF00211064 /* MedicineCollection.swift */,
 			);
-			path = Facades;
-			sourceTree = "<group>";
-		};
-		96089793205558C700211064 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				96089794205558DB00211064 /* MedicineManager.swift */,
-				96089796205558EE00211064 /* ActivityManager.swift */,
-				960897982055591100211064 /* MeetingManager.swift */,
-				9608979A2055594000211064 /* StateManager.swift */,
-				9608979E20555A4500211064 /* DoctorManager.swift */,
-			);
-			path = Managers;
+			path = Collections;
 			sourceTree = "<group>";
 		};
 		A1768D612046AECD007A76D6 = {
@@ -144,11 +119,10 @@
 		A1768D6C2046AECD007A76D6 /* ParkinsonCare */ = {
 			isa = PBXGroup;
 			children = (
-				96089793205558C700211064 /* Managers */,
-				960897892055516C00211064 /* Facades */,
 				960897862055513D00211064 /* Factories */,
 				A1768D6D2046AECD007A76D6 /* AppDelegate.swift */,
 				A1768D6F2046AECD007A76D6 /* ViewController.swift */,
+				960897A720556E6500211064 /* Collections */,
 				A1768D712046AECD007A76D6 /* Main.storyboard */,
 				A1768D772046AECD007A76D6 /* Assets.xcassets */,
 				A1768D792046AECD007A76D6 /* LaunchScreen.storyboard */,
@@ -310,17 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9608979B2055594000211064 /* StateManager.swift in Sources */,
-				9608978C2055523800211064 /* BusinessLogicFacade.swift in Sources */,
-				96089795205558DB00211064 /* MedicineManager.swift in Sources */,
+				960897A920556EBF00211064 /* MedicineCollection.swift in Sources */,
 				A1768D702046AECD007A76D6 /* ViewController.swift in Sources */,
-				9608979F20555A4500211064 /* DoctorManager.swift in Sources */,
-				960897992055591100211064 /* MeetingManager.swift in Sources */,
-				96089797205558EE00211064 /* ActivityManager.swift in Sources */,
 				A1768D762046AECD007A76D6 /* ParkinsonCare.xcdatamodeld in Sources */,
 				A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */,
 				9608979D2055599D00211064 /* ManagerFactory.swift in Sources */,
-				960897882055515F00211064 /* FacadeFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
