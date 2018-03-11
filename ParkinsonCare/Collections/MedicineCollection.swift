@@ -10,22 +10,34 @@ import Foundation
 
 class MedicineCollection{
     
+    // MARK: - Properties
+    private var medicines : [Medicine] = [Medicine]()
     
-    func push(_newMedicine medicine : Medicine) -> MedicineCollection {
-        return self
+    // MARK: - Methods
+    
+    func push(_newMedicine medicine : Medicine) -> Void{
+         self.medicines.append(medicine)
     }
     
-    func remove(_medicineToRemove medicine : Medicine) -> MedicineCollection {
-        return self
-    }
-    
-    func remove(_byName name : String) -> MedicineCollection{
-        return self
+    func remove(_ medicine : Medicine) -> Void {
+        guard let index : Int =  self.medicines.index(of: medicine) else{
+            return
+        }
+        self.medicines.remove(at: index)
     }
     
     func find(_byName name : String) -> Medicine?{
-        return nil
+        var i : Int = 0
+        var found : Bool = false
+        while (i < self.medicines.count && !found ){
+            found = self.medicines[i].name == name
+            i += 1
+        }
+        if found{
+            return self.medicines[i-1]
+        }
+        else{
+            return nil
+        }
     }
-    
-    
 }
