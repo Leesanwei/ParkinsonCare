@@ -18,6 +18,7 @@
 		960897D020591DA900211064 /* MedecinMedicamentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897CF20591DA900211064 /* MedecinMedicamentController.swift */; };
 		960897D22059312F00211064 /* MedicineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897D12059312F00211064 /* MedicineTableViewCell.swift */; };
 		960897D6205936F400211064 /* MedicineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897D5205936F400211064 /* MedicineExtension.swift */; };
+		960897D9205940A800211064 /* surgeon.png in Resources */ = {isa = PBXBuildFile; fileRef = 960897D8205940A800211064 /* surgeon.png */; };
 		A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6D2046AECD007A76D6 /* AppDelegate.swift */; };
 		A1768D702046AECD007A76D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6F2046AECD007A76D6 /* ViewController.swift */; };
 		A1768D732046AECD007A76D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1768D712046AECD007A76D6 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		960897CF20591DA900211064 /* MedecinMedicamentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinMedicamentController.swift; sourceTree = "<group>"; };
 		960897D12059312F00211064 /* MedicineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewCell.swift; sourceTree = "<group>"; };
 		960897D5205936F400211064 /* MedicineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineExtension.swift; sourceTree = "<group>"; };
+		960897D8205940A800211064 /* surgeon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surgeon.png; sourceTree = "<group>"; };
 		A1768D6A2046AECD007A76D6 /* ParkinsonCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinsonCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1768D6D2046AECD007A76D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1768D6F2046AECD007A76D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		960897D72059405C00211064 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				960897D8205940A800211064 /* surgeon.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		A1768D612046AECD007A76D6 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 		A1768D6C2046AECD007A76D6 /* ParkinsonCare */ = {
 			isa = PBXGroup;
 			children = (
+				960897D72059405C00211064 /* Images */,
 				960897D4205936D700211064 /* Extensions */,
 				960897D32059313500211064 /* Cells */,
 				960897CE20591D8D00211064 /* Controllers */,
@@ -319,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1768D7B2046AECD007A76D6 /* LaunchScreen.storyboard in Resources */,
+				960897D9205940A800211064 /* surgeon.png in Resources */,
 				A1768D782046AECD007A76D6 /* Assets.xcassets in Resources */,
 				A1768D732046AECD007A76D6 /* Main.storyboard in Resources */,
 			);
