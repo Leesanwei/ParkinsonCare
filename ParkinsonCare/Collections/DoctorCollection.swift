@@ -19,25 +19,11 @@ class DoctorCollection{
         self.doctors.append(doctor)
     }
     
-    func remove(_ Doctor : doctor) -> Void {
+    func remove(_ doctor : Doctor) -> Void {
         guard let index : Int =  self.doctors.index(of: doctor) else{
             return
         }
         self.doctors.remove(at: index)
     }
-    
-    func find(_byName name : String) -> Doctor?{
-        var i : Int = 0
-        var found : Bool = false
-        while (i < self.doctors.count && !found ){
-            found = self.doctors[i].name == name
-            i += 1
-        }
-        if found{
-            return self.doctors[i-1]
-        }
-        else{
-            return nil
-        }
-    }
+
 }

@@ -8,40 +8,36 @@
 
 import Foundation
 
-class CollectionFactory {
+class CollectionFactory{
     
     // MARK: Singleton implementation
     private static let sharedCollectionFactory : CollectionFactory = CollectionFactory()
     private init(){}
     
     static func getInstance() -> CollectionFactory {
-            return sharedCollectionFactory
+        return sharedCollectionFactory
     }
     
     // MARK: - Methods
     
     // Build the Medicine Collection
     func getMedicineCollection() -> MedicineCollection{
-        return MedicineCollection.getInstance()
+        return MedicineCollection()
     }
     
     //Build the Activity Collection
     func getActivityCollection() -> ActivityCollection{
-        return ActivityCollection.getInstance()
+        return ActivityCollection()
     }
     
     //Build the Meeting Collection
     func getMeetingCollection() -> MeetingCollection{
-        return MeetingCollection.getInstance()
-    }
-    
-    //Build the Activity Collection
-    func getStateCollection() -> StateCollection{
-        return StateCollection.getInstance()
+        return MeetingCollection()
     }
     
     //Build the Doctor Collection
     func getDoctorCollection() -> DoctorCollection{
-        return DoctorCollection.getInstance()
+        return DoctorCollection()
     }
 }
+

@@ -7,13 +7,19 @@
 //
 
 import Foundation
+import CoreData
 
 class MedicineCollection{
     
     // MARK: - Properties
     private var medicines : [Medicine] = [Medicine]()
     
+    
     // MARK: - Methods
+    
+    func count() -> Int {
+        return self.medicines.count
+    }
     
     func push(_newMedicine medicine : Medicine) -> Void{
          self.medicines.append(medicine)
@@ -25,7 +31,9 @@ class MedicineCollection{
         }
         self.medicines.remove(at: index)
     }
-    
+    func find(_byIndex index : Int) -> Medicine{
+        return self.medicines[index]
+    }
     func find(_byName name : String) -> Medicine?{
         var i : Int = 0
         var found : Bool = false
@@ -38,6 +46,15 @@ class MedicineCollection{
         }
         else{
             return nil
+        }
+    }
+    
+    func fill(_ context : NSManagedObjectContext) throws {
+        let request : NSFetchRequest<Medicine> = Medicine.fetchRequest()
+        do{
+            try self.medicines = context.fetch(request)
+        }catch let error as NSError{
+            throw error
         }
     }
 }
