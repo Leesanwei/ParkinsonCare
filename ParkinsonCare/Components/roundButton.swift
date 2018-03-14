@@ -10,13 +10,16 @@ import UIKit
 
 class roundButton: UIButton {
     
+    
     override func didMoveToWindow() {
+        //circle button
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.layer.masksToBounds = false
         self.layer.shadowRadius = 1.0
         self.layer.shadowOpacity = 0.5
         self.layer.cornerRadius = self.frame.width / 2
+                
     }
     
     
