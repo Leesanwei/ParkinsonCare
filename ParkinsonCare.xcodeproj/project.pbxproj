@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		843CA8EC20517B4F00DC7D3C /* roundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CA8EB20517B4F00DC7D3C /* roundButton.swift */; };
+		960897B72059195E00211064 /* Collections in Resources */ = {isa = PBXBuildFile; fileRef = 960897B62059195E00211064 /* Collections */; };
+		960897B92059196D00211064 /* Factories in Resources */ = {isa = PBXBuildFile; fileRef = 960897B82059196C00211064 /* Factories */; };
 		A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6D2046AECD007A76D6 /* AppDelegate.swift */; };
 		A1768D702046AECD007A76D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6F2046AECD007A76D6 /* ViewController.swift */; };
 		A1768D732046AECD007A76D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1768D712046AECD007A76D6 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		843CA8EB20517B4F00DC7D3C /* roundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundButton.swift; sourceTree = "<group>"; };
+		960897B62059195E00211064 /* Collections */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Collections; sourceTree = "<group>"; };
+		960897B82059196C00211064 /* Factories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Factories; sourceTree = "<group>"; };
 		A1768D6A2046AECD007A76D6 /* ParkinsonCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinsonCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1768D6D2046AECD007A76D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1768D6F2046AECD007A76D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,10 +113,11 @@
 		A1768D6C2046AECD007A76D6 /* ParkinsonCare */ = {
 			isa = PBXGroup;
 			children = (
+				960897B82059196C00211064 /* Factories */,
+				960897B62059195E00211064 /* Collections */,
 				843CA8ED205182B900DC7D3C /* Components */,
 				A1768D6D2046AECD007A76D6 /* AppDelegate.swift */,
 				A1768D6F2046AECD007A76D6 /* ViewController.swift */,
-				960897A720556E6500211064 /* Collections */,
 				A1768D712046AECD007A76D6 /* Main.storyboard */,
 				A1768D772046AECD007A76D6 /* Assets.xcassets */,
 				A1768D792046AECD007A76D6 /* LaunchScreen.storyboard */,
@@ -249,7 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1768D7B2046AECD007A76D6 /* LaunchScreen.storyboard in Resources */,
+				960897B92059196D00211064 /* Factories in Resources */,
 				A1768D782046AECD007A76D6 /* Assets.xcassets in Resources */,
+				960897B72059195E00211064 /* Collections in Resources */,
 				A1768D732046AECD007A76D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,13 +284,8 @@
 			files = (
 				843CA8EC20517B4F00DC7D3C /* roundButton.swift in Sources */,
 				A1768D702046AECD007A76D6 /* ViewController.swift in Sources */,
-				960897AD2055828600211064 /* ActivityCollection.swift in Sources */,
-				960897B52055835100211064 /* NotificationCollection.swift in Sources */,
 				A1768D762046AECD007A76D6 /* ParkinsonCare.xcdatamodeld in Sources */,
 				A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */,
-				960897B32055833100211064 /* ReportingCollection.swift in Sources */,
-				9608979D2055599D00211064 /* CollectionFactory.swift in Sources */,
-				960897B1205582A500211064 /* MeetingCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
