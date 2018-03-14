@@ -39,11 +39,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri2-zR-lof" customClass="roundButton" customModule="ParkinsonCare">
-                                <rect key="frame" x="16" y="202" width="145" height="145"/>
+                                <rect key="frame" x="16" y="162" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.99587111398963735" green="0.18546171229026742" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="XVd-Xc-b4W"/>
-                                    <constraint firstAttribute="width" constant="145" id="rg5-62-pYa"/>
+                                    <constraint firstAttribute="width" constant="145" id="8yl-T3-EHS"/>
+                                    <constraint firstAttribute="height" constant="145" id="uT9-ZH-F9f"/>
                                 </constraints>
                                 <state key="normal" title="Médicaments"/>
                                 <connections>
@@ -51,11 +51,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY2-3b-agc" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="214" y="445" width="145" height="145"/>
+                                <rect key="frame" x="214" y="405" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.13449819924359185" green="0.075984146831056254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="145" id="2HM-2p-sFi"/>
-                                    <constraint firstAttribute="height" constant="145" id="2Vn-vS-PsD"/>
+                                    <constraint firstAttribute="width" constant="145" id="eWS-Yj-yfd"/>
+                                    <constraint firstAttribute="height" constant="145" id="qK6-JG-ng2"/>
                                 </constraints>
                                 <state key="normal" title="Tableau de Synthèse"/>
                                 <connections>
@@ -63,11 +63,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-9O-EuY" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="214" y="202" width="145" height="145"/>
+                                <rect key="frame" x="214" y="162" width="145" height="145"/>
                                 <color key="backgroundColor" red="1" green="0.029626705872060732" blue="0.93469386609015448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="Lnx-O7-HYI"/>
-                                    <constraint firstAttribute="width" constant="145" id="yrz-vA-R2Y"/>
+                                    <constraint firstAttribute="height" constant="145" id="VBt-Sv-bqS"/>
+                                    <constraint firstAttribute="width" constant="145" id="ioj-1o-1EA"/>
                                 </constraints>
                                 <state key="normal" title="Sports"/>
                                 <connections>
@@ -75,11 +75,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-8Y-g1Q" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="445" width="145" height="145"/>
+                                <rect key="frame" x="16" y="405" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.038803651078940127" green="0.060398401615078257" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="145" id="1Mg-hP-KOE"/>
-                                    <constraint firstAttribute="height" constant="145" id="c2j-vn-3Ig"/>
+                                    <constraint firstAttribute="height" constant="145" id="X1N-ad-pit"/>
+                                    <constraint firstAttribute="width" constant="145" id="ueG-9U-wCF"/>
                                 </constraints>
                                 <state key="normal" title="Médecin"/>
                                 <connections>
@@ -89,16 +89,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gH1-V7-iTF" firstAttribute="top" secondItem="WPh-8Y-g1Q" secondAttribute="bottom" constant="77" id="B5O-p7-Tf1"/>
-                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" id="CLg-wa-inR"/>
-                            <constraint firstItem="iY2-3b-agc" firstAttribute="leading" secondItem="WPh-8Y-g1Q" secondAttribute="trailing" constant="53" id="HsK-D9-sEU"/>
-                            <constraint firstItem="ZtB-9O-EuY" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="138" id="JhI-qY-K8P"/>
-                            <constraint firstItem="iY2-3b-agc" firstAttribute="top" secondItem="ZtB-9O-EuY" secondAttribute="bottom" constant="98" id="Juk-KF-cEo"/>
-                            <constraint firstItem="iY2-3b-agc" firstAttribute="top" secondItem="ZtB-9O-EuY" secondAttribute="bottom" constant="98" id="L3g-nD-5Jt"/>
-                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="top" secondItem="ri2-zR-lof" secondAttribute="bottom" constant="98" id="Pnw-RD-WMl"/>
-                            <constraint firstItem="ZtB-9O-EuY" firstAttribute="leading" secondItem="ri2-zR-lof" secondAttribute="trailing" constant="53" id="gCI-ZP-ysy"/>
-                            <constraint firstItem="ri2-zR-lof" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="138" id="gsX-O5-WZq"/>
-                            <constraint firstItem="ri2-zR-lof" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" id="j1H-k0-UNI"/>
+                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" id="1Xv-Wl-rFd"/>
+                            <constraint firstItem="iY2-3b-agc" firstAttribute="trailing" secondItem="xSN-Sc-JQe" secondAttribute="trailingMargin" id="3yt-07-gvY"/>
+                            <constraint firstItem="ZtB-9O-EuY" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="98" id="8lv-9k-voI"/>
+                            <constraint firstItem="ri2-zR-lof" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="98" id="9x7-kc-bTr"/>
+                            <constraint firstItem="iY2-3b-agc" firstAttribute="top" secondItem="ZtB-9O-EuY" secondAttribute="bottom" constant="98" id="Dn8-Hi-HmH"/>
+                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="top" secondItem="ri2-zR-lof" secondAttribute="bottom" constant="98" id="GaC-CI-Jfr"/>
+                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="top" secondItem="ri2-zR-lof" secondAttribute="bottom" constant="98" id="OSn-zA-aRS"/>
+                            <constraint firstItem="ri2-zR-lof" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" id="UZO-l7-vex"/>
+                            <constraint firstItem="ZtB-9O-EuY" firstAttribute="trailing" secondItem="xSN-Sc-JQe" secondAttribute="trailingMargin" id="Wk8-uH-pWm"/>
+                            <constraint firstItem="iY2-3b-agc" firstAttribute="top" secondItem="ZtB-9O-EuY" secondAttribute="bottom" constant="98" id="dvG-De-kvD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu Médecin" id="Tf6-Y0-EMx"/>
@@ -199,19 +199,12 @@
                                     <segue destination="vOb-pr-ztY" kind="show" id="Ebe-4h-7q7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-wd-NKB">
-                                <rect key="frame" x="254" y="64" width="105" height="30"/>
-                                <state key="normal" title="Accès Mèdecin"/>
-                                <connections>
-                                    <segue destination="RGO-Z3-im9" kind="show" id="21c-1I-A6K"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHo-6f-9Pz" customClass="roundButton" customModule="ParkinsonCare">
                                 <rect key="frame" x="214" y="126" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="UJt-Ww-Vda"/>
-                                    <constraint firstAttribute="width" constant="145" id="rir-nb-HqL"/>
+                                    <constraint firstAttribute="height" constant="145" id="2fM-Q8-geA"/>
+                                    <constraint firstAttribute="width" constant="145" id="BOG-jb-dLW"/>
                                 </constraints>
                                 <state key="normal" title="Sports"/>
                                 <connections>
@@ -234,8 +227,8 @@
                                 <rect key="frame" x="214" y="307" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="Cqa-86-11T"/>
-                                    <constraint firstAttribute="width" constant="145" id="D6Z-Z4-iN9"/>
+                                    <constraint firstAttribute="height" constant="145" id="Dnl-dg-LOF"/>
+                                    <constraint firstAttribute="width" constant="145" id="Nm7-bf-bsJ"/>
                                 </constraints>
                                 <state key="normal" title="Signaler"/>
                                 <connections>
@@ -258,8 +251,8 @@
                                 <rect key="frame" x="214" y="488" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="Xlo-0D-TJs"/>
-                                    <constraint firstAttribute="width" constant="145" id="hHT-HH-v3K"/>
+                                    <constraint firstAttribute="height" constant="145" id="4W9-fC-1IV"/>
+                                    <constraint firstAttribute="width" constant="145" id="dq3-IQ-NY7"/>
                                 </constraints>
                                 <state key="normal" title="Infos"/>
                                 <connections>
@@ -269,24 +262,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Nyc-Hk-SF1" firstAttribute="top" secondItem="RHo-6f-9Pz" secondAttribute="bottom" constant="36" id="015-l5-ard"/>
                             <constraint firstItem="2Zg-EL-bgL" firstAttribute="top" secondItem="Q85-n0-Jng" secondAttribute="bottom" constant="36" id="1bn-oJ-5Uy"/>
+                            <constraint firstItem="Nyc-Hk-SF1" firstAttribute="top" secondItem="RHo-6f-9Pz" secondAttribute="bottom" constant="36" id="3Hr-bq-D35"/>
                             <constraint firstItem="Q85-n0-Jng" firstAttribute="top" secondItem="NbU-aD-U19" secondAttribute="bottom" constant="62" id="3Y8-Na-4RL"/>
-                            <constraint firstItem="WcW-wd-NKB" firstAttribute="top" secondItem="NbU-aD-U19" secondAttribute="bottom" id="COS-dE-Cdu"/>
-                            <constraint firstItem="Nyc-Hk-SF1" firstAttribute="top" secondItem="RHo-6f-9Pz" secondAttribute="bottom" constant="36" id="HVl-xU-roT"/>
                             <constraint firstItem="s5r-Je-SvS" firstAttribute="top" secondItem="2Zg-EL-bgL" secondAttribute="bottom" constant="36" id="QpS-1W-Sjd"/>
-                            <constraint firstItem="TMz-NL-TiX" firstAttribute="trailing" secondItem="64D-we-dVK" secondAttribute="trailingMargin" id="To0-nN-a24"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RHo-6f-9Pz" secondAttribute="trailing" id="aSY-d6-cMU"/>
-                            <constraint firstItem="WcW-wd-NKB" firstAttribute="trailing" secondItem="64D-we-dVK" secondAttribute="trailingMargin" id="bC6-NT-bi5"/>
+                            <constraint firstItem="RHo-6f-9Pz" firstAttribute="top" secondItem="NbU-aD-U19" secondAttribute="bottom" constant="62" id="Rec-Ng-Qi1"/>
+                            <constraint firstItem="Nyc-Hk-SF1" firstAttribute="trailing" secondItem="64D-we-dVK" secondAttribute="trailingMargin" id="WGE-NT-nXf"/>
                             <constraint firstItem="Q85-n0-Jng" firstAttribute="leading" secondItem="64D-we-dVK" secondAttribute="leadingMargin" id="bGb-VH-kUM"/>
-                            <constraint firstItem="RHo-6f-9Pz" firstAttribute="top" secondItem="WcW-wd-NKB" secondAttribute="bottom" constant="32" id="l6f-vY-2QZ"/>
+                            <constraint firstItem="TMz-NL-TiX" firstAttribute="top" secondItem="Nyc-Hk-SF1" secondAttribute="bottom" constant="36" id="ggW-Ii-5MZ"/>
                             <constraint firstItem="2Zg-EL-bgL" firstAttribute="leading" secondItem="64D-we-dVK" secondAttribute="leadingMargin" id="ocp-k2-8cV"/>
                             <constraint firstItem="s5r-Je-SvS" firstAttribute="leading" secondItem="64D-we-dVK" secondAttribute="leadingMargin" id="ovo-Si-8bc"/>
-                            <constraint firstItem="TMz-NL-TiX" firstAttribute="top" secondItem="Nyc-Hk-SF1" secondAttribute="bottom" constant="36" id="qGm-qJ-YSl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nyc-Hk-SF1" secondAttribute="trailing" id="zBv-Kb-9fH"/>
+                            <constraint firstItem="TMz-NL-TiX" firstAttribute="trailing" secondItem="64D-we-dVK" secondAttribute="trailingMargin" id="tyW-A8-deF"/>
+                            <constraint firstItem="RHo-6f-9Pz" firstAttribute="trailing" secondItem="64D-we-dVK" secondAttribute="trailingMargin" id="zZa-Y2-2Rz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" id="wj1-fc-H57"/>
+                    <navigationItem key="navigationItem" title="Menu" id="wj1-fc-H57">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="0Yb-5n-hpz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WcW-wd-NKB">
+                                <rect key="frame" x="254" y="7" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Accès Mèdecin"/>
+                                <connections>
+                                    <segue destination="RGO-Z3-im9" kind="show" id="21c-1I-A6K"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB3-kK-igD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
