@@ -15,6 +15,14 @@ class ActivityCollection{
     
     // MARK: - Methods
     
+    func setActivities(activities : [Activity]){
+        self.activities = activities
+    }
+    
+    func count() -> Int {
+        return self.activities.count
+    }
+    
     func push(_newActivity activity : Activity) -> Void{
         self.activities.append(activity)
     }
@@ -25,19 +33,5 @@ class ActivityCollection{
         }
         self.activities.remove(at: index)
     }
-    
-    func find(_byName name : String) -> Activity?{
-        var i : Int = 0
-        var found : Bool = false
-        while (i < self.activities.count && !found ){
-            found = self.activities[i].name == name
-            i += 1
-        }
-        if found{
-            return self.activities[i-1]
-        }
-        else{
-            return nil
-        }
-    }
+
 }

@@ -15,6 +15,14 @@ class ReportingCollection{
     
     // MARK: - Methods
     
+    func setReportings(reportings : [Reporting]){
+        self.reportings = reportings
+    }
+    
+    func count() -> Int {
+        return self.reportings.count
+    }
+    
     func push(_newReporting reporting : Reporting) -> Void{
         self.reportings.append(reporting)
     }

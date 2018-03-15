@@ -15,6 +15,14 @@ class DoctorCollection{
     
     // MARK: - Methods
     
+    func setDoctors(doctors : [Doctor]){
+        self.doctors = doctors
+    }
+    
+    func count() -> Int {
+        return self.doctors.count
+    }
+    
     func push(_newDoctor doctor : Doctor) -> Void{
         self.doctors.append(doctor)
     }

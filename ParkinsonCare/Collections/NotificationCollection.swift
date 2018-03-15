@@ -15,6 +15,14 @@ class NotificationCollection{
     
     // MARK: - Methods
     
+    func setNotifications(notifications : [Notification]){
+        self.notifications = notifications
+    }
+    
+    func count() -> Int {
+        return self.notifications.count
+    }
+    
     func push(_newNotification notification : Notification) -> Void{
         self.notifications.append(notification)
     }

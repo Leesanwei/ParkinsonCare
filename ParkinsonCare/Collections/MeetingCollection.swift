@@ -15,6 +15,14 @@ class MeetingCollection{
     
     // MARK: - Methods
     
+    func setMeetings(meetings : [Meeting]){
+        self.meetings = meetings
+    }
+    
+    func count() -> Int {
+        return self.meetings.count
+    }
+    
     func push(_newMeeting meeting : Meeting) -> Void{
         self.meetings.append(meeting)
     }

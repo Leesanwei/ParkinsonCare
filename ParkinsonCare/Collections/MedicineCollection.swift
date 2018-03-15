@@ -17,6 +17,10 @@ class MedicineCollection{
     
     // MARK: - Methods
     
+    func setMedicines(medicines : [Medicine]){
+        self.medicines = medicines
+    }
+    
     func count() -> Int {
         return self.medicines.count
     }
@@ -46,15 +50,6 @@ class MedicineCollection{
         }
         else{
             return nil
-        }
-    }
-    
-    func fill(_ context : NSManagedObjectContext) throws {
-        let request : NSFetchRequest<Medicine> = Medicine.fetchRequest()
-        do{
-            try self.medicines = context.fetch(request)
-        }catch let error as NSError{
-            throw error
         }
     }
 }

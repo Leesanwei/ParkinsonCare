@@ -30,21 +30,17 @@ class MedecinMedicamentController: UIViewController, UITableViewDataSource, UITa
     // MARK: - ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        //Get persistant context
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            self.alertError(errorMsg : "Could not load data", userInfo : "Unknown reason")
+        // get the persistence facade that hides the storage business logic.
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        // try to fetch all the medicines.
+        guard let meds : MedicineCollection = persistanceFacade.getAllMedicines()  else {
+            self.alertError(errorMsg : "Cannot reach the medicines", userInfo : "Unknown Error")
             return
         }
-        let context = appDelegate.persistentContainer.viewContext
-        do{
-            // fetch the medicines in the database
-            try medicines.fill(context)
-            
-        }catch is NSError{
-            self.alertError(errorMsg: "Cannot Fetch medicines", userInfo: "Unknown Reason")
-        }
+        self.medicines = meds
     }
     
     override func didReceiveMemoryWarning() {
