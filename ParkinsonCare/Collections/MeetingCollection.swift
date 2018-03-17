@@ -33,5 +33,9 @@ class MeetingCollection{
         }
         self.meetings.remove(at: index)
     }
+    
+    func find(_byIndex index : Int) -> Meeting{
+        return self.meetings[index]
+    }
 
 }

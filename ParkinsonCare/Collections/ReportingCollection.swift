@@ -33,5 +33,9 @@ class ReportingCollection{
         }
         self.reportings.remove(at: index)
     }
+    
+    func find(_byIndex index : Int) -> Reporting{
+        return self.reportings[index]
+    }
 
 }

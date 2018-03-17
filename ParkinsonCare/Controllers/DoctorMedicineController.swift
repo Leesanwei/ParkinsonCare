@@ -9,7 +9,7 @@
 
 import UIKit
 
-class MedecinMedicamentController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class DoctorMedicineController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     // MARK: - Properties
     var medicines : MedicineCollection = MedicineCollection()

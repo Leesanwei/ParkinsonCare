@@ -38,8 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri2-zR-lof" customClass="roundButton" customModule="ParkinsonCare">
-                                <rect key="frame" x="16" y="162" width="145" height="145"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri2-zR-lof" customClass="roundButton" customModule="ParkinsonCare">
+                                <rect key="frame" x="16" y="125" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.99587111398963735" green="0.18546171229026742" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145" id="8yl-T3-EHS"/>
@@ -50,20 +50,8 @@
                                     <segue destination="7Yf-st-22v" kind="show" id="dgJ-kA-gaj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY2-3b-agc" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="214" y="405" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.13449819924359185" green="0.075984146831056254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="145" id="eWS-Yj-yfd"/>
-                                    <constraint firstAttribute="height" constant="145" id="qK6-JG-ng2"/>
-                                </constraints>
-                                <state key="normal" title="Tableau de Synthèse"/>
-                                <connections>
-                                    <segue destination="Jrx-ik-NSu" kind="show" id="qky-Nx-FHV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-9O-EuY" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="214" y="162" width="145" height="145"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-9O-EuY" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
+                                <rect key="frame" x="214" y="125" width="145" height="145"/>
                                 <color key="backgroundColor" red="1" green="0.029626705872060732" blue="0.93469386609015448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="VBt-Sv-bqS"/>
@@ -74,8 +62,8 @@
                                     <segue destination="vxv-mo-zp2" kind="show" id="2L4-p0-z7L"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-8Y-g1Q" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="405" width="145" height="145"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-8Y-g1Q" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
+                                <rect key="frame" x="16" y="330" width="145" height="145"/>
                                 <color key="backgroundColor" red="0.038803651078940127" green="0.060398401615078257" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="X1N-ad-pit"/>
@@ -84,6 +72,26 @@
                                 <state key="normal" title="Médecin"/>
                                 <connections>
                                     <segue destination="SYe-Yg-bv2" kind="show" id="hDw-od-xPi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtQ-KI-WHY" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
+                                <rect key="frame" x="121" y="515" width="133" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Signalements"/>
+                                <connections>
+                                    <segue destination="HJb-Sg-v9j" kind="show" id="7fw-SB-VzH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY2-3b-agc" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
+                                <rect key="frame" x="214" y="330" width="145" height="145"/>
+                                <color key="backgroundColor" red="0.13449819924359185" green="0.075984146831056254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="eWS-Yj-yfd"/>
+                                    <constraint firstAttribute="height" constant="145" id="qK6-JG-ng2"/>
+                                </constraints>
+                                <state key="normal" title="Tableau de Synthèse"/>
+                                <connections>
+                                    <segue destination="Jrx-ik-NSu" kind="show" id="qky-Nx-FHV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,12 +113,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUc-SB-1rE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626.39999999999998" y="-509.59520239880067"/>
+            <point key="canvasLocation" x="-991.20000000000005" y="-1240.0299850074964"/>
+        </scene>
+        <!--Signalements-->
+        <scene sceneID="Ep3-3l-Ked">
+            <objects>
+                <viewController title="Signalements" id="HJb-Sg-v9j" customClass="PatientReportingController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pjb-Md-mEn"/>
+                        <viewControllerLayoutGuide type="bottom" id="oQt-eQ-E1a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gOa-nO-a3v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dnd-cF-ncc">
+                                <rect key="frame" x="16" y="78" width="343" height="569"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reportingCell" rowHeight="68" id="ZMG-YN-NZf" customClass="ReportingTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZMG-YN-NZf" id="DSB-Hz-6PU">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx9-br-WC6">
+                                                    <rect key="frame" x="15" y="23" width="232" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgg-18-Nc2">
+                                                    <rect key="frame" x="256" y="18" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressReporting:" destination="ZMG-YN-NZf" eventType="touchUpInside" id="zaf-Zd-zL9"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="reportingDescriptionLabel" destination="rx9-br-WC6" id="rEG-oZ-2HH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HJb-Sg-v9j" id="gcF-oA-sWQ"/>
+                                    <outlet property="delegate" destination="HJb-Sg-v9j" id="63y-oa-yLR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="reportingTableView" destination="dnd-cF-ncc" id="SBY-yb-WYF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waC-EU-Aao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.40000000000001" y="-1617.8410794602701"/>
         </scene>
         <!--Médicaments-->
         <scene sceneID="t1B-s3-pmC">
             <objects>
-                <viewController title="Médicaments" id="7Yf-st-22v" customClass="MedecinMedicamentController" customModule="ParkinsonCare" sceneMemberID="viewController">
+                <viewController title="Médicaments" id="7Yf-st-22v" customClass="DoctorMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2eh-Rx-hwF"/>
                         <viewControllerLayoutGuide type="bottom" id="0UE-JH-7DF"/>
@@ -120,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-bA-LYF">
-                                <rect key="frame" x="16" y="148" width="343" height="519"/>
+                                <rect key="frame" x="16" y="148" width="343" height="499"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -138,6 +208,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fl-X7-wFy">
+                                                    <rect key="frame" x="256" y="8" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressMedicine:" destination="vRg-HD-pN1" eventType="touchUpInside" id="B9R-Ha-b6h"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -299,7 +377,7 @@
         <!--Ordonnance-->
         <scene sceneID="uEl-7s-JoJ">
             <objects>
-                <viewController title="Ordonnance" id="vOb-pr-ztY" sceneMemberID="viewController">
+                <viewController title="Ordonnance" id="vOb-pr-ztY" customClass="PatientMedicinePrescriptionController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RfV-Wq-xTh"/>
                         <viewControllerLayoutGuide type="bottom" id="8G1-m7-E4N"/>
@@ -309,9 +387,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hsj-K5-l0I">
-                                <rect key="frame" x="57" y="212" width="240" height="128"/>
+                                <rect key="frame" x="16" y="165" width="343" height="482"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medicinePrescriptionCell" rowHeight="99" id="alO-8A-wWB" customClass="MedicinePrescriptionTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alO-8A-wWB" id="Jfy-Ea-fBR">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="98.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp0-zF-fIs">
+                                                    <rect key="frame" x="15" y="11" width="204" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCe-J1-RV1">
+                                                    <rect key="frame" x="15" y="40" width="204" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjN-NF-BIB">
+                                                    <rect key="frame" x="15" y="67" width="204" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxC-6N-b8r">
+                                                    <rect key="frame" x="256" y="34" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressPrescription:" destination="alO-8A-wWB" eventType="touchUpInside" id="AZG-CR-Dbx"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="medicineNameLabel" destination="rp0-zF-fIs" id="dbS-sc-eAc"/>
+                                            <outlet property="prescriptionFrequencyLabel" destination="CjN-NF-BIB" id="LBH-55-ecl"/>
+                                            <outlet property="prescriptionPeriodLabel" destination="qCe-J1-RV1" id="rjf-Lh-P2O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vOb-pr-ztY" id="t0s-2P-lNG"/>
+                                    <outlet property="delegate" destination="vOb-pr-ztY" id="khk-iJ-6HE"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDM-oO-dsg">
                                 <rect key="frame" x="156" y="110" width="63" height="30"/>
@@ -329,15 +457,18 @@
                             <constraint firstItem="iDM-oO-dsg" firstAttribute="top" secondItem="RfV-Wq-xTh" secondAttribute="bottom" constant="46" id="b9f-RI-RqV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="medicinePrescriptionTableView" destination="Hsj-K5-l0I" id="PNx-eU-5bW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gok-9l-L4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="2015"/>
+            <point key="canvasLocation" x="584.79999999999995" y="2014.5427286356824"/>
         </scene>
         <!--Sports-->
         <scene sceneID="QTM-sU-qEH">
             <objects>
-                <viewController title="Sports" id="SoA-zH-obI" sceneMemberID="viewController">
+                <viewController title="Sports" id="SoA-zH-obI" customClass="PatientActivityPrescriptionController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KYT-9r-KJn"/>
                         <viewControllerLayoutGuide type="bottom" id="HPq-dH-yPg"/>
@@ -356,9 +487,47 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z2I-eH-hRh">
-                                <rect key="frame" x="58" y="269" width="240" height="128"/>
+                                <rect key="frame" x="16" y="166" width="343" height="481"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activityPrescriptionCell" rowHeight="72" id="o6u-Ht-qSH" customClass="ActivityPrescriptionTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o6u-Ht-qSH" id="mY1-zA-oju">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9u-4e-htl">
+                                                    <rect key="frame" x="15" y="11" width="210" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hur-th-vw3">
+                                                    <rect key="frame" x="15" y="40" width="210" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8l-MO-Sdk">
+                                                    <rect key="frame" x="256" y="20" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressPrescription:" destination="o6u-Ht-qSH" eventType="touchUpInside" id="q71-xB-uZU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activityDescriptionLabel" destination="Hur-th-vw3" id="m4a-Ep-zFm"/>
+                                            <outlet property="activityNameLabel" destination="b9u-4e-htl" id="ojn-OP-4RH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -367,15 +536,18 @@
                             <constraint firstItem="2Xg-uT-wQX" firstAttribute="centerX" secondItem="ChV-Aa-wEI" secondAttribute="centerX" id="KNV-HJ-PHz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityPrescriptionTableView" destination="z2I-eH-hRh" id="9Z8-JG-YNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3b6-Hn-sqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="2682"/>
+            <point key="canvasLocation" x="584.79999999999995" y="2681.1094452773614"/>
         </scene>
         <!--Rendez-vous-->
         <scene sceneID="ZDu-Fn-q4t">
             <objects>
-                <viewController title="Rendez-vous" id="U10-qP-Ego" sceneMemberID="viewController">
+                <viewController title="Rendez-vous" id="U10-qP-Ego" customClass="PatientMeetingController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q5m-n2-yvB"/>
                         <viewControllerLayoutGuide type="bottom" id="irX-O5-u0s"/>
@@ -394,9 +566,47 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JUe-Co-rd2">
-                                <rect key="frame" x="67" y="285" width="240" height="128"/>
+                                <rect key="frame" x="16" y="163" width="343" height="484"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingCell" rowHeight="68" id="Jin-In-aHW" customClass="MeetingTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jin-In-aHW" id="m8n-Kg-OcY">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-JC-Y8L">
+                                                    <rect key="frame" x="15" y="11" width="233" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrB-UQ-U41">
+                                                    <rect key="frame" x="15" y="36" width="233" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXg-xd-LLR">
+                                                    <rect key="frame" x="256" y="18" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressMeeting:" destination="Jin-In-aHW" eventType="touchUpInside" id="0zW-nX-wd0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="meetingDescriptionLabel" destination="PrB-UQ-U41" id="CPd-ea-ArC"/>
+                                            <outlet property="meetingDoctorNameLabel" destination="JKr-JC-Y8L" id="FPJ-pf-a41"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -405,10 +615,13 @@
                             <constraint firstItem="SRd-Hu-UN6" firstAttribute="centerX" secondItem="0zb-J2-gfS" secondAttribute="centerX" id="s4T-eA-uJf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="meetingTableView" destination="JUe-Co-rd2" id="M57-N6-m7i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLs-0G-SZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="3344"/>
+            <point key="canvasLocation" x="584.79999999999995" y="3343.1784107946028"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Snx-ib-dgS">
@@ -727,7 +940,7 @@
         <!--Médecins-->
         <scene sceneID="ljY-SY-spC">
             <objects>
-                <viewController title="Médecins" id="SYe-Yg-bv2" sceneMemberID="viewController">
+                <viewController title="Médecins" id="SYe-Yg-bv2" customClass="DoctorController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mIH-0q-T6C"/>
                         <viewControllerLayoutGuide type="bottom" id="ynI-cv-kXF"/>
@@ -749,9 +962,60 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaO-XY-qBf">
-                                <rect key="frame" x="81" y="220" width="240" height="128"/>
+                                <rect key="frame" x="16" y="168" width="343" height="479"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doctorCell" rowHeight="73" id="5bg-nu-ozB" customClass="DoctorTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5bg-nu-ozB" id="xru-51-QSm">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="72.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEk-s1-bF1">
+                                                    <rect key="frame" x="15" y="17" width="130" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUz-sV-TEx">
+                                                    <rect key="frame" x="15" y="41" width="227" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psU-tx-ctB">
+                                                    <rect key="frame" x="256" y="21" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressDoctor:" destination="5bg-nu-ozB" eventType="touchUpInside" id="SN2-FN-nqv"/>
+                                                        <action selector="suppressDoctor:" destination="gEa-J2-0AQ" eventType="touchUpInside" id="duN-ia-DRN"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="317-1z-l4z">
+                                                    <rect key="frame" x="150" y="17" width="92" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="doctorContactLabel" destination="FUz-sV-TEx" id="qx5-Fa-cLl"/>
+                                            <outlet property="doctorNameLabel" destination="kEk-s1-bF1" id="JIH-10-GGy"/>
+                                            <outlet property="doctorSpecialityLabel" destination="317-1z-l4z" id="tVh-CE-rcN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SYe-Yg-bv2" id="xni-i5-qQR"/>
+                                    <outlet property="delegate" destination="SYe-Yg-bv2" id="Zoz-pT-Y0j"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -762,8 +1026,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIE-ae-YrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gEa-J2-0AQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="150" y="584"/>
+            <point key="canvasLocation" x="149.59999999999999" y="583.3583208395803"/>
         </scene>
         <!--Synthèse-->
         <scene sceneID="l2b-im-Fiy">
@@ -982,7 +1247,7 @@
         <!--Sports-->
         <scene sceneID="9hX-Oh-PpQ">
             <objects>
-                <viewController title="Sports" id="vxv-mo-zp2" sceneMemberID="viewController">
+                <viewController title="Sports" id="vxv-mo-zp2" customClass="DoctorActivityController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="znx-og-jsh"/>
                         <viewControllerLayoutGuide type="bottom" id="es4-RR-Vpw"/>
@@ -1004,9 +1269,43 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Itn-j3-JTx">
-                                <rect key="frame" x="80" y="209" width="240" height="128"/>
+                                <rect key="frame" x="16" y="166" width="343" height="493"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activityCell" rowHeight="65" id="GT7-Zw-3qO" customClass="ActivityTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GT7-Zw-3qO" id="vCc-cc-sbY">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="64.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gL-NY-WL3">
+                                                    <rect key="frame" x="15" y="22" width="193" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyQ-Cp-N07">
+                                                    <rect key="frame" x="256" y="18" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressActivity:" destination="GT7-Zw-3qO" eventType="touchUpInside" id="hRE-Ir-zAK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activityNameLabel" destination="0gL-NY-WL3" id="jrC-We-Ha9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vxv-mo-zp2" id="evK-Iq-jcW"/>
+                                    <outlet property="delegate" destination="vxv-mo-zp2" id="KTt-3z-wsS"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1015,6 +1314,9 @@
                             <constraint firstItem="2TV-Id-cW9" firstAttribute="top" secondItem="znx-og-jsh" secondAttribute="bottom" constant="46" id="yir-wC-Kzl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityTableView" destination="Itn-j3-JTx" id="b6v-mv-WZb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbm-1p-RCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1169,6 +1471,231 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVv-vP-oAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="-763"/>
+        </scene>
+        <!--Médicaments-->
+        <scene sceneID="8Os-DC-gGW">
+            <objects>
+                <viewController title="Médicaments" id="sCP-Ra-ko2" customClass="DoctorMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GOp-E1-dX4"/>
+                        <viewControllerLayoutGuide type="bottom" id="gMf-SR-Kax"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T0b-9w-3FT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Fg-t7-3h9">
+                                <rect key="frame" x="16" y="148" width="343" height="499"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medicineCell" rowHeight="48" id="igF-PR-NXp" customClass="MedicineTableViewCell" customModule="ParkinsonCare">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="igF-PR-NXp" id="t3r-zy-fYm">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ami-aH-m3y">
+                                                    <rect key="frame" x="15" y="12" width="226" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOT-HM-aeU">
+                                                    <rect key="frame" x="256" y="8" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressMedicine:" destination="igF-PR-NXp" eventType="touchUpInside" id="5iN-MQ-ggL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="medicineNameLabel" destination="ami-aH-m3y" id="Wn0-QK-fwR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sCP-Ra-ko2" id="Jy5-jl-xRp"/>
+                                    <outlet property="delegate" destination="sCP-Ra-ko2" id="W0A-4c-bLB"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhf-27-pkd">
+                                <rect key="frame" x="156" y="90" width="63" height="30"/>
+                                <state key="normal" title="Ajouter +">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMedicine:" destination="sCP-Ra-ko2" eventType="touchUpInside" id="vGH-FT-C1U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hhf-27-pkd" firstAttribute="top" secondItem="GOp-E1-dX4" secondAttribute="bottom" constant="46" id="ChD-fW-0zn"/>
+                            <constraint firstItem="hhf-27-pkd" firstAttribute="centerX" secondItem="T0b-9w-3FT" secondAttribute="centerX" id="DsH-2V-1k3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="medicineTableView" destination="1Fg-t7-3h9" id="jnh-hz-miF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnB-ZX-jM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-763.26836581709154"/>
+        </scene>
+        <!--Médicaments-->
+        <scene sceneID="Pyl-fF-3Ty">
+            <objects>
+                <viewController title="Médicaments" id="JCE-7y-FlP" customClass="DoctorMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g3b-Mw-3dK"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaM-od-LxD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eqf-yV-jGh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-Q8-xrE">
+                                <rect key="frame" x="16" y="148" width="343" height="499"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medicineCell" rowHeight="48" id="apX-mf-nEr" customClass="MedicineTableViewCell" customModule="ParkinsonCare">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apX-mf-nEr" id="prc-Qw-xTR">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkA-lA-LWz">
+                                                    <rect key="frame" x="15" y="12" width="226" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcg-0u-Zo6">
+                                                    <rect key="frame" x="256" y="8" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressMedicine:" destination="apX-mf-nEr" eventType="touchUpInside" id="2wd-hL-e1u"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="medicineNameLabel" destination="KkA-lA-LWz" id="knQ-zq-K52"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JCE-7y-FlP" id="dje-9W-YGn"/>
+                                    <outlet property="delegate" destination="JCE-7y-FlP" id="zuD-xy-dWg"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8f-qW-2BY">
+                                <rect key="frame" x="156" y="90" width="63" height="30"/>
+                                <state key="normal" title="Ajouter +">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMedicine:" destination="JCE-7y-FlP" eventType="touchUpInside" id="iG9-L9-CEg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M8f-qW-2BY" firstAttribute="centerX" secondItem="Eqf-yV-jGh" secondAttribute="centerX" id="3bj-7L-gmT"/>
+                            <constraint firstItem="M8f-qW-2BY" firstAttribute="top" secondItem="g3b-Mw-3dK" secondAttribute="bottom" constant="46" id="joz-rf-CHG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="medicineTableView" destination="evZ-Q8-xrE" id="afQ-qb-TVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSQ-bz-pNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-763.26836581709154"/>
+        </scene>
+        <!--Médicaments-->
+        <scene sceneID="mRR-iu-mKI">
+            <objects>
+                <viewController title="Médicaments" id="CKS-Ck-GXO" customClass="DoctorMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EIP-Pk-J7y"/>
+                        <viewControllerLayoutGuide type="bottom" id="luJ-ZF-GId"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0kR-9q-QKR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JFi-MZ-qN6">
+                                <rect key="frame" x="16" y="148" width="343" height="499"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medicineCell" rowHeight="48" id="96Z-ek-Pnm" customClass="MedicineTableViewCell" customModule="ParkinsonCare">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="96Z-ek-Pnm" id="Er4-aY-Dyl">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oag-TK-Wvk">
+                                                    <rect key="frame" x="15" y="12" width="226" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdw-U7-KLh">
+                                                    <rect key="frame" x="256" y="8" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Supprimer"/>
+                                                    <connections>
+                                                        <action selector="suppressMedicine:" destination="96Z-ek-Pnm" eventType="touchUpInside" id="UTz-yj-2VF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="medicineNameLabel" destination="oag-TK-Wvk" id="lXA-Ht-v6K"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CKS-Ck-GXO" id="DgK-2s-23P"/>
+                                    <outlet property="delegate" destination="CKS-Ck-GXO" id="EOw-As-pli"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMZ-uA-aMC">
+                                <rect key="frame" x="156" y="90" width="63" height="30"/>
+                                <state key="normal" title="Ajouter +">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMedicine:" destination="CKS-Ck-GXO" eventType="touchUpInside" id="qCw-p2-Beb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lMZ-uA-aMC" firstAttribute="centerX" secondItem="0kR-9q-QKR" secondAttribute="centerX" id="5q9-nb-iqd"/>
+                            <constraint firstItem="lMZ-uA-aMC" firstAttribute="top" secondItem="EIP-Pk-J7y" secondAttribute="bottom" constant="46" id="cPu-pp-vHu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="medicineTableView" destination="JFi-MZ-qN6" id="nMM-G8-wIE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YxE-du-2G9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-763.26836581709154"/>
         </scene>
     </scenes>
     <resources>

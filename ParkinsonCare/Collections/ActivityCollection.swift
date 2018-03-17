@@ -33,5 +33,10 @@ class ActivityCollection{
         }
         self.activities.remove(at: index)
     }
+    
+    func find(_byIndex index : Int) -> Activity{
+        return self.activities[index]
+    }
+
 
 }

@@ -33,5 +33,9 @@ class DoctorCollection{
         }
         self.doctors.remove(at: index)
     }
+    
+    func find(_byIndex index : Int) -> Doctor{
+        return self.doctors[index]
+    }
 
 }
