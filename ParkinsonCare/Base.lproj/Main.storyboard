@@ -1041,7 +1041,7 @@
         <!--Ajouter sport-->
         <scene sceneID="Asc-Lf-6Om">
             <objects>
-                <viewController title="Ajouter sport" id="BCN-ST-Jad" sceneMemberID="viewController">
+                <viewController title="Ajouter sport" id="BCN-ST-Jad" customClass="MedecinSportsController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fYN-eg-3SQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Znk-Jf-P74"/>
@@ -1081,6 +1081,9 @@
                             <constraint firstItem="5wA-Eb-qKk" firstAttribute="top" secondItem="H9m-9c-Pq1" secondAttribute="bottom" constant="75" id="mMc-U0-p2Q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="H9m-9c-Pq1" id="Zkp-bu-UCa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BoT-Bc-92F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
