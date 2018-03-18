@@ -234,7 +234,6 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addMedicine:" destination="7Yf-st-22v" eventType="touchUpInside" id="BMe-rH-oa0"/>
                                     <segue destination="v6h-rU-BpR" kind="show" id="shZ-6u-RU4"/>
                                 </connections>
                             </button>
