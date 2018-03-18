@@ -1373,7 +1373,7 @@
         <!--Ajouter Médicament-->
         <scene sceneID="hrI-09-9oF">
             <objects>
-                <viewController title="Ajouter Médicament" id="AMw-cr-3LJ" sceneMemberID="viewController">
+                <viewController title="Ajouter Médicament" id="AMw-cr-3LJ" customClass="DoctorMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="32G-Qu-bcD"/>
                         <viewControllerLayoutGuide type="bottom" id="vQS-Qm-FoP"/>
@@ -1397,10 +1397,16 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AMw-cr-3LJ" id="x6u-qe-GgE"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MY2-Um-nug">
                                 <rect key="frame" x="164" y="332" width="47" height="74"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addMedicine:" destination="AMw-cr-3LJ" eventType="touchUpInside" id="A29-0Y-3fb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1416,6 +1422,10 @@
                             <constraint firstItem="bZl-DK-4wF" firstAttribute="centerX" secondItem="mjb-df-1K9" secondAttribute="centerX" id="epe-Vk-Nlw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addMedicine" destination="MY2-Um-nug" id="OCW-d3-Ren"/>
+                        <outlet property="addMedicineText" destination="Uvh-eZ-Yoa" id="LhB-x4-uv1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srD-BZ-kIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,7 +25,7 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         let cell = self.meetingTableView.dequeueReusableCell(withIdentifier: "meetingCell", for: indexPath) as! MeetingTableViewCell
         let meeting : Meeting = self.meetings.find(_byIndex : indexPath.row)
         
-        guard let doctor : Doctor = (meeting.doctor as! Doctor) else{}
+        guard let doctor : Doctor = (meeting.value(forKeyPath: "doctor.meetings") as! Doctor) else{}
         
         cell.meetingDoctorNameLabel.text = doctor.getFullName()
         cell.meetingDescriptionLabel.text = "Le \((meeting.date as! NSDate).toString(dateFormat: "dd-MM")) à  \(doctor.location as! String)"

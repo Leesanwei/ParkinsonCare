@@ -24,7 +24,7 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.medicinePrescriptionTableView.dequeueReusableCell(withIdentifier: "medicinePrescriptionCell", for: indexPath) as! MedicinePrescriptionTableViewCell
         let prescription : MedicinePrescription = self.medicinePrescriptions.find(_byIndex : indexPath.row)
-        guard let medicine : Medicine = prescription.medicine as! Medicine else{
+        guard let medicine : Medicine = prescription.value(forKeyPath: "medicine.medicinePrescriptions") as! Medicine else{
             
         }
         cell.medicineNameLabel.text = medicine.getFullDescription()

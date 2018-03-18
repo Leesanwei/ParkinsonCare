@@ -26,9 +26,9 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
         cell.doctorNameLabel.text = self.doctors.find(_byIndex : indexPath.row).getFullName()
         cell.doctorContactLabel.text = self.doctors.find(_byIndex : indexPath.row).getContact()
 
-        guard let speciality  = (self.doctors.find(_byIndex : indexPath.row).speciality as! Speciality).name else{
+        guard let speciality  = (self.doctors.find(_byIndex : indexPath.row).value(forKeyPath: "speciality.doctors") as! Speciality).name else{
             cell.doctorSpecialityLabel.text = "Specialité inconnue."
-            return cell
+          return cell
         }
         cell.doctorSpecialityLabel.text = speciality
         return cell
