@@ -235,7 +235,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addMedicine:" destination="7Yf-st-22v" eventType="touchUpInside" id="BMe-rH-oa0"/>
-                                    <segue destination="v6h-rU-BpR" kind="show" id="7VG-gf-spB"/>
+                                    <segue destination="v6h-rU-BpR" kind="show" id="shZ-6u-RU4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1373,7 +1373,7 @@
         <!--Ajouter Médicament-->
         <scene sceneID="hrI-09-9oF">
             <objects>
-                <viewController title="Ajouter Médicament" id="AMw-cr-3LJ" customClass="DoctorMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Ajouter Médicament" id="AMw-cr-3LJ" customClass="DoctorAddMedicineController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="32G-Qu-bcD"/>
                         <viewControllerLayoutGuide type="bottom" id="vQS-Qm-FoP"/>
@@ -1434,7 +1434,7 @@
         <!--Ajouter Médicament-->
         <scene sceneID="MFP-iU-jzq">
             <objects>
-                <viewController title="Ajouter Médicament" id="v6h-rU-BpR" sceneMemberID="viewController">
+                <viewController title="Ajouter Médicament" id="v6h-rU-BpR" customClass="DoctorAddMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nvi-D0-lLx"/>
                         <viewControllerLayoutGuide type="bottom" id="Cqi-UM-T1w"/>
@@ -1458,10 +1458,16 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="v6h-rU-BpR" id="Bt5-JW-veW"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJR-w3-pBq">
                                 <rect key="frame" x="164" y="376" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addMedicine:" destination="v6h-rU-BpR" eventType="touchUpInside" id="vII-0E-i3n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1477,6 +1483,9 @@
                             <constraint firstItem="BJR-w3-pBq" firstAttribute="centerX" secondItem="eyc-yc-JjR" secondAttribute="centerX" id="qUd-1t-XqD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AddMedicineText" destination="75I-Jx-Ks1" id="UTj-az-Sbi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVv-vP-oAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

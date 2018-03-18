@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		843CA8EC20517B4F00DC7D3C /* roundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CA8EB20517B4F00DC7D3C /* roundButton.swift */; };
+		845FB4D5205ED581009245EC /* DoctorAddMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */; };
 		960897C320591BC900211064 /* DoctorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C220591BC900211064 /* DoctorCollection.swift */; };
 		960897C520591BCC00211064 /* MedicineCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C420591BCC00211064 /* MedicineCollection.swift */; };
 		960897C720591BCF00211064 /* MeetingCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C620591BCF00211064 /* MeetingCollection.swift */; };
@@ -81,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		843CA8EB20517B4F00DC7D3C /* roundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundButton.swift; sourceTree = "<group>"; };
+		845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddMedicineController.swift; sourceTree = "<group>"; };
 		960897C220591BC900211064 /* DoctorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCollection.swift; sourceTree = "<group>"; };
 		960897C420591BCC00211064 /* MedicineCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollection.swift; sourceTree = "<group>"; };
 		960897C620591BCF00211064 /* MeetingCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCollection.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				96EDA74C205D678700ED2AB4 /* PatientActivityPrescriptionController.swift */,
 				96DF3004205D6E0100FD5B57 /* PatientMeetingController.swift */,
 				96DF300C205D75C500FD5B57 /* PatientReportingController.swift */,
+				845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				960897C720591BCF00211064 /* MeetingCollection.swift in Sources */,
 				960897E9205AC97200211064 /* CoreDataDoctorDAO.swift in Sources */,
 				960897DB205AA73500211064 /* DAOFactory.swift in Sources */,
+				845FB4D5205ED581009245EC /* DoctorAddMedicineController.swift in Sources */,
 				960897FF205ACAB800211064 /* MedicinePrescription.swift in Sources */,
 				96EDA747205D55CF00ED2AB4 /* PatientMedicinePrescriptionController.swift in Sources */,
 				96089803205ACB8200211064 /* ActivityPrescriptionCollection.swift in Sources */,

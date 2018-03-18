@@ -13,17 +13,9 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: - Properties
     var medicines : MedicineCollection = MedicineCollection()
-    var medicine : [Medicine] = []
+
 
     @IBOutlet weak var medicineTableView: UITableView!
-    @IBOutlet weak var addMedicineText: UITextField!
-    @IBAction func addMedicine(_ sender: Any) {
-        if addMedicineText.hasText{
-            let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-            persistanceFacade.addMedicine(nameMedicine: self.addMedicineText.text!)
-            
-        }
-    }
     
     
     // MARK: - UITableViewDataSource methods
