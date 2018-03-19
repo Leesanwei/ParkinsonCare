@@ -32,8 +32,16 @@ class CoreDataActivityDAO : ActivityDAO{
         return true
     }
     
-    func add(act: Activity) -> Bool {
-        return true
+    func add(nameSport: String) -> Bool{
+        let activity = Activity(context : context)
+        activity.name = nameSport
+        do{
+            try context.save()
+            return true
+        }catch let error as NSError{
+            return false
+        }
+        
     }
     
 }

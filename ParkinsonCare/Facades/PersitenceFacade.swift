@@ -46,6 +46,24 @@ class PersistenceFacade {
         
     }
     
+    func addSport(nameSport : String) -> Bool {
+        guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
+            return false
+        }
+        
+        return activityDAO.add(nameSport : nameSport)
+        
+        
+    }
+    
+    func addDoctor(firstName: String, lastName : String, specialityName: String, phoneNumber: String, location: String) -> Bool {
+        guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
+            return false
+        }
+        
+        return doctorDAO.add(firstName : firstName, lastName : lastName, specialityName : specialityName, phoneNumber : phoneNumber, location : location)
+    }
+    
     func getAllMedicinePrescriptions() -> MedicinePrescriptionCollection?{
         //Try to get the medicinePrescriptionDAO
         guard let medicinePrescriptionDAO : MedicinePrescriptionDAO = daoFactory.getMedicinePrescriptionDAO() else{

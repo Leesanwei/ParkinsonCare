@@ -49,7 +49,19 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        // try to fetch all the medicines.
+        guard let meds : MedicineCollection = persistanceFacade.getAllMedicines()  else {
+            self.alertError(errorMsg : "Cannot reach the medicines", userInfo : "Unknown Error")
+            return
+        }
+        self.medicines = meds
+        self.medicineTableView.reloadData()
+    }
     func alertError(errorMsg msg : String, userInfo info : String){
         
     }

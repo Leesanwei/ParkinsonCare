@@ -32,8 +32,22 @@ class CoreDataDoctorDAO : DoctorDAO{
         return true
     }
     
-    func add(doc: Doctor) -> Bool {
-        return true
+    func add(firstName : String, lastName : String, specialityName : String, phoneNumber : String, location: String) -> Bool {
+        
+        let doctor = Doctor(context : context)
+        let speciality = Speciality(context : context)
+        doctor.firstName = firstName
+        doctor.lastName = lastName
+        doctor.phoneNumber = phoneNumber
+        doctor.location = location
+        speciality.name = specialityName
+        
+        do{
+            try context.save()
+            return true
+        }catch let error as NSError{
+            return false
+        }
     }
     
 }
