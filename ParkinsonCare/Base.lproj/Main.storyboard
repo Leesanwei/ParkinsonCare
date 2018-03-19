@@ -1378,7 +1378,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ajouter +"/>
                                 <connections>
-                                    <segue destination="BCN-ST-Jad" kind="show" id="Y5N-oU-5kR"/>
+                                    <segue destination="oLj-5c-VmZ" kind="show" id="OSw-ee-Nm0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1390,65 +1390,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbm-1p-RCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168.80000000000001" y="-75.112443778110944"/>
+            <point key="canvasLocation" x="346" y="-103"/>
         </scene>
-        <!--Ajouter sport-->
-        <scene sceneID="Asc-Lf-6Om">
+        <!--Ajouter Sport-->
+        <scene sceneID="nEE-3M-LOP">
             <objects>
-                <viewController title="Ajouter sport" id="BCN-ST-Jad" customClass="DoctorAddSportController" sceneMemberID="viewController">
+                <viewController title="Ajouter Sport" id="oLj-5c-VmZ" customClass="DoctorAddSportController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fYN-eg-3SQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Znk-Jf-P74"/>
+                        <viewControllerLayoutGuide type="top" id="5ZM-ec-6Fn"/>
+                        <viewControllerLayoutGuide type="bottom" id="l3j-q2-eBZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="miO-Lh-Syj">
+                    <view key="view" contentMode="scaleToFill" id="vzM-yq-Ike">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sport :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpQ-s6-CVJ">
-                                <rect key="frame" x="161.5" y="186" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sport :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2G-V4-t2J">
+                                <rect key="frame" x="166" y="143" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wA-Eb-qKk">
-                                <rect key="frame" x="164" y="376" width="47" height="30"/>
-                                <state key="normal" title="Valider"/>
-                                <connections>
-                                    <action selector="addSport:" destination="BCN-ST-Jad" eventType="touchUpInside" id="KGC-m5-dZu"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-9c-Pq1">
-                                <rect key="frame" x="74" y="271" width="227" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RcT-vf-bkn"/>
-                                    <constraint firstAttribute="width" constant="227" id="wK8-LO-sy2"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2P5-rw-xbb">
+                                <rect key="frame" x="139" y="235" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BCN-ST-Jad" id="Kqn-UT-fK1"/>
-                                </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1X-P7-s2Z">
+                                <rect key="frame" x="164" y="365" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addSport:" destination="oLj-5c-VmZ" eventType="touchUpInside" id="G4k-Xi-vnL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="H9m-9c-Pq1" firstAttribute="centerX" secondItem="miO-Lh-Syj" secondAttribute="centerX" id="9Ui-Df-C6U"/>
-                            <constraint firstItem="H9m-9c-Pq1" firstAttribute="top" secondItem="kpQ-s6-CVJ" secondAttribute="bottom" constant="64" id="EOW-vh-baU"/>
-                            <constraint firstItem="5wA-Eb-qKk" firstAttribute="centerX" secondItem="miO-Lh-Syj" secondAttribute="centerX" id="IZL-m8-cjN"/>
-                            <constraint firstItem="kpQ-s6-CVJ" firstAttribute="top" secondItem="fYN-eg-3SQ" secondAttribute="bottom" constant="122" id="djU-jO-cPP"/>
-                            <constraint firstItem="kpQ-s6-CVJ" firstAttribute="centerX" secondItem="miO-Lh-Syj" secondAttribute="centerX" id="lHk-9m-AVH"/>
-                            <constraint firstItem="5wA-Eb-qKk" firstAttribute="top" secondItem="H9m-9c-Pq1" secondAttribute="bottom" constant="75" id="mMc-U0-p2Q"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZEa-LL-94H"/>
                     <connections>
-                        <outlet property="addSportText" destination="H9m-9c-Pq1" id="R7i-aR-B48"/>
+                        <outlet property="addSportText" destination="2P5-rw-xbb" id="GFk-lZ-QyF"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BoT-Bc-92F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f67-ht-th0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-31"/>
+            <point key="canvasLocation" x="1068" y="-104"/>
         </scene>
         <!--Ajouter Médicament-->
         <scene sceneID="MFP-iU-jzq">

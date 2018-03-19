@@ -47,6 +47,20 @@ class DoctorActivityController: UIViewController, UITableViewDataSource, UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // get the persistence facade that hides the storage business logic.
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        // try to fetch all the medicines.
+        guard let acts : ActivityCollection = persistanceFacade.getAllActivities()  else {
+            self.alertError(errorMsg : "Cannot reach the activities", userInfo : "Unknown Error")
+            return
+        }
+        self.activities = acts
+        self.activityTableView.reloadData()
+    }
     
     func alertError(errorMsg msg : String, userInfo info : String){
         
