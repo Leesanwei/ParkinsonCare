@@ -17,7 +17,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        preloadData()
         return true
+    }
+    
+    func preloadData(){
+        let specialities : [String] = ["Kinésithérapeute","Orthophoniste","Infirmier","Psychologue Clinicien","Neuropsychologue","Ergothérapeute","Psychomotricien","Pédicure-podologue","Diététicien(ne)",            "Neurologue","Medecin Generaliste","Psychiatre","Neurochirurgien","Médecin de structure antidouleur","Gériatre","Médecin spécialiste en médecine","Orthoptiste","Physique","Gastro-entérologue",        "Urologue, Gynécologue, Sexologue","Ophtalmologiste","ORL-phoniatre","Rhumatologue","Chirurgien","Orthopédique","Pneumologue","Cardiologue","Médecin du travail",        "Chirurgien-Dentiste","Assistant de service social","Personnels de transport sanitaire","Personnels de soins infirmiers à domicile","Personnels des services d’aide à domicile","Personnels des services d’aide à la personne","Personnels de coordination gérontologique","Maisons départementales des personnes handicapées", "Educateur médico-sportif","Associations de patients"]
+        
+        let context: NSManagedObjectContext =  self.persistentContainer.viewContext
+        
+        for speciality in specialities {
+            let spec = Speciality(context : context)
+            spec.name = speciality
+            do{
+                try context.save()
+                print("=======================")
+                print("FILES COPIED")
+                print("=======================")
+                
+            }catch {
+                print("=======================")
+                print("ERROR IN COPY OPERATION")
+                print("=======================")
+            }
+
+            
+        }
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
