@@ -453,7 +453,7 @@
 				TargetAttributes = {
 					A1768D692046AECD007A76D6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = HWKZ678QT4;
+						DevelopmentTeam = 32JN4DKEWS;
 						ProvisioningStyle = Automatic;
 					};
 					A1768D802046AECD007A76D6 = {
@@ -732,7 +732,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HWKZ678QT4;
+				DEVELOPMENT_TEAM = 32JN4DKEWS;
 				INFOPLIST_FILE = ParkinsonCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LEECOMBEST.ParkinsonCare;
@@ -745,7 +745,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HWKZ678QT4;
+				DEVELOPMENT_TEAM = 32JN4DKEWS;
 				INFOPLIST_FILE = ParkinsonCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LEECOMBEST.ParkinsonCare;
