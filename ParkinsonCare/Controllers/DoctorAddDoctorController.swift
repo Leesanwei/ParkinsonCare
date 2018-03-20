@@ -8,11 +8,14 @@
 
 
 import UIKit
+import CoreData
 
-class DoctorAddDoctorController: UIViewController{
+class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+    
+    var specialities : [Speciality] = [Speciality]()
     
     
-    
+    @IBOutlet weak var specialityPicker: UIPickerView!
     @IBOutlet weak var phoneNumberText: UITextField!
     @IBOutlet weak var specialityText: UITextField!
     @IBOutlet weak var firstNameText: UITextField!
@@ -32,6 +35,15 @@ class DoctorAddDoctorController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        specialityPicker.dataSource = self
+        specialityPicker.delegate = self
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let context : NSManagedObjectContext = (appDelegate?.persistentContainer.viewContext)!
+        let request : NSFetchRequest<Speciality> = Speciality.fetchRequest()
+        do{
+            try self.specialities = context.fetch(request)
+        }catch let error as NSError{
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,4 +51,7 @@ class DoctorAddDoctorController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {return 1}
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {return specialities.count}
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {return specialities[row].name}
 }
