@@ -41,7 +41,7 @@ class PersistenceFacade {
             return false
         }
         
-        return medicineDAO.add(nameMedicine : name, amountMedicine : amount, commentMedicine : comment)
+        return medicineDAO.add(name : name, amount : amount, comment : comment)
     }
     
     func addSport(nameSport : String) -> Bool {

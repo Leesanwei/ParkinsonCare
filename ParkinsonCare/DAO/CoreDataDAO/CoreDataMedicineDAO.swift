@@ -32,8 +32,8 @@ class CoreDataMedicineDAO : MedicineDAO{
         return true
     }
     
-    func add(nameMedicine: String, amountMedicine : Int, commentMedicine : String) -> Bool{
-        let medicine = Medicine(name : nameMedicine, amount : amountMedicine, comment : commentMedicine)
+    func add(name: String, amount : Int, comment : String) -> Bool{
+        let medicine = Medicine(context : self.context, name : name, amount : amount, comment : comment)
         do{
             try context.save()
             return true

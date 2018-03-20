@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import CoreData
 
 extension Medicine {
     
-    convenience init(name : String, amount : Int, comment : String){
-        self.init()
+    convenience init(context : NSManagedObjectContext, name : String, amount : Int, comment : String){
+        self.init(context : context)
         self.name = name
         self.amount = Int16(amount)
         self.comment = comment

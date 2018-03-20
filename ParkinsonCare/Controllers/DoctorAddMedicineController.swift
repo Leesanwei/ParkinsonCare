@@ -12,10 +12,14 @@ class DoctorAddMedicineController: UIViewController{
 
     @IBOutlet weak var addMedicineText: UITextField!
     
+    @IBOutlet weak var medicineAmount: UITextField!
+    
+    @IBOutlet weak var medicineComment: UITextField!
+    
     @IBAction func addMedicine(_ sender: Any) {
-        if addMedicineText.hasText && medicineAmount.hasText && medicineComment.hastext {
+        if addMedicineText.hasText && medicineAmount.hasText && medicineComment.hasText {
             let name : String = addMedicineText.text!
-            let amount : Int = Int(medicineAmount.text!)
+            let amount : Int = Int(medicineAmount.text!)!
             let comment : String = medicineComment.text!
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
             if persistanceFacade.addMedicine(name: name, amount: amount, comment: comment){
