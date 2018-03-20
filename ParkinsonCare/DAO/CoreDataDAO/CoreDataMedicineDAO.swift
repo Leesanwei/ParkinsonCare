@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 class CoreDataMedicineDAO : MedicineDAO{
-    
+
     private let context : NSManagedObjectContext
     
     init(context : NSManagedObjectContext){
@@ -32,13 +32,12 @@ class CoreDataMedicineDAO : MedicineDAO{
         return true
     }
     
-    func add(nameMedicine: String) -> Bool{
-        let medicine = Medicine(context : context)
-        medicine.name = nameMedicine
+    func add(nameMedicine: String, amountMedicine : Int, commentMedicine : String) -> Bool{
+        let medicine = Medicine(name : nameMedicine, amount : amountMedicine, comment : commentMedicine)
         do{
             try context.save()
             return true
-        }catch let error as NSError{
+        }catch {
             return false
         }
         

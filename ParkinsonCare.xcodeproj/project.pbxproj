@@ -41,6 +41,14 @@
 		96089801205ACB6A00211064 /* MedicinePrescriptionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96089800205ACB6A00211064 /* MedicinePrescriptionCollection.swift */; };
 		96089803205ACB8200211064 /* ActivityPrescriptionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96089802205ACB8200211064 /* ActivityPrescriptionCollection.swift */; };
 		96089805205ACD0300211064 /* NotificationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96089804205ACD0300211064 /* NotificationDAO.swift */; };
+		96270A3D206115F5001A6BDE /* MedicinePrescriptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A3C206115F5001A6BDE /* MedicinePrescriptionExtension.swift */; };
+		96270A3F20611956001A6BDE /* ActivityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A3E20611956001A6BDE /* ActivityExtension.swift */; };
+		96270A41206119B6001A6BDE /* ActivityPrescriptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A40206119B6001A6BDE /* ActivityPrescriptionExtension.swift */; };
+		96270A4320611AEF001A6BDE /* ReportingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4220611AEF001A6BDE /* ReportingExtension.swift */; };
+		96270A4520611B76001A6BDE /* MeetingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4420611B76001A6BDE /* MeetingExtension.swift */; };
+		96270A4720611D02001A6BDE /* EvaluationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4620611D02001A6BDE /* EvaluationCollection.swift */; };
+		96270A492061203B001A6BDE /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A482061203B001A6BDE /* NotificationExtension.swift */; };
+		96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4A206123DA001A6BDE /* EventExtension.swift */; };
 		96DF3005205D6E0100FD5B57 /* PatientMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3004205D6E0100FD5B57 /* PatientMeetingController.swift */; };
 		96DF3007205D6F1B00FD5B57 /* MeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3006205D6F1B00FD5B57 /* MeetingTableViewCell.swift */; };
 		96DF3009205D73E900FD5B57 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3008205D73E900FD5B57 /* DateExtension.swift */; };
@@ -117,6 +125,14 @@
 		96089800205ACB6A00211064 /* MedicinePrescriptionCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinePrescriptionCollection.swift; sourceTree = "<group>"; };
 		96089802205ACB8200211064 /* ActivityPrescriptionCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPrescriptionCollection.swift; sourceTree = "<group>"; };
 		96089804205ACD0300211064 /* NotificationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDAO.swift; sourceTree = "<group>"; };
+		96270A3C206115F5001A6BDE /* MedicinePrescriptionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinePrescriptionExtension.swift; sourceTree = "<group>"; };
+		96270A3E20611956001A6BDE /* ActivityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityExtension.swift; sourceTree = "<group>"; };
+		96270A40206119B6001A6BDE /* ActivityPrescriptionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPrescriptionExtension.swift; sourceTree = "<group>"; };
+		96270A4220611AEF001A6BDE /* ReportingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingExtension.swift; sourceTree = "<group>"; };
+		96270A4420611B76001A6BDE /* MeetingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingExtension.swift; sourceTree = "<group>"; };
+		96270A4620611D02001A6BDE /* EvaluationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCollection.swift; sourceTree = "<group>"; };
+		96270A482061203B001A6BDE /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		96270A4A206123DA001A6BDE /* EventExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExtension.swift; sourceTree = "<group>"; };
 		96DF3004205D6E0100FD5B57 /* PatientMeetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMeetingController.swift; sourceTree = "<group>"; };
 		96DF3006205D6F1B00FD5B57 /* MeetingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTableViewCell.swift; sourceTree = "<group>"; };
 		96DF3008205D73E900FD5B57 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -200,6 +216,7 @@
 				960897C420591BCC00211064 /* MedicineCollection.swift */,
 				96089800205ACB6A00211064 /* MedicinePrescriptionCollection.swift */,
 				96089802205ACB8200211064 /* ActivityPrescriptionCollection.swift */,
+				96270A4620611D02001A6BDE /* EvaluationCollection.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -241,6 +258,13 @@
 				960897D5205936F400211064 /* MedicineExtension.swift */,
 				96EDA744205D3C7100ED2AB4 /* DoctorExtension.swift */,
 				96DF3008205D73E900FD5B57 /* DateExtension.swift */,
+				96270A3C206115F5001A6BDE /* MedicinePrescriptionExtension.swift */,
+				96270A3E20611956001A6BDE /* ActivityExtension.swift */,
+				96270A40206119B6001A6BDE /* ActivityPrescriptionExtension.swift */,
+				96270A4220611AEF001A6BDE /* ReportingExtension.swift */,
+				96270A4420611B76001A6BDE /* MeetingExtension.swift */,
+				96270A482061203B001A6BDE /* NotificationExtension.swift */,
+				96270A4A206123DA001A6BDE /* EventExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -499,9 +523,13 @@
 			files = (
 				843CA8EC20517B4F00DC7D3C /* roundButton.swift in Sources */,
 				960897C320591BC900211064 /* DoctorCollection.swift in Sources */,
+				96270A4320611AEF001A6BDE /* ReportingExtension.swift in Sources */,
 				A1768D702046AECD007A76D6 /* ViewController.swift in Sources */,
 				960897C920591BD400211064 /* NotificationCollection.swift in Sources */,
+				96270A3F20611956001A6BDE /* ActivityExtension.swift in Sources */,
+				96270A492061203B001A6BDE /* NotificationExtension.swift in Sources */,
 				96EDA741205D3B1C00ED2AB4 /* DoctorController.swift in Sources */,
+				96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */,
 				96EDA749205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift in Sources */,
 				960897EB205AC99B00211064 /* CoreDataActivityDAO.swift in Sources */,
 				960897F5205ACA4700211064 /* ActivityDAO.swift in Sources */,
@@ -510,9 +538,11 @@
 				960897D020591DA900211064 /* DoctorMedicineController.swift in Sources */,
 				960897EF205AC9C200211064 /* CoreDataActivityPrescriptionDAO.swift in Sources */,
 				96EDA73B205D319300ED2AB4 /* DoctorActivityController.swift in Sources */,
+				96270A4520611B76001A6BDE /* MeetingExtension.swift in Sources */,
 				960897D6205936F400211064 /* MedicineExtension.swift in Sources */,
 				960897E1205AA7C600211064 /* CoreDataMedicineDAO.swift in Sources */,
 				960897CD20591C6800211064 /* ActivityCollection.swift in Sources */,
+				96270A3D206115F5001A6BDE /* MedicinePrescriptionExtension.swift in Sources */,
 				96DF3005205D6E0100FD5B57 /* PatientMeetingController.swift in Sources */,
 				960897C520591BCC00211064 /* MedicineCollection.swift in Sources */,
 				960897CB20591BD700211064 /* ReportingCollection.swift in Sources */,
@@ -526,6 +556,7 @@
 				A1768D762046AECD007A76D6 /* ParkinsonCare.xcdatamodeld in Sources */,
 				96EDA74B205D663D00ED2AB4 /* ActivityPrescriptionTableViewCell.swift in Sources */,
 				96089801205ACB6A00211064 /* MedicinePrescriptionCollection.swift in Sources */,
+				96270A4720611D02001A6BDE /* EvaluationCollection.swift in Sources */,
 				960897ED205AC9AD00211064 /* CoreDataMedicinePrescriptionDAO.swift in Sources */,
 				960897E7205AC95800211064 /* CoreDataNotificationDAO.swift in Sources */,
 				96DF3007205D6F1B00FD5B57 /* MeetingTableViewCell.swift in Sources */,
@@ -540,6 +571,7 @@
 				845FB4D5205ED581009245EC /* DoctorAddMedicineController.swift in Sources */,
 				960897FF205ACAB800211064 /* MedicinePrescription.swift in Sources */,
 				96EDA747205D55CF00ED2AB4 /* PatientMedicinePrescriptionController.swift in Sources */,
+				96270A41206119B6001A6BDE /* ActivityPrescriptionExtension.swift in Sources */,
 				96089803205ACB8200211064 /* ActivityPrescriptionCollection.swift in Sources */,
 				960897DE205AA78C00211064 /* MedicineDAO.swift in Sources */,
 				96089805205ACD0300211064 /* NotificationDAO.swift in Sources */,

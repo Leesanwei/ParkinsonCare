@@ -24,17 +24,17 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.medicinePrescriptionTableView.dequeueReusableCell(withIdentifier: "medicinePrescriptionCell", for: indexPath) as! MedicinePrescriptionTableViewCell
         let prescription : MedicinePrescription = self.medicinePrescriptions.find(_byIndex : indexPath.row)
-        guard let medicine : Medicine = prescription.value(forKeyPath: "medicine.medicinePrescriptions") as! Medicine else{
-            
-        }
-        cell.medicineNameLabel.text = medicine.getFullDescription()
-        cell.prescriptionPeriodLabel.text = "Du \(String(describing: prescription.beginDate)) au \(prescription.endDate)"
+        
+        cell.medicineNameLabel.text = prescription.getMedicine().getFullDescription()
+        
+        cell.prescriptionPeriodLabel.text = "Du \(prescription.getBeginDate()) au \(prescription.getEndDate())"
         
         cell.prescriptionFrequencyLabel.text = ""
-        if prescription.morning { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Matin "}
-        if prescription.midday { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Midi "}
-        if prescription.evening { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Soir "}
-        cell.prescriptionFrequencyLabel.text =  cell.prescriptionFrequencyLabel.text! + "tous les \(prescription.frequency)"
+        if prescription.hasMorningTake() { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Matin "}
+        if prescription.hasMiddayTake() { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Midi "}
+        if prescription.hasEveningTake() { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Soir "}
+        
+        cell.prescriptionFrequencyLabel.text =  cell.prescriptionFrequencyLabel.text! + "tous les \(prescription.getFrequency())"
         
         return cell
     }

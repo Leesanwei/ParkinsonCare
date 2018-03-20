@@ -1024,6 +1024,9 @@
                             <constraint firstItem="aub-u4-Ic5" firstAttribute="centerX" secondItem="WyQ-4p-DNX" secondAttribute="centerX" id="L1y-AI-I52"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doctorsTableView" destination="NaO-XY-qBf" id="40L-AE-m1F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIE-ae-YrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gEa-J2-0AQ" userLabel="Exit" sceneMemberID="exit"/>

@@ -13,9 +13,12 @@ class DoctorAddMedicineController: UIViewController{
     @IBOutlet weak var addMedicineText: UITextField!
     
     @IBAction func addMedicine(_ sender: Any) {
-        if addMedicineText.hasText{
+        if addMedicineText.hasText && medicineAmount.hasText && medicineComment.hastext {
+            let name : String = addMedicineText.text!
+            let amount : Int = Int(medicineAmount.text!)
+            let comment : String = medicineComment.text!
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-            if persistanceFacade.addMedicine(nameMedicine: self.addMedicineText.text!){
+            if persistanceFacade.addMedicine(name: name, amount: amount, comment: comment){
                 self.addMedicineText.text = ""
               self.navigationController?.popViewController(animated: true)
             }

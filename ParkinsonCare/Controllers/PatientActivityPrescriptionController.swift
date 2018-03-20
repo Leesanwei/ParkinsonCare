@@ -25,10 +25,10 @@ class PatientActivityPrescriptionController: UIViewController, UITableViewDataSo
         let cell = self.activityPrescriptionTableView.dequeueReusableCell(withIdentifier: "activityPrescriptionCell", for: indexPath) as! ActivityPrescriptionTableViewCell
         let prescription : ActivityPrescription = self.activityPrescriptions.find(_byIndex : indexPath.row)
        
-        guard let  activity : Activity = prescription.value(forKeyPath: "activity.activityPrescriptions") as! Activity else{}
+        let  activity : Activity = prescription.getActivity()
         
         cell.activityNameLabel.text = activity.name
-        cell.activityDescriptionLabel.text = (prescription.duration as! String) + " min tous les " + (prescription.frequency as! String)
+        cell.activityDescriptionLabel.text = "\(prescription.getDuration()) min tous les \(prescription.getFrequency())"
         
         return cell
     }

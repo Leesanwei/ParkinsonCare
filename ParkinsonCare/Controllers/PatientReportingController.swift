@@ -25,10 +25,10 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         let cell = self.reportingTableView.dequeueReusableCell(withIdentifier: "reportingCell", for: indexPath) as! ReportingTableViewCell
         let reporting : Reporting = self.reportings.find(_byIndex : indexPath.row)
         
-        guard let event : Event = (reporting.value(forKeyPath: "event.reportings") as! Event) else{}
         
-        cell.reportingDescriptionLabel.text = " \(String(describing: event.name)) le \((reporting.date as! NSDate).toString(dateFormat: "dd-MM"))"
+        let event : Event = reporting.getEvent()
         
+        cell.reportingDescriptionLabel.text = " \(event.getName()) le \(reporting.getDate().toString(dateFormat: "dd-MM"))"
     
         return cell
     }

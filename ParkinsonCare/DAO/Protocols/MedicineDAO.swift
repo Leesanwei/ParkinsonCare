@@ -11,6 +11,6 @@ import Foundation
 protocol MedicineDAO {
     
     func findAll() throws -> MedicineCollection
-    func add(nameMedicine: String) -> Bool
+    func add(nameMedicine: String, amountMedicine : Int, commentMedicine : String) -> Bool
     func remove(med: Medicine) -> Bool
 }

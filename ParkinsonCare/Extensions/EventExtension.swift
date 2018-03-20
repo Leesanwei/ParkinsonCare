@@ -1,5 +1,5 @@
 //
-//  ActivityExtension.swift
+//  EventExtension.swift
 //  ParkinsonCare
 //
 //  Created by Loic Combis on 20/03/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Activity {
+extension Event {
     
     convenience init(name : String){
         self.init()

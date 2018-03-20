@@ -23,7 +23,7 @@ class DoctorActivityController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.activityTableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath) as! ActivityTableViewCell
-        cell.activityNameLabel.text = self.activities.find(_byIndex : indexPath.row).name
+        cell.activityNameLabel.text = self.activities.find(_byIndex : indexPath.row).getName()
         return cell
     }
     

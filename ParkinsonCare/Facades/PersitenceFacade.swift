@@ -36,14 +36,12 @@ class PersistenceFacade {
         }
     }
     
-    func addMedicine(nameMedicine : String) -> Bool {
+    func addMedicine(name : String, amount : Int, comment : String) -> Bool {
         guard let medicineDAO : MedicineDAO = daoFactory.getMedicineDAO() else{
             return false
         }
         
-           return medicineDAO.add(nameMedicine : nameMedicine)
-        
-        
+        return medicineDAO.add(nameMedicine : name, amountMedicine : amount, commentMedicine : comment)
     }
     
     func addSport(nameSport : String) -> Bool {
