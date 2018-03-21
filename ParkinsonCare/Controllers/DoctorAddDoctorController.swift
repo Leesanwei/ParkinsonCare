@@ -47,7 +47,9 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
            
         }catch let error as NSError{
         }
-         print(specialities[1].name)
+        self.specialities = self.specialities.sorted {
+            $0.name! < $1.name!
+        }
     }
     
     override func didReceiveMemoryWarning() {

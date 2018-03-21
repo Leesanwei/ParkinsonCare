@@ -52,6 +52,19 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        guard let docs : DoctorCollection = persistanceFacade.getAllDoctors()  else {
+            self.alertError(errorMsg : "Cannot reach the doctors", userInfo : "Unknown Error")
+            return
+        }
+        self.doctors = docs
+        self.doctorsTableView.reloadData()
+    }
+    
     func alertError(errorMsg msg : String, userInfo info : String){
         
     }
