@@ -71,6 +71,7 @@
 		A1768D7B2046AECD007A76D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1768D792046AECD007A76D6 /* LaunchScreen.storyboard */; };
 		A1768D862046AECD007A76D6 /* ParkinsonCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D852046AECD007A76D6 /* ParkinsonCareTests.swift */; };
 		A1768D912046AECD007A76D6 /* ParkinsonCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D902046AECD007A76D6 /* ParkinsonCareUITests.swift */; };
+		A183CD242062C8A10033698E /* PatientAddSportcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183CD232062C8A10033698E /* PatientAddSportcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,7 @@
 		A1768D8C2046AECD007A76D6 /* ParkinsonCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkinsonCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1768D902046AECD007A76D6 /* ParkinsonCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkinsonCareUITests.swift; sourceTree = "<group>"; };
 		A1768D922046AECD007A76D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A183CD232062C8A10033698E /* PatientAddSportcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientAddSportcontroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */,
 				8464E8E220601D9900FA8769 /* DoctorAddSportController.swift */,
 				84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */,
+				A183CD232062C8A10033698E /* PatientAddSportcontroller.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				96270A492061203B001A6BDE /* NotificationExtension.swift in Sources */,
 				96EDA741205D3B1C00ED2AB4 /* DoctorController.swift in Sources */,
 				96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */,
+				A183CD242062C8A10033698E /* PatientAddSportcontroller.swift in Sources */,
 				96EDA749205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift in Sources */,
 				960897EB205AC99B00211064 /* CoreDataActivityDAO.swift in Sources */,
 				960897F5205ACA4700211064 /* ActivityDAO.swift in Sources */,

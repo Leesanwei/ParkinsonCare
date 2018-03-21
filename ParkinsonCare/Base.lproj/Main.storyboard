@@ -803,7 +803,7 @@
         <!--Ajouter sport-->
         <scene sceneID="ybx-1h-Ta6">
             <objects>
-                <viewController title="Ajouter sport" id="i6g-qp-yAk" sceneMemberID="viewController">
+                <viewController title="Ajouter sport" id="i6g-qp-yAk" customClass="PatientAddSportController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="90D-we-YIf"/>
                         <viewControllerLayoutGuide type="bottom" id="M5F-3Z-Fxg"/>
@@ -840,6 +840,10 @@
                                     <constraint firstAttribute="height" constant="51" id="aFe-B2-7vg"/>
                                     <constraint firstAttribute="width" constant="320" id="g12-oV-zsz"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="i6g-qp-yAk" id="0Am-yn-R1w"/>
+                                    <outlet property="delegate" destination="i6g-qp-yAk" id="JBi-3h-YDe"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fréquence :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uA-vB-Ipr">
                                 <rect key="frame" x="142" y="363" width="91" height="21"/>
@@ -865,10 +869,17 @@
                                     <constraint firstAttribute="height" constant="51" id="lFY-kM-B8q"/>
                                     <constraint firstAttribute="width" constant="124" id="vnx-WR-4Cd"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="i6g-qp-yAk" id="amX-zF-rKf"/>
+                                    <outlet property="delegate" destination="i6g-qp-yAk" id="QcE-W8-6uf"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6z-d2-zZi">
                                 <rect key="frame" x="164" y="516" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addSport:" destination="i6g-qp-yAk" eventType="touchUpInside" id="U5q-y3-88M"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -894,6 +905,12 @@
                             <constraint firstItem="ZiO-rj-fIg" firstAttribute="top" secondItem="k2U-Ur-TM1" secondAttribute="bottom" constant="122" id="vrq-yQ-k6W"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DurationPicker" destination="k2U-Ur-TM1" id="bG5-lC-zgz"/>
+                        <outlet property="addSport" destination="l6z-d2-zZi" id="K0K-yo-ZvR"/>
+                        <outlet property="frequencePicker" destination="Wce-jT-xti" id="W8I-Hm-vhd"/>
+                        <outlet property="sportName" destination="bIv-ec-H8j" id="1Ry-z9-DZk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAB-Cw-Kxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

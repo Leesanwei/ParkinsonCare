@@ -13,7 +13,6 @@ import CoreData
 class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     var specialities = [Speciality]()
-    var speciality : String = ""
     
     
     @IBOutlet weak var specialityPicker: UIPickerView!
@@ -26,8 +25,9 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
         if lastNameText.hasText && firstNameText.hasText && phoneNumberText.hasText && location.hasText{
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
             let row = specialityPicker.selectedRow(inComponent: 0)
-            self.speciality = specialities[row].name!
-            if persistanceFacade.addDoctor(firstName: self.firstNameText.text!,lastName : self.lastNameText.text!,specialityName : self.speciality,phoneNumber: self.phoneNumberText.text!, location : self.location.text!){
+            let speciality = specialities[row]
+            if persistanceFacade.addDoctor(firstName: self.firstNameText.text!,lastName : self.lastNameText.text!,speciality : speciality,phoneNumber: self.phoneNumberText.text!, location : self.location.text!){
+                
                 self.navigationController?.popViewController(animated: true)
             }
         }
