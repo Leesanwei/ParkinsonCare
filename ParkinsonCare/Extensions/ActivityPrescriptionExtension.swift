@@ -10,6 +10,7 @@ import Foundation
 
 extension ActivityPrescription{
     
+    // MARK: - Initializater
     convenience init(activity : Activity, duration : Int, frequency : Int){
         self.init()
         self.activity = activity
@@ -17,15 +18,23 @@ extension ActivityPrescription{
         self.frequency = Int16(frequency)
     }
     
-    func getActivity() -> Activity {
-        return self.activity!
+    // MARK: - Properties -
+    
+    var e_activity : Activity {
+        get{
+            return self.activity!
+        }
     }
     
-    func getDuration() -> Int {
-        return Int(self.duration)
+    var e_duration : Int {
+        get{
+            return Int(self.duration)
+        }
     }
     
-    func getFrequency() -> Int {
-        return Int(self.frequency)
+    var e_frequency : Int {
+        get{
+            return Int(self.frequency)
+        }
     }
 }

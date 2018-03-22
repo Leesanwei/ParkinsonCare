@@ -13,6 +13,7 @@ class EvaluationCollection{
     // MARK: - Properties
     private var evaluations : [Evaluation] = [Evaluation]()
     
+
     // MARK: - Methods
     
     func setEvaluations(evaluations : [Evaluation]){
@@ -20,7 +21,7 @@ class EvaluationCollection{
     }
     
     func castToNSSet() -> NSSet{
-        var set : NSSet = NSSet()
+        let set : NSSet = NSSet()
         for eval in self.evaluations {
             set.adding(eval)
         }

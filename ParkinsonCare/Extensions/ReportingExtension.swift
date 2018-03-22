@@ -10,17 +10,24 @@ import Foundation
 
 extension Reporting {
     
+    // MARK: - Initializater
     convenience init(event : Event, date : NSDate){
         self.init()
         self.event = event
         self.date = date
     }
     
-    func getEvent() -> Event {
-        return self.event!
+    // MARK: - Properties -
+    
+    var e_event : Event {
+        get{
+            return self.event!
+        }
     }
     
-    func getDate() -> NSDate {
-        return self.date!
+    var e_date : NSDate {
+        get{
+            return self.date!
+        }
     }
 }

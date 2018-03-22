@@ -10,6 +10,7 @@ import Foundation
 
 extension Meeting {
     
+    // MARK: - Initializater
     convenience init(doctor : Doctor, date : NSDate, delay : Int, evaluations : EvaluationCollection){
         self.init()
         self.doctor = doctor
@@ -18,21 +19,29 @@ extension Meeting {
         self.evaluations = evaluations.castToNSSet()
     }
     
-    func getDoctor() -> Doctor {
+    // MARK: - Properties -
+    
+    var e_doctor : Doctor {
         return self.doctor!
     }
     
-    func getDate() -> NSDate {
-        return self.date!
+    var e_date : NSDate {
+        get{
+            return self.date!
+        }
     }
     
-    func getDelay() -> Int {
-        return Int(self.delay)
+    var e_delay : Int {
+        get{
+            return Int(self.delay)
+        }
     }
     
-    func getEvaluations() -> EvaluationCollection {
-        var evals : EvaluationCollection = EvaluationCollection()
-        evals.setEvaluations(evaluations: Array(self.evaluations!) as! [Evaluation])
-        return evals
+    var e_evaluations : EvaluationCollection {
+        get{
+            let evals : EvaluationCollection = EvaluationCollection()
+            evals.setEvaluations(evaluations: Array(self.evaluations!) as! [Evaluation])
+            return evals
+        }
     }
 }

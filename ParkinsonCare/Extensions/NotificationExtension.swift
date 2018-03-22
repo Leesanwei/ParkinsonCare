@@ -10,19 +10,27 @@ import Foundation
 
 extension Notification {
     
+    // MARK: - Initializater
     convenience init(type : TypeNotification, date : NSDate){
         self.init()
         self.typeNotification = type
         self.answered = false
     }
     
-    func getTypeNotification() -> TypeNotification {
-        return self.typeNotification!
+    // MARK: - Properties -
+    var e_typeNotification : TypeNotification {
+        get{
+            return self.typeNotification!
+        }
     }
     
-    func hasBeenAnswered() -> Bool {
-        return self.answered
+    var hasBeenAnswered : Bool {
+        get{
+            return self.answered
+        }
     }
+    
+    // MARK: - Methods
     
     func makeAsAnswered() -> Void{
         self.answered = true

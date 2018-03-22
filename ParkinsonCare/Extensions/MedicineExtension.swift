@@ -11,6 +11,7 @@ import CoreData
 
 extension Medicine {
     
+    // MARK: - Initializater
     convenience init(context : NSManagedObjectContext, name : String, amount : Int, comment : String){
         self.init(context : context)
         self.name = name
@@ -18,15 +19,23 @@ extension Medicine {
         self.comment = comment
     }
     
-    func getFullDescription() -> String{
-        return "\(self.getName()) \(self.getAmount())"
+    // MARK: - Properties -
+    
+    var fullDescription : String {
+        get{
+            return "\(self.e_name) \(self.e_amount)"
+        }
     }
     
-    func getName() -> String {
-        return self.name!
+    var e_name : String {
+        get{
+            return self.name!
+        }
     }
     
-    func getAmount() -> Int {
-        return Int(self.amount)
+    var e_amount : Int {
+        get{
+            return Int(self.amount)
+        }
     }
 }

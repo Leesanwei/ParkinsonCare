@@ -10,12 +10,16 @@ import Foundation
 
 extension Event {
     
+    // MARK: - Initializater
     convenience init(name : String){
         self.init()
         self.name = name
     }
     
-    func getName() -> String {
-        return self.name!
+    // MARK: - Properties -
+    var e_name : String {
+        get{
+            return self.name!
+        }
     }
 }

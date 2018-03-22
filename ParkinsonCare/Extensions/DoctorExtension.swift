@@ -11,6 +11,7 @@ import CoreData
 
 extension Doctor{
     
+    // MARK: - Initializater
     convenience init(context : NSManagedObjectContext, firstName : String, lastName : String, location : String, phoneNumber : String, speciality : Speciality ){
         self.init(context : context)
         self.firstName = firstName
@@ -20,21 +21,29 @@ extension Doctor{
         self.speciality = speciality
     }
     
-    func getContact() -> String {
-        return "\(String(describing: self.phoneNumber)) \(String(describing: self.location))"
+    var e_contact : String {
+        get {
+            return "\(String(describing: self.phoneNumber)) \(String(describing: self.location))"
+        }
     }
     
-    func getFullName() -> String {
-        return "\(String(describing: self.firstName)) \(String(describing: self.lastName))"
+    var e_fullName : String {
+        get {
+            return "\(self.firstName!) \(self.lastName!)"
+        }
     }
     
-    func getSpeciality() -> Speciality {
-        return self.speciality!
+    var e_speciality : Speciality {
+        get{
+            return self.speciality!
+        }
     }
     
     
-    func getLocation() -> String {
-        return self.location!
+    var e_location : String {
+        get{
+            return self.location!
+        }
     }
     
 }
