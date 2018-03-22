@@ -11,7 +11,7 @@ import Foundation
 extension MedicinePrescription {
     
     // MARK: - Initializater
-    convenience init(medicine : Medicine, morning : Bool, midday : Bool, evening : Bool, frequency : Int, beginDate : Date, endDate : Date){
+    convenience init(medicine : Medicine, morning : Bool, midday : Bool, evening : Bool, frequency : Int, beginDate : NSDate, endDate : NSDate){
         self.init()
         self.medicine = medicine
         self.morning = morning
@@ -42,13 +42,13 @@ extension MedicinePrescription {
         }
     }
     
-    var e_beginDate : Date {
+    var e_beginDate : NSDate {
         get{
             return self.beginDate!
         }
     }
 
-    var e_endDate : Date {
+    var e_endDate : NSDate {
         get{
             return self.endDate!
         }

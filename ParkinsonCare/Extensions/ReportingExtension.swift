@@ -11,7 +11,7 @@ import Foundation
 extension Reporting {
     
     // MARK: - Initializater
-    convenience init(event : Event, date : Date){
+    convenience init(event : Event, date : NSDate){
         self.init()
         self.event = event
         self.date = date
@@ -25,7 +25,7 @@ extension Reporting {
         }
     }
     
-    var e_date : Date {
+    var e_date : NSDate {
         get{
             return self.date!
         }
