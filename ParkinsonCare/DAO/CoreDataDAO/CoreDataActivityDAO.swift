@@ -20,7 +20,7 @@ class CoreDataActivityDAO : ActivityDAO{
     func findAll() throws -> ActivityCollection{
         let request : NSFetchRequest<Activity> = Activity.fetchRequest()
         do{
-            var activities = ActivityCollection()
+            let activities = ActivityCollection()
             try activities.setActivities(activities: self.context.fetch(request))
             return activities
         }catch let error as NSError{
@@ -44,7 +44,7 @@ class CoreDataActivityDAO : ActivityDAO{
         do{
             try context.save()
             return true
-        }catch let error as NSError{
+        }catch{
             return false
         }
         

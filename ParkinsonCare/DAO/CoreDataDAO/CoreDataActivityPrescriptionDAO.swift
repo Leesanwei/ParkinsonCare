@@ -20,7 +20,7 @@ class CoreDataActivityPrescriptionDAO : ActivityPrescriptionDAO{
     func findAll() throws -> ActivityPrescriptionCollection{
         let request : NSFetchRequest<ActivityPrescription> = ActivityPrescription.fetchRequest()
         do{
-            var activityPrescriptions = ActivityPrescriptionCollection()
+            let activityPrescriptions = ActivityPrescriptionCollection()
             try activityPrescriptions.setActivityPrescriptions(activityPrescriptions: self.context.fetch(request))
             return activityPrescriptions
         }catch let error as NSError{

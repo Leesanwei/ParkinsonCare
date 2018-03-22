@@ -20,7 +20,7 @@ class CoreDataMeetingDAO : MeetingDAO{
     func findAll() throws -> MeetingCollection{
         let request : NSFetchRequest<Meeting> = Meeting.fetchRequest()
         do{
-            var meetings = MeetingCollection()
+            let meetings = MeetingCollection()
             try meetings.setMeetings(meetings: self.context.fetch(request))
             return meetings
         }catch let error as NSError{

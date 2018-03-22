@@ -20,7 +20,7 @@ class CoreDataReportingDAO : ReportingDAO{
     func findAll() throws -> ReportingCollection{
         let request : NSFetchRequest<Reporting> = Reporting.fetchRequest()
         do{
-            var reportings = ReportingCollection()
+            let reportings = ReportingCollection()
             try reportings.setReportings(reportings: self.context.fetch(request))
             return reportings
         }catch let error as NSError{
