@@ -54,12 +54,12 @@ class PersistenceFacade {
         
     }
     
-    func addDoctor(firstName: String, lastName : String, specialityName: String, phoneNumber: String, location: String) -> Bool {
+    func addDoctor(firstName: String, lastName : String, speciality : Speciality, phoneNumber: String, location: String) -> Bool {
         guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
             return false
         }
         
-        return doctorDAO.add(firstName : firstName, lastName : lastName, specialityName : specialityName, phoneNumber : phoneNumber, location : location)
+        return doctorDAO.add(firstName : firstName, lastName : lastName, speciality : speciality, phoneNumber : phoneNumber, location : location)
     }
     
     func getAllMedicinePrescriptions() -> MedicinePrescriptionCollection?{

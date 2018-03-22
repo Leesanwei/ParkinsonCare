@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        preloadData()
         
         // *******************************************************************
         // *******************************************************************
@@ -25,24 +24,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let context = delegate.persistentContainer.viewContext
         
-        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Doctor")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        let deleteFetchDoctor = NSFetchRequest<NSFetchRequestResult>(entityName: "Doctor")
+        let deleteRequestDoctor = NSBatchDeleteRequest(fetchRequest: deleteFetchDoctor)
+        let deleteFetchSpeciality = NSFetchRequest<NSFetchRequestResult>(entityName: "Speciality")
+        let deleteRequestSpeciality = NSBatchDeleteRequest(fetchRequest: deleteFetchSpeciality)
         
         do {
             // Uncomment line below to execute the request.
-            //try context.execute(deleteRequest)
+            try context.execute(deleteRequestDoctor)
+            try context.execute(deleteRequestSpeciality)
             //try context.save()
         } catch {
             print ("There was an error")
         }
         // *****************************************************************
         // *****************************************************************
-        
+        preloadData()
         return true
     }
     
     func preloadData(){
-        let specialities : [String] = ["Kinésithérapeute","Orthophoniste","Infirmier","Psychologue Clinicien","Neuropsychologue","Ergothérapeute","Psychomotricien","Pédicure-podologue","Diététicien(ne)",            "Neurologue","Medecin Generaliste","Psychiatre","Neurochirurgien","Médecin de structure antidouleur","Gériatre","Médecin spécialiste en médecine","Orthoptiste","Physique","Gastro-entérologue",        "Urologue, Gynécologue, Sexologue","Ophtalmologiste","ORL-phoniatre","Rhumatologue","Chirurgien","Orthopédique","Pneumologue","Cardiologue","Médecin du travail",        "Chirurgien-Dentiste","Assistant de service social","Personnels de transport sanitaire","Personnels de soins infirmiers à domicile","Personnels des services d’aide à domicile","Personnels des services d’aide à la personne","Personnels de coordination gérontologique","Maisons départementales des personnes handicapées", "Educateur médico-sportif","Associations de patients"]
+        let specialities : [String] = ["Kinésithérapeute","Orthophoniste","Infirmier","Psychologue Clinicien","Neuropsychologue","Ergothérapeute","Psychomotricien","Pédicure-podologue","Diététicien(ne)","Neurologue","Medecin Generaliste","Psychiatre","Neurochirurgien","Médecin de structure antidouleur","Gériatre","Médecin spécialiste en médecine","Orthoptiste","Physique","Gastro-entérologue","Urologue, Gynécologue, Sexologue","Ophtalmologiste","ORL-phoniatre","Rhumatologue","Chirurgien","Orthopédique","Pneumologue","Cardiologue","Médecin du travail","Chirurgien-Dentiste","Assistant de service social","Personnels de transport sanitaire","Personnels de soins infirmiers à domicile","Personnels des services d’aide à domicile","Personnels des services d’aide à la personne","Personnels de coordination gérontologique","Maisons départementales des personnes handicapées", "Educateur médico-sportif","Associations de patients"]
         
         let context: NSManagedObjectContext =  self.persistentContainer.viewContext
         

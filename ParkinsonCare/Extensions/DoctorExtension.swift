@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import CoreData
 
 extension Doctor{
     
-    convenience init(firstName : String, lastName : String, location : String, phoneNumber : String, speciality : Speciality ){
-        self.init()
+    convenience init(context : NSManagedObjectContext, firstName : String, lastName : String, location : String, phoneNumber : String, speciality : Speciality ){
+        self.init(context : context)
         self.firstName = firstName
         self.lastName = lastName
         self.location = location
@@ -30,6 +31,7 @@ extension Doctor{
     func getSpeciality() -> Speciality {
         return self.speciality!
     }
+    
     
     func getLocation() -> String {
         return self.location!

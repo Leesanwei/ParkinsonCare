@@ -32,15 +32,11 @@ class CoreDataDoctorDAO : DoctorDAO{
         return true
     }
     
-    func add(firstName : String, lastName : String, specialityName : String, phoneNumber : String, location: String) -> Bool {
+    
+    func add(firstName : String, lastName : String, speciality : Speciality, phoneNumber : String, location: String) -> Bool {
         
-        let doctor = Doctor(context : context)
-        let speciality = Speciality(context : context)
-        doctor.firstName = firstName
-        doctor.lastName = lastName
-        doctor.phoneNumber = phoneNumber
-        doctor.location = location
-        speciality.name = specialityName
+         let doctor = Doctor(context : self.context, firstName : firstName, lastName : lastName, location : location, phoneNumber : phoneNumber, speciality : speciality)
+
         
         do{
             try context.save()
