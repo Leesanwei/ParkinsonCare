@@ -12,5 +12,6 @@ protocol ActivityDAO {
     
     func findAll() throws -> ActivityCollection
      func add(nameSport: String) -> Bool
+    func add(nameSport: String, duration : Int, frequence : Int) -> Bool
     func remove(act : Activity) -> Bool
 }

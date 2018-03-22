@@ -35,4 +35,9 @@ class DoctorCollection{
         return self.doctors[index]
     }
 
+    func sort(){
+        self.doctors = self.doctors.sorted{
+            $0.firstName! < $1.firstName!
+        }
+    }
 }

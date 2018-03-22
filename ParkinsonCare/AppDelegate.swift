@@ -17,9 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-    
-        preloadData()
+   
         return true
+    }
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        // Si l'application n'a jamais été installé alors on remplis la BD
+        //UserDefaults.standard.set(false, forKey: "wasLaunched")
+        if(!UserDefaults.standard.bool(forKey: "wasLaunched")){
+            preloadData()
+            UserDefaults.standard.set(true, forKey: "wasLaunched")
+        }
+          return true
     }
     
     func preloadData(){
@@ -32,14 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             spec.name = speciality
             do{
                 try context.save()
-                print("=======================")
-                print("FILES COPIED")
-                print("=======================")
+               
                 
             }catch {
-                print("=======================")
-                print("ERROR IN COPY OPERATION")
-                print("=======================")
+       
             }
 
             

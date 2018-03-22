@@ -8,34 +8,32 @@
 
 import UIKit
 
-class PatientAddSportController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class PatientAddSportController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     
-    let days = [1,2,3,4,5,6,7]
     
     
     
     @IBOutlet weak var sportName: UITextField!
    
     
+    
     @IBOutlet weak var DurationPicker: UIPickerView!
     @IBOutlet weak var frequencePicker: UIPickerView!
     
     @IBAction func addSport(_ sender: Any) {
-    }
-    /*
-    @IBAction func addMedicine(_ sender: Any) {
-       if addMedicineText.hasText && medicineAmount.hasText && medicineComment.hasText {
-              let amount : Int = Int(medicineAmount.text!)!
-            let comment : String = medicineComment.text!
+        if sportName.hasText{
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-            if persistanceFacade.addMedicine(name: name, amount: amount, comment: comment){
-                self.addMedicineText.text = ""
+            let duration = (DurationPicker.selectedRow(inComponent: 0)*60)+DurationPicker.selectedRow(inComponent: 1)
+      
+            let frequence = frequencePicker.selectedRow(inComponent: 0)+1
+            if persistanceFacade.addSport(nameSport: self.sportName.text!,duration: duration,frequence : frequence){
+                
                 self.navigationController?.popViewController(animated: true)
-            }
             
         }
     }
- */
+    }
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +64,7 @@ class PatientAddSportController: UIViewController, UIPickerViewDataSource, UIPic
                 return 0
             }}
         else{
-            return days.count
+            return 7
         }
         
         
@@ -79,14 +77,14 @@ class PatientAddSportController: UIViewController, UIPickerViewDataSource, UIPic
         if (pickerView.tag == 1){
             switch component {
             case 0:
-                return "\(row) Hour"
+                return "\(row) Heure"
             case 1:
                 return "\(row) Minute"
             default:
                 return ""
             }}
         else{
-            return "\(row)"
+            return "\(row+1)"
         }
         
     }

@@ -71,6 +71,7 @@
 		96EDA749205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDA748205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift */; };
 		96EDA74B205D663D00ED2AB4 /* ActivityPrescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDA74A205D663D00ED2AB4 /* ActivityPrescriptionTableViewCell.swift */; };
 		96EDA74D205D678700ED2AB4 /* PatientActivityPrescriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDA74C205D678700ED2AB4 /* PatientActivityPrescriptionController.swift */; };
+		A105FD4B2063EFBB0004A7A8 /* PatientAddMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A105FD4A2063EFBB0004A7A8 /* PatientAddMeetingController.swift */; };
 		A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6D2046AECD007A76D6 /* AppDelegate.swift */; };
 		A1768D702046AECD007A76D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D6F2046AECD007A76D6 /* ViewController.swift */; };
 		A1768D732046AECD007A76D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1768D712046AECD007A76D6 /* Main.storyboard */; };
@@ -164,6 +165,7 @@
 		96EDA748205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinePrescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		96EDA74A205D663D00ED2AB4 /* ActivityPrescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPrescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		96EDA74C205D678700ED2AB4 /* PatientActivityPrescriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientActivityPrescriptionController.swift; sourceTree = "<group>"; };
+		A105FD4A2063EFBB0004A7A8 /* PatientAddMeetingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientAddMeetingController.swift; sourceTree = "<group>"; };
 		A1768D6A2046AECD007A76D6 /* ParkinsonCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinsonCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1768D6D2046AECD007A76D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1768D6F2046AECD007A76D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				A183CD232062C8A10033698E /* PatientAddSportcontroller.swift */,
 				96B3679D2063D7A8008CBC91 /* DoctorSynthesisController.swift */,
 				96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */,
+				A105FD4A2063EFBB0004A7A8 /* PatientAddMeetingController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				96B367A02063D86D008CBC91 /* SynthesisCollection.swift in Sources */,
 				960897C720591BCF00211064 /* MeetingCollection.swift in Sources */,
 				960897E9205AC97200211064 /* CoreDataDoctorDAO.swift in Sources */,
+				A105FD4B2063EFBB0004A7A8 /* PatientAddMeetingController.swift in Sources */,
 				960897DB205AA73500211064 /* DAOFactory.swift in Sources */,
 				845FB4D5205ED581009245EC /* DoctorAddMedicineController.swift in Sources */,
 				960897FF205ACAB800211064 /* MedicinePrescription.swift in Sources */,
@@ -776,6 +780,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 32JN4DKEWS;
 				INFOPLIST_FILE = ParkinsonCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LEECOMBEST.ParkinsonCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -790,6 +795,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 32JN4DKEWS;
 				INFOPLIST_FILE = ParkinsonCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LEECOMBEST.ParkinsonCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
