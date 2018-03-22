@@ -29,16 +29,54 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Manage only deleting.
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            self.medicineTableView.beginUpdates()
+            
+            if self.delete(atIndex : indexPath.row) { // Try to delete in persistence
+                // Delete the row in the tableView
+                self.medicineTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }else{
+                self.alertError(errorMsg : "Impossible de supprimer l'élément.", userInfo : "Raison Inconnue")
+            }
+            self.medicineTableView.endUpdates()
+        }
+    }
+
+    
+    // MARK: - UITableViewDelegate methods -
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let persistenceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        // try to fetch all the medicines.
+        guard let meds : MedicineCollection = persistenceFacade.getAllMedicines()  else {
+            self.alertError(errorMsg : "Cannot reach the medicines", userInfo : "Unknown Error")
+            return
+        }
+        self.medicines = meds
+        self.medicineTableView.reloadData()
+    }
+    
+    
     // MARK: - ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // get the persistence facade that hides the storage business logic.
-        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        let persistenceFacade : PersistenceFacade = PersistenceFacade.getInstance()
         
         
         // try to fetch all the medicines.
-        guard let meds : MedicineCollection = persistanceFacade.getAllMedicines()  else {
+        guard let meds : MedicineCollection = persistenceFacade.getAllMedicines()  else {
             self.alertError(errorMsg : "Cannot reach the medicines", userInfo : "Unknown Error")
             return
         }
@@ -49,20 +87,18 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-        
-        
-        // try to fetch all the medicines.
-        guard let meds : MedicineCollection = persistanceFacade.getAllMedicines()  else {
-            self.alertError(errorMsg : "Cannot reach the medicines", userInfo : "Unknown Error")
-            return
-        }
-        self.medicines = meds
-        self.medicineTableView.reloadData()
-    }
+    
     func alertError(errorMsg msg : String, userInfo info : String){
         
+    }
+    
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteMedicine(med : self.medicines.find(_byIndex: index)){
+            self.medicines.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
     }
 }

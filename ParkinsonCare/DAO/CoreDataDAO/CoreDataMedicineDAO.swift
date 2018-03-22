@@ -29,11 +29,17 @@ class CoreDataMedicineDAO : MedicineDAO{
     }
     
     func remove(med: Medicine) -> Bool {
-        return true
+        self.context.delete(med)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+        }
     }
     
-    func add(name: String, amount : Int, comment : String) -> Bool{
-        let medicine = Medicine(context : self.context, name : name, amount : amount, comment : comment)
+    func add(name: String, amount : String) -> Bool{
+        let medicine = Medicine(context : self.context, name : name, amount : amount)
         do{
             try context.save()
             return true

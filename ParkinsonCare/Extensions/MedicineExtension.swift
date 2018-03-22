@@ -12,11 +12,10 @@ import CoreData
 extension Medicine {
     
     // MARK: - Initializater
-    convenience init(context : NSManagedObjectContext, name : String, amount : Int, comment : String){
+    convenience init(context : NSManagedObjectContext, name : String, amount : String){
         self.init(context : context)
         self.name = name
-        self.amount = Int16(amount)
-        self.comment = comment
+        self.amount = amount
     }
     
     // MARK: - Properties -
@@ -33,9 +32,9 @@ extension Medicine {
         }
     }
     
-    var e_amount : Int {
+    var e_amount : String {
         get{
-            return Int(self.amount)
+            return self.amount!
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName="Activity" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="activityPrescriptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityPrescription" inverseName="activity" inverseEntity="ActivityPrescription" syncable="YES"/>
@@ -27,8 +27,7 @@
         <relationship name="reportings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reporting" inverseName="event" inverseEntity="Reporting" syncable="YES"/>
     </entity>
     <entity name="Medicine" representedClassName="Medicine" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="medicinePrescriptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MedicinePrescription" inverseName="medicine" inverseEntity="MedicinePrescription" syncable="YES"/>
     </entity>
@@ -73,7 +72,7 @@
         <element name="Doctor" positionX="-11" positionY="405" width="128" height="133"/>
         <element name="Evaluation" positionX="153" positionY="228" width="128" height="88"/>
         <element name="Event" positionX="151" positionY="-153" width="128" height="73"/>
-        <element name="Medicine" positionX="-198" positionY="-54" width="128" height="103"/>
+        <element name="Medicine" positionX="-198" positionY="-54" width="128" height="90"/>
         <element name="MedicinePrescription" positionX="-216" positionY="108" width="128" height="148"/>
         <element name="Meeting" positionX="169" positionY="362" width="128" height="103"/>
         <element name="Notification" positionX="-20" positionY="81" width="128" height="73"/>

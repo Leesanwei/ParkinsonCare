@@ -36,30 +36,19 @@ class PersistenceFacade {
         }
     }
     
-    func addMedicine(name : String, amount : Int, comment : String) -> Bool {
+    func deleteMedicine(med : Medicine) -> Bool {
+        guard let medicineDAO : MedicineDAO = daoFactory.getMedicineDAO() else{
+            return false
+        }
+        return medicineDAO.remove(med : med)
+    }
+    
+    func addMedicine(name : String, amount : String) -> Bool {
         guard let medicineDAO : MedicineDAO = daoFactory.getMedicineDAO() else{
             return false
         }
         
-        return medicineDAO.add(name : name, amount : amount, comment : comment)
-    }
-    
-    func addSport(nameSport : String) -> Bool {
-        guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
-            return false
-        }
-        
-        return activityDAO.add(nameSport : nameSport)
-        
-        
-    }
-    
-    func addDoctor(firstName: String, lastName : String, speciality : Speciality, phoneNumber: String, location: String) -> Bool {
-        guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
-            return false
-        }
-        
-        return doctorDAO.add(firstName : firstName, lastName : lastName, speciality : speciality, phoneNumber : phoneNumber, location : location)
+        return medicineDAO.add(name : name, amount : amount)
     }
     
     func getAllMedicinePrescriptions() -> MedicinePrescriptionCollection?{
@@ -114,6 +103,14 @@ class PersistenceFacade {
         }
     }
     
+    func addDoctor(firstName: String, lastName : String, speciality : Speciality, phoneNumber: String, location: String) -> Bool {
+        guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
+            return false
+        }
+        
+        return doctorDAO.add(firstName : firstName, lastName : lastName, speciality : speciality, phoneNumber : phoneNumber, location : location)
+    }
+    
     func getAllSpecialities() -> [Speciality]?{
         //Try to get the doctorDAO
         guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
@@ -121,6 +118,16 @@ class PersistenceFacade {
         }
         return  doctorDAO.findAllSpecialities()
        
+    }
+    
+    // MARK: - Sport
+    
+    func addSport(nameSport : String) -> Bool {
+        guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
+            return false
+        }
+        
+        return activityDAO.add(nameSport : nameSport)
     }
     
     // MARK: - Meeting

@@ -17,28 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // *******************************************************************
-        // *******************************************************************
-        // MARK: - DELETE ALL THE DATA OF THE SPECIFIED ENTITIY
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        let context = delegate.persistentContainer.viewContext
-        
-        let deleteFetchDoctor = NSFetchRequest<NSFetchRequestResult>(entityName: "Doctor")
-        let deleteRequestDoctor = NSBatchDeleteRequest(fetchRequest: deleteFetchDoctor)
-        let deleteFetchSpeciality = NSFetchRequest<NSFetchRequestResult>(entityName: "Speciality")
-        let deleteRequestSpeciality = NSBatchDeleteRequest(fetchRequest: deleteFetchSpeciality)
-        
-        do {
-            // Uncomment line below to execute the request.
-            try context.execute(deleteRequestDoctor)
-            try context.execute(deleteRequestSpeciality)
-            //try context.save()
-        } catch {
-            print ("There was an error")
-        }
-        // *****************************************************************
-        // *****************************************************************
+    
         preloadData()
         return true
     }
