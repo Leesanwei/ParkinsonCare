@@ -198,5 +198,27 @@ class PersistenceFacade {
         return reportingDAO.remove(rep : rep)
     }
     
+    // MARK: - Synthesis -
+    
+    func getAllSynthesis() -> SynthesisCollection?{
+        
+        guard let synthesisDAO : SynthesisDAO = daoFactory.getSynthesisDAO() else{
+            return nil
+        }
+        do{
+            return try synthesisDAO.findAll()
+        }catch {
+            return nil
+        }
+    }
+    
+    func deleteSynthesis(syn : Synthesis) -> Bool {
+        guard let synthesisDAO : SynthesisDAO = daoFactory.getSynthesisDAO() else{
+            return false
+        }
+        return synthesisDAO.remove(syn : syn)
+    }
+    
+    
     
 }

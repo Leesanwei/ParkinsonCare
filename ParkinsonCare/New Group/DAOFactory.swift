@@ -84,4 +84,11 @@ class DAOFactory {
         }
         return CoreDataNotificationDAO(context : context)
     }
+    
+    func getSynthesisDAO() -> SynthesisDAO?{
+        guard let context : NSManagedObjectContext = self.getContext() else{
+            return nil
+        }
+        return CoreDataSynthesisDAO(context : context)
+    }
 }

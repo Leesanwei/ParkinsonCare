@@ -20,7 +20,6 @@
 		960897D020591DA900211064 /* DoctorMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897CF20591DA900211064 /* DoctorMedicineController.swift */; };
 		960897D22059312F00211064 /* MedicineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897D12059312F00211064 /* MedicineTableViewCell.swift */; };
 		960897D6205936F400211064 /* MedicineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897D5205936F400211064 /* MedicineExtension.swift */; };
-		960897D9205940A800211064 /* surgeon.png in Resources */ = {isa = PBXBuildFile; fileRef = 960897D8205940A800211064 /* surgeon.png */; };
 		960897DB205AA73500211064 /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897DA205AA73500211064 /* DAOFactory.swift */; };
 		960897DE205AA78C00211064 /* MedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897DD205AA78C00211064 /* MedicineDAO.swift */; };
 		960897E1205AA7C600211064 /* CoreDataMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897E0205AA7C600211064 /* CoreDataMedicineDAO.swift */; };
@@ -49,6 +48,15 @@
 		96270A4720611D02001A6BDE /* EvaluationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4620611D02001A6BDE /* EvaluationCollection.swift */; };
 		96270A492061203B001A6BDE /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A482061203B001A6BDE /* NotificationExtension.swift */; };
 		96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4A206123DA001A6BDE /* EventExtension.swift */; };
+		96B3679E2063D7A8008CBC91 /* DoctorSynthesisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3679D2063D7A8008CBC91 /* DoctorSynthesisController.swift */; };
+		96B367A02063D86D008CBC91 /* SynthesisCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3679F2063D86D008CBC91 /* SynthesisCollection.swift */; };
+		96B367A22063D9A6008CBC91 /* SynthesisExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B367A12063D9A6008CBC91 /* SynthesisExtension.swift */; };
+		96B367A42063DCE3008CBC91 /* CoreDataSynthesisDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B367A32063DCE3008CBC91 /* CoreDataSynthesisDAO.swift */; };
+		96B367A62063DD8A008CBC91 /* SynthesisDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B367A52063DD8A008CBC91 /* SynthesisDAO.swift */; };
+		96B367A82063DE8D008CBC91 /* SynthesisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B367A72063DE8D008CBC91 /* SynthesisTableViewCell.swift */; };
+		96B367AD2063E366008CBC91 /* icons8-chevron-right-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B367AB2063E366008CBC91 /* icons8-chevron-right-filled-50.png */; };
+		96B367AE2063E366008CBC91 /* icons8-medical-doctor-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B367AC2063E366008CBC91 /* icons8-medical-doctor-50.png */; };
+		96B367B02063E8F6008CBC91 /* ShowSynthesisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */; };
 		96DF3005205D6E0100FD5B57 /* PatientMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3004205D6E0100FD5B57 /* PatientMeetingController.swift */; };
 		96DF3007205D6F1B00FD5B57 /* MeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3006205D6F1B00FD5B57 /* MeetingTableViewCell.swift */; };
 		96DF3009205D73E900FD5B57 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3008205D73E900FD5B57 /* DateExtension.swift */; };
@@ -105,7 +113,6 @@
 		960897CF20591DA900211064 /* DoctorMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMedicineController.swift; sourceTree = "<group>"; };
 		960897D12059312F00211064 /* MedicineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewCell.swift; sourceTree = "<group>"; };
 		960897D5205936F400211064 /* MedicineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineExtension.swift; sourceTree = "<group>"; };
-		960897D8205940A800211064 /* surgeon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surgeon.png; sourceTree = "<group>"; };
 		960897DA205AA73500211064 /* DAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
 		960897DD205AA78C00211064 /* MedicineDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDAO.swift; sourceTree = "<group>"; };
 		960897E0205AA7C600211064 /* CoreDataMedicineDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMedicineDAO.swift; sourceTree = "<group>"; };
@@ -134,6 +141,15 @@
 		96270A4620611D02001A6BDE /* EvaluationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCollection.swift; sourceTree = "<group>"; };
 		96270A482061203B001A6BDE /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		96270A4A206123DA001A6BDE /* EventExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExtension.swift; sourceTree = "<group>"; };
+		96B3679D2063D7A8008CBC91 /* DoctorSynthesisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSynthesisController.swift; sourceTree = "<group>"; };
+		96B3679F2063D86D008CBC91 /* SynthesisCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesisCollection.swift; sourceTree = "<group>"; };
+		96B367A12063D9A6008CBC91 /* SynthesisExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesisExtension.swift; sourceTree = "<group>"; };
+		96B367A32063DCE3008CBC91 /* CoreDataSynthesisDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSynthesisDAO.swift; sourceTree = "<group>"; };
+		96B367A52063DD8A008CBC91 /* SynthesisDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesisDAO.swift; sourceTree = "<group>"; };
+		96B367A72063DE8D008CBC91 /* SynthesisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesisTableViewCell.swift; sourceTree = "<group>"; };
+		96B367AB2063E366008CBC91 /* icons8-chevron-right-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-chevron-right-filled-50.png"; sourceTree = "<group>"; };
+		96B367AC2063E366008CBC91 /* icons8-medical-doctor-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-medical-doctor-50.png"; sourceTree = "<group>"; };
+		96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSynthesisController.swift; sourceTree = "<group>"; };
 		96DF3004205D6E0100FD5B57 /* PatientMeetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMeetingController.swift; sourceTree = "<group>"; };
 		96DF3006205D6F1B00FD5B57 /* MeetingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTableViewCell.swift; sourceTree = "<group>"; };
 		96DF3008205D73E900FD5B57 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -219,6 +235,7 @@
 				96089800205ACB6A00211064 /* MedicinePrescriptionCollection.swift */,
 				96089802205ACB8200211064 /* ActivityPrescriptionCollection.swift */,
 				96270A4620611D02001A6BDE /* EvaluationCollection.swift */,
+				96B3679F2063D86D008CBC91 /* SynthesisCollection.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -237,6 +254,8 @@
 				8464E8E220601D9900FA8769 /* DoctorAddSportController.swift */,
 				84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */,
 				A183CD232062C8A10033698E /* PatientAddSportcontroller.swift */,
+				96B3679D2063D7A8008CBC91 /* DoctorSynthesisController.swift */,
+				96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +270,7 @@
 				96EDA74A205D663D00ED2AB4 /* ActivityPrescriptionTableViewCell.swift */,
 				96DF3006205D6F1B00FD5B57 /* MeetingTableViewCell.swift */,
 				96DF300A205D756F00FD5B57 /* ReportingTableViewCell.swift */,
+				96B367A72063DE8D008CBC91 /* SynthesisTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -268,6 +288,7 @@
 				96270A4420611B76001A6BDE /* MeetingExtension.swift */,
 				96270A482061203B001A6BDE /* NotificationExtension.swift */,
 				96270A4A206123DA001A6BDE /* EventExtension.swift */,
+				96B367A12063D9A6008CBC91 /* SynthesisExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,7 +296,8 @@
 		960897D72059405C00211064 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				960897D8205940A800211064 /* surgeon.png */,
+				96B367AB2063E366008CBC91 /* icons8-chevron-right-filled-50.png */,
+				96B367AC2063E366008CBC91 /* icons8-medical-doctor-50.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -300,6 +322,7 @@
 				960897EE205AC9C200211064 /* CoreDataActivityPrescriptionDAO.swift */,
 				960897F0205AC9D600211064 /* CoreDataMeetingDAO.swift */,
 				960897F2205AC9EC00211064 /* CoreDataReportingDAO.swift */,
+				96B367A32063DCE3008CBC91 /* CoreDataSynthesisDAO.swift */,
 			);
 			path = CoreDataDAO;
 			sourceTree = "<group>";
@@ -323,6 +346,7 @@
 				960897FC205ACAA900211064 /* ActivityPrescriptionDAO.swift */,
 				960897FE205ACAB800211064 /* MedicinePrescription.swift */,
 				96089804205ACD0300211064 /* NotificationDAO.swift */,
+				96B367A52063DD8A008CBC91 /* SynthesisDAO.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -503,8 +527,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1768D7B2046AECD007A76D6 /* LaunchScreen.storyboard in Resources */,
-				960897D9205940A800211064 /* surgeon.png in Resources */,
+				96B367AD2063E366008CBC91 /* icons8-chevron-right-filled-50.png in Resources */,
 				A1768D782046AECD007A76D6 /* Assets.xcassets in Resources */,
+				96B367AE2063E366008CBC91 /* icons8-medical-doctor-50.png in Resources */,
 				A1768D732046AECD007A76D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,14 +562,18 @@
 				960897C920591BD400211064 /* NotificationCollection.swift in Sources */,
 				96270A3F20611956001A6BDE /* ActivityExtension.swift in Sources */,
 				96270A492061203B001A6BDE /* NotificationExtension.swift in Sources */,
+				96B3679E2063D7A8008CBC91 /* DoctorSynthesisController.swift in Sources */,
 				96EDA741205D3B1C00ED2AB4 /* DoctorController.swift in Sources */,
 				96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */,
 				A183CD242062C8A10033698E /* PatientAddSportcontroller.swift in Sources */,
+				96B367A62063DD8A008CBC91 /* SynthesisDAO.swift in Sources */,
 				96EDA749205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift in Sources */,
 				960897EB205AC99B00211064 /* CoreDataActivityDAO.swift in Sources */,
 				960897F5205ACA4700211064 /* ActivityDAO.swift in Sources */,
 				96EDA74D205D678700ED2AB4 /* PatientActivityPrescriptionController.swift in Sources */,
 				960897F1205AC9D600211064 /* CoreDataMeetingDAO.swift in Sources */,
+				96B367A82063DE8D008CBC91 /* SynthesisTableViewCell.swift in Sources */,
+				96B367A42063DCE3008CBC91 /* CoreDataSynthesisDAO.swift in Sources */,
 				960897D020591DA900211064 /* DoctorMedicineController.swift in Sources */,
 				960897EF205AC9C200211064 /* CoreDataActivityPrescriptionDAO.swift in Sources */,
 				96EDA73B205D319300ED2AB4 /* DoctorActivityController.swift in Sources */,
@@ -571,10 +600,13 @@
 				960897E7205AC95800211064 /* CoreDataNotificationDAO.swift in Sources */,
 				96DF3007205D6F1B00FD5B57 /* MeetingTableViewCell.swift in Sources */,
 				8464E8E320601D9900FA8769 /* DoctorAddSportController.swift in Sources */,
+				96B367A22063D9A6008CBC91 /* SynthesisExtension.swift in Sources */,
 				960897FB205ACA8000211064 /* ReportingDAO.swift in Sources */,
+				96B367B02063E8F6008CBC91 /* ShowSynthesisController.swift in Sources */,
 				96DF3009205D73E900FD5B57 /* DateExtension.swift in Sources */,
 				84E8F9362060349A00D24419 /* DoctorAddDoctorController.swift in Sources */,
 				A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */,
+				96B367A02063D86D008CBC91 /* SynthesisCollection.swift in Sources */,
 				960897C720591BCF00211064 /* MeetingCollection.swift in Sources */,
 				960897E9205AC97200211064 /* CoreDataDoctorDAO.swift in Sources */,
 				960897DB205AA73500211064 /* DAOFactory.swift in Sources */,

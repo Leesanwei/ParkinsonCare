@@ -45,6 +45,7 @@
         <attribute name="delay" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="doctor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Doctor" inverseName="meetings" inverseEntity="Doctor" syncable="YES"/>
         <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="meeting" inverseEntity="Evaluation" syncable="YES"/>
+        <relationship name="synthesis" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Synthesis" inverseName="meeting" inverseEntity="Synthesis" syncable="YES"/>
     </entity>
     <entity name="Notification" representedClassName="Notification" syncable="YES" codeGenerationType="class">
         <attribute name="answered" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -62,6 +63,9 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="state" inverseEntity="Evaluation" syncable="YES"/>
     </entity>
+    <entity name="Synthesis" representedClassName="Synthesis" syncable="YES" codeGenerationType="class">
+        <relationship name="meeting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meeting" inverseName="synthesis" inverseEntity="Meeting" syncable="YES"/>
+    </entity>
     <entity name="TypeNotification" representedClassName="TypeNotification" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="notifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Notification" inverseName="typeNotification" inverseEntity="Notification" syncable="YES"/>
@@ -74,11 +78,12 @@
         <element name="Event" positionX="151" positionY="-153" width="128" height="73"/>
         <element name="Medicine" positionX="-198" positionY="-54" width="128" height="90"/>
         <element name="MedicinePrescription" positionX="-216" positionY="108" width="128" height="148"/>
-        <element name="Meeting" positionX="169" positionY="362" width="128" height="103"/>
+        <element name="Meeting" positionX="169" positionY="362" width="128" height="118"/>
         <element name="Notification" positionX="-20" positionY="81" width="128" height="73"/>
         <element name="Reporting" positionX="214" positionY="-6" width="128" height="73"/>
         <element name="Speciality" positionX="-207" positionY="440" width="128" height="73"/>
         <element name="State" positionX="180" positionY="102" width="128" height="73"/>
         <element name="TypeNotification" positionX="-9" positionY="-112" width="128" height="75"/>
+        <element name="Synthesis" positionX="358" positionY="396" width="128" height="58"/>
     </elements>
 </model>
