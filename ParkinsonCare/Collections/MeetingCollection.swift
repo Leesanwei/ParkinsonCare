@@ -27,10 +27,7 @@ class MeetingCollection{
         self.meetings.append(meeting)
     }
     
-    func remove(_ meeting : Meeting) -> Void {
-        guard let index : Int =  self.meetings.index(of: meeting) else{
-            return
-        }
+    func remove(atIndex index : Int) -> Void {
         self.meetings.remove(at: index)
     }
     

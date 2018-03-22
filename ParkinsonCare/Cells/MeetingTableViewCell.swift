@@ -20,10 +20,7 @@ class MeetingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    @IBAction func suppressMeeting(_ sender: Any) {
-    }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

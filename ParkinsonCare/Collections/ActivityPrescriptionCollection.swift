@@ -28,10 +28,7 @@ class ActivityPrescriptionCollection{
         self.activityPrescriptions.append(activityPrescription)
     }
     
-    func remove(_ activityPrescription : ActivityPrescription) -> Void {
-        guard let index : Int =  self.activityPrescriptions.index(of: activityPrescription) else{
-            return
-        }
+    func remove(atIndex index : Int) -> Void {
         self.activityPrescriptions.remove(at: index)
     }
     

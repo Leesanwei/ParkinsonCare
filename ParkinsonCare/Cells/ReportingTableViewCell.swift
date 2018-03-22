@@ -17,10 +17,7 @@ class ReportingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    @IBAction func suppressReporting(_ sender: Any) {
-    }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

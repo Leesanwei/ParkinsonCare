@@ -23,10 +23,5 @@ class ActivityPrescriptionTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
-    @IBAction func suppressPrescription(_ sender : Any){
-        //delete the prescription.
-    }
-    
 }
 

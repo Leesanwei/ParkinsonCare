@@ -47,7 +47,6 @@ class PersistenceFacade {
         guard let medicineDAO : MedicineDAO = daoFactory.getMedicineDAO() else{
             return false
         }
-        
         return medicineDAO.add(name : name, amount : amount)
     }
     
@@ -63,7 +62,14 @@ class PersistenceFacade {
         }
     }
     
-    // MARK: - Activity
+    func deleteMedicinePrescription(medPres : MedicinePrescription) -> Bool {
+        guard let medicinePrescriptionDAO : MedicinePrescriptionDAO = daoFactory.getMedicinePrescriptionDAO() else{
+            return false
+        }
+        return medicinePrescriptionDAO.remove(mp : medPres)
+    }
+    
+    // MARK: - Activity -
     
     func getAllActivities() -> ActivityCollection?{
         //Try to get the activityDAO
@@ -75,6 +81,21 @@ class PersistenceFacade {
         }catch {
             return nil
         }
+    }
+    
+    func deleteActivity(act : Activity) -> Bool {
+        guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
+            return false
+        }
+        return activityDAO.remove(act : act)
+    }
+    
+    func addSport(nameSport : String) -> Bool {
+        guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
+            return false
+        }
+        
+        return activityDAO.add(nameSport : nameSport)
     }
     
     func getAllActivityPrescriptions() -> ActivityPrescriptionCollection?{
@@ -89,7 +110,14 @@ class PersistenceFacade {
         }
     }
     
-    // MARK: - Doctor
+    func deleteActivityPrescription(actPres : ActivityPrescription) -> Bool {
+        guard let activityPrescriptionDAO : ActivityPrescriptionDAO = daoFactory.getActivityPrescriptionDAO() else{
+            return false
+        }
+        return activityPrescriptionDAO.remove(ap : actPres)
+    }
+    
+    // MARK: - Doctor -
     
     func getAllDoctors() -> DoctorCollection?{
         //Try to get the doctorDAO
@@ -101,6 +129,13 @@ class PersistenceFacade {
         }catch {
             return nil
         }
+    }
+    
+    func deleteDoctor(doc : Doctor) -> Bool {
+        guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
+            return false
+        }
+        return doctorDAO.remove(doc : doc)
     }
     
     func addDoctor(firstName: String, lastName : String, speciality : Speciality, phoneNumber: String, location: String) -> Bool {
@@ -120,17 +155,8 @@ class PersistenceFacade {
        
     }
     
-    // MARK: - Sport
     
-    func addSport(nameSport : String) -> Bool {
-        guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
-            return false
-        }
-        
-        return activityDAO.add(nameSport : nameSport)
-    }
-    
-    // MARK: - Meeting
+    // MARK: - Meeting -
     
     func getAllMeetings() -> MeetingCollection?{
         //Try to get the meetingDAO
@@ -144,7 +170,14 @@ class PersistenceFacade {
         }
     }
     
-    // MARK: - Reporting
+    func deleteMeeting(meet : Meeting) -> Bool {
+        guard let meetingDAO : MeetingDAO = daoFactory.getMeetingDAO() else{
+            return false
+        }
+        return meetingDAO.remove(meet : meet)
+    }
+    
+    // MARK: - Reporting -
     
     func getAllReportings() -> ReportingCollection?{
         //Try to get the reportingDAO
@@ -156,6 +189,13 @@ class PersistenceFacade {
         }catch {
             return nil
         }
+    }
+    
+    func deleteReporting(rep : Reporting) -> Bool {
+        guard let reportingDAO : ReportingDAO = daoFactory.getReportingDAO() else{
+            return false
+        }
+        return reportingDAO.remove(rep : rep)
     }
     
     

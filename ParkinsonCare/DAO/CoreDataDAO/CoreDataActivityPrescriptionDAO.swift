@@ -28,8 +28,14 @@ class CoreDataActivityPrescriptionDAO : ActivityPrescriptionDAO{
         }
     }
     
-    func remove(ap: ActivityPrescription) -> Bool {
-        return true
+    func remove(ap : ActivityPrescription) -> Bool {
+        self.context.delete(ap)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+        }
     }
     
     func add(ap: ActivityPrescription) -> Bool {

@@ -27,10 +27,7 @@ class DoctorCollection{
         self.doctors.append(doctor)
     }
     
-    func remove(_ doctor : Doctor) -> Void {
-        guard let index : Int =  self.doctors.index(of: doctor) else{
-            return
-        }
+    func remove(atIndex index : Int) -> Void {
         self.doctors.remove(at: index)
     }
     

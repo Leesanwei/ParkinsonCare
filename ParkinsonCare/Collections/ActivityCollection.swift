@@ -27,10 +27,7 @@ class ActivityCollection{
         self.activities.append(activity)
     }
     
-    func remove(_ activity : Activity) -> Void {
-        guard let index : Int =  self.activities.index(of: activity) else{
-            return
-        }
+    func remove(atIndex index : Int) -> Void {
         self.activities.remove(at: index)
     }
     

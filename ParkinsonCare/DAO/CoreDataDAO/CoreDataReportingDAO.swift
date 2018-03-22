@@ -29,7 +29,13 @@ class CoreDataReportingDAO : ReportingDAO{
     }
     
     func remove(rep: Reporting) -> Bool {
-        return true
+        self.context.delete(rep)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+        }
     }
     
     func add(rep: Reporting) -> Bool {

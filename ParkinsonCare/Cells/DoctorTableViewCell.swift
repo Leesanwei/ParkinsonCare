@@ -21,9 +21,6 @@ class DoctorTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    @IBAction func suppressDoctor(_ sender: Any) {
-    }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

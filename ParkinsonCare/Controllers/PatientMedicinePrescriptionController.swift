@@ -16,7 +16,7 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
     
     @IBOutlet weak var medicinePrescriptionTableView: UITableView!
     
-    // MARK: - UITableViewDataSource methods
+    // MARK: - UITableViewDataSource methods -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.medicinePrescriptions.count()
     }
@@ -38,6 +38,27 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Manage only deleting.
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            self.medicinePrescriptionTableView.beginUpdates()
+            
+            if self.delete(atIndex : indexPath.row) { // Try to delete in persistence
+                // Delete the row in the tableView
+                self.medicinePrescriptionTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }else{
+                self.alertError(errorMsg : "Impossible de supprimer l'élément.", userInfo : "Raison Inconnue")
+            }
+            self.medicinePrescriptionTableView.endUpdates()
+        }
+    }
+    
     
     // MARK: - ViewController methods
     override func viewDidLoad() {
@@ -62,6 +83,16 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
     
     func alertError(errorMsg msg : String, userInfo info : String){
         
+    }
+    
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteMedicinePrescription(medPres : self.medicinePrescriptions.find(_byIndex: index)){
+            self.medicinePrescriptions.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
     }
 }
 

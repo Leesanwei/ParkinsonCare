@@ -29,7 +29,13 @@ class CoreDataMeetingDAO : MeetingDAO{
     }
     
     func remove(meet: Meeting) -> Bool {
-        return true
+        self.context.delete(meet)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+        }
     }
     
     func add(meet: Meeting) -> Bool {

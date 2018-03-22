@@ -28,8 +28,14 @@ class CoreDataMedicinePrescriptionDAO : MedicinePrescriptionDAO{
         }
     }
     
-    func remove(mp: MedicinePrescription) -> Bool {
-        return true
+    func remove(mp : MedicinePrescription) -> Bool {
+        self.context.delete(mp)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+        }
     }
     
     func add(mp: MedicinePrescription) -> Bool {

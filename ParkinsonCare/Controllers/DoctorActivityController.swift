@@ -27,7 +27,28 @@ class DoctorActivityController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Manage only deleting.
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            self.activityTableView.beginUpdates()
+            
+            if self.delete(atIndex : indexPath.row) { // Try to delete in persistence
+                // Delete the row in the tableView
+                self.activityTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }else{
+                self.alertError(errorMsg : "Impossible de supprimer l'élément.", userInfo : "Raison Inconnue")
+            }
+            self.activityTableView.endUpdates()
+        }
+    }
+    
     // MARK: - ViewController methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +85,16 @@ class DoctorActivityController: UIViewController, UITableViewDataSource, UITable
     
     func alertError(errorMsg msg : String, userInfo info : String){
         
+    }
+    
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteActivity(act : self.activities.find(_byIndex: index)){
+            self.activities.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
     }
 }
 

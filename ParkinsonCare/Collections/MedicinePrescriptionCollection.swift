@@ -28,12 +28,10 @@ class MedicinePrescriptionCollection{
         self.medicinePrescriptions.append(medicinePrescription)
     }
     
-    func remove(_ medicinePrescription : MedicinePrescription) -> Void {
-        guard let index : Int =  self.medicinePrescriptions.index(of: medicinePrescription) else{
-            return
-        }
+    func remove(atIndex index : Int) -> Void {
         self.medicinePrescriptions.remove(at: index)
     }
+    
     func find(_byIndex index : Int) -> MedicinePrescription{
         return self.medicinePrescriptions[index]
     }

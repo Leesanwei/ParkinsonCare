@@ -33,6 +33,26 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Manage only deleting.
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            self.meetingTableView.beginUpdates()
+            
+            if self.delete(atIndex : indexPath.row) { // Try to delete in persistence
+                // Delete the row in the tableView
+                self.meetingTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }else{
+                self.alertError(errorMsg : "Impossible de supprimer l'élément.", userInfo : "Raison Inconnue")
+            }
+            self.meetingTableView.endUpdates()
+        }
+    }
+    
     // MARK: - ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +76,16 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
     
     func alertError(errorMsg msg : String, userInfo info : String){
         
+    }
+    
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteMeeting(meet : self.meetings.find(_byIndex: index)){
+            self.meetings.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
     }
 }
 

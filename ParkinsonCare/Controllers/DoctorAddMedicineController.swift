@@ -12,8 +12,8 @@ class DoctorAddMedicineController: UIViewController{
 
     @IBOutlet weak var addMedicineText: UITextField!
     
-    @IBOutlet weak var medicineAmount: UITextField!
     
+    @IBOutlet weak var medicineAmount: UITextField!
     
     @IBAction func addMedicine(_ sender: Any) {
         // Check all the textfields are filled.

@@ -33,6 +33,26 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Manage only deleting.
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            self.reportingTableView.beginUpdates()
+            
+            if self.delete(atIndex : indexPath.row) { // Try to delete in persistence
+                // Delete the row in the tableView
+                self.reportingTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }else{
+                self.alertError(errorMsg : "Impossible de supprimer l'élément.", userInfo : "Raison Inconnue")
+            }
+            self.reportingTableView.endUpdates()
+        }
+    }
+    
     // MARK: - ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +76,16 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
     
     func alertError(errorMsg msg : String, userInfo info : String){
         
+    }
+    
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteReporting(rep : self.reportings.find(_byIndex: index)){
+            self.reportings.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
     }
 }
 

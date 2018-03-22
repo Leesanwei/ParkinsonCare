@@ -27,10 +27,7 @@ class ReportingCollection{
         self.reportings.append(reporting)
     }
     
-    func remove(_ reporting : Reporting) -> Void {
-        guard let index : Int =  self.reportings.index(of: reporting) else{
-            return
-        }
+    func remove(atIndex index : Int) -> Void {
         self.reportings.remove(at: index)
     }
     

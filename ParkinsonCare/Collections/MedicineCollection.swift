@@ -35,18 +35,4 @@ class MedicineCollection{
     func find(_byIndex index : Int) -> Medicine{
         return self.medicines[index]
     }
-    func find(_byName name : String) -> Medicine?{
-        var i : Int = 0
-        var found : Bool = false
-        while (i < self.medicines.count && !found ){
-            found = self.medicines[i].name == name
-            i += 1
-        }
-        if found{
-            return self.medicines[i-1]
-        }
-        else{
-            return nil
-        }
-    }
 }

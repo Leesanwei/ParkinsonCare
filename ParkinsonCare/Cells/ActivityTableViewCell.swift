@@ -17,10 +17,6 @@ class ActivityTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    @IBAction func suppressActivity(_ sender: Any){
-        //delete the activity
-    }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

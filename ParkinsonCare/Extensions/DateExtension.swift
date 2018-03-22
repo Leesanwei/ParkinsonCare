@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSDate
+extension Date
 {
     func toString( dateFormat format  : String ) -> String
     {

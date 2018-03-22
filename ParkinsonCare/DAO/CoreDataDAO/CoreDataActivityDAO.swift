@@ -28,8 +28,14 @@ class CoreDataActivityDAO : ActivityDAO{
         }
     }
     
-    func remove(act: Activity) -> Bool {
-        return true
+    func remove(act : Activity) -> Bool {
+        self.context.delete(act)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+        }
     }
     
     func add(nameSport: String) -> Bool{

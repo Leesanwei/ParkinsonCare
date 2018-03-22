@@ -11,7 +11,7 @@ import Foundation
 extension Meeting {
     
     // MARK: - Initializater
-    convenience init(doctor : Doctor, date : NSDate, delay : Int, evaluations : EvaluationCollection){
+    convenience init(doctor : Doctor, date : Date, delay : Int, evaluations : EvaluationCollection){
         self.init()
         self.doctor = doctor
         self.date = date
@@ -25,7 +25,7 @@ extension Meeting {
         return self.doctor!
     }
     
-    var e_date : NSDate {
+    var e_date : Date {
         get{
             return self.date!
         }

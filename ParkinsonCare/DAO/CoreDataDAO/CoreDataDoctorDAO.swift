@@ -29,7 +29,13 @@ class CoreDataDoctorDAO : DoctorDAO{
     }
     
     func remove(doc: Doctor) -> Bool {
-        return true
+        self.context.delete(doc)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+        }
     }
     
     
