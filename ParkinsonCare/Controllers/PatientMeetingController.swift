@@ -25,10 +25,10 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         let cell = self.meetingTableView.dequeueReusableCell(withIdentifier: "meetingCell", for: indexPath) as! MeetingTableViewCell
         let meeting : Meeting = self.meetings.find(_byIndex : indexPath.row)
         
-        let doctor : Doctor = meeting.getDoctor()
+        let doctor : Doctor = meeting.e_doctor
         
-        cell.meetingDoctorNameLabel.text = doctor.getFullName()
-        cell.meetingDescriptionLabel.text = "Le \((meeting.getDate()).toString(dateFormat: "dd-MM")) à  \(doctor.getLocation())"
+        cell.meetingDoctorNameLabel.text = doctor.e_fullName
+        cell.meetingDescriptionLabel.text = "Le \((meeting.e_date).toString(dateFormat: "dd-MM")) à  \(doctor.e_location)"
         
         return cell
     }

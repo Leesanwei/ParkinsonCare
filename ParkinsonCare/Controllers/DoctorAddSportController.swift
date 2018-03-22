@@ -18,7 +18,9 @@ class DoctorAddSportController: UIViewController{
     @IBAction func addSport(_ sender: Any) {
         
         if addSportText.hasText{
+            
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+            
             if persistanceFacade.addSport(nameSport: self.addSportText.text!){
                 self.navigationController?.popViewController(animated: true)
             }

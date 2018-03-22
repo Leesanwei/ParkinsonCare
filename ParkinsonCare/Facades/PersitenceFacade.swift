@@ -114,6 +114,15 @@ class PersistenceFacade {
         }
     }
     
+    func getAllSpecialities() -> [Speciality]?{
+        //Try to get the doctorDAO
+        guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
+            return nil
+        }
+        return  doctorDAO.findAllSpecialities()
+       
+    }
+    
     // MARK: - Meeting
     
     func getAllMeetings() -> MeetingCollection?{

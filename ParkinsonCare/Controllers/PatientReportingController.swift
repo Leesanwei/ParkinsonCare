@@ -26,9 +26,9 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         let reporting : Reporting = self.reportings.find(_byIndex : indexPath.row)
         
         
-        let event : Event = reporting.getEvent()
+        let event : Event = reporting.e_event
         
-        cell.reportingDescriptionLabel.text = " \(event.getName()) le \(reporting.getDate().toString(dateFormat: "dd-MM"))"
+        cell.reportingDescriptionLabel.text = " \(event.e_name) le \(reporting.e_date.toString(dateFormat: "dd-MM"))"
     
         return cell
     }

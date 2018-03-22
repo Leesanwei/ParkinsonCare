@@ -20,7 +20,7 @@ class CoreDataDoctorDAO : DoctorDAO{
     func findAll() throws -> DoctorCollection{
         let request : NSFetchRequest<Doctor> = Doctor.fetchRequest()
         do{
-            var doctors = DoctorCollection()
+            let doctors = DoctorCollection()
             try doctors.setDoctors(doctors: self.context.fetch(request))
             return doctors
         }catch let error as NSError{
@@ -37,13 +37,22 @@ class CoreDataDoctorDAO : DoctorDAO{
         
          let doctor = Doctor(context : self.context, firstName : firstName, lastName : lastName, location : location, phoneNumber : phoneNumber, speciality : speciality)
 
-        
         do{
-            try context.save()
+            try self.context.save()
             return true
-        }catch let error as NSError{
+        }catch {
             return false
         }
     }
     
+    func findAllSpecialities() -> [Speciality]? {
+        let request : NSFetchRequest<Speciality> = Speciality.fetchRequest()
+        do{
+            return try self.context.fetch(request)
+            
+        }catch {
+            return nil
+        }
+    }
+
 }

@@ -25,7 +25,7 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.medicineTableView.dequeueReusableCell(withIdentifier: "medicineCell", for: indexPath) as! MedicineTableViewCell
-        cell.medicineNameLabel.text = self.medicines.find(_byIndex : indexPath.row).getFullDescription()
+        cell.medicineNameLabel.text = self.medicines.find(_byIndex : indexPath.row).fullDescription
         return cell
     }
     

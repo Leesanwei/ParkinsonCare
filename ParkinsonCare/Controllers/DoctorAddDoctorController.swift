@@ -38,16 +38,14 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let context : NSManagedObjectContext = (appDelegate?.persistentContainer.viewContext)!
-        let request : NSFetchRequest<Speciality> = Speciality.fetchRequest()
-        do{
-            self.specialities = try context.fetch(request)
-            
-           
-        }catch let error as NSError{
-            print("Unable to reach specialities")
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+
+        guard  let specs : [Speciality] = persistanceFacade.getAllSpecialities() else{
+            fatalError()
         }
+        
+        self.specialities = specs
+        
         self.specialities = self.specialities.sorted {
             $0.name! < $1.name!
         }
