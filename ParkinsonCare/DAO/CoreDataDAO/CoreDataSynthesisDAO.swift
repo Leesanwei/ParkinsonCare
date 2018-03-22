@@ -20,7 +20,7 @@ class CoreDataSynthesisDAO : SynthesisDAO{
     func findAll() throws -> SynthesisCollection{
         let request : NSFetchRequest<Synthesis> = Synthesis.fetchRequest()
         do{
-            var synthesisList = SynthesisCollection()
+            let synthesisList = SynthesisCollection()
             try synthesisList.setSynthesis(sl: self.context.fetch(request))
             return synthesisList
         }catch let error as NSError{

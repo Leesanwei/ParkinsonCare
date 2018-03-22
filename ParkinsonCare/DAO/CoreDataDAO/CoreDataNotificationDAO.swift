@@ -20,7 +20,7 @@ class CoreDataNotificationDAO : NotificationDAO{
     func findAll() throws -> NotificationCollection{
         let request : NSFetchRequest<Notification> = Notification.fetchRequest()
         do{
-            var notifications = NotificationCollection()
+            let notifications = NotificationCollection()
             try notifications.setNotifications(notifications: self.context.fetch(request))
             return notifications
         }catch let error as NSError{

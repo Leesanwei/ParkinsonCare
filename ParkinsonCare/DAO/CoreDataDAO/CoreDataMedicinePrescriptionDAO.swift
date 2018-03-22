@@ -20,7 +20,7 @@ class CoreDataMedicinePrescriptionDAO : MedicinePrescriptionDAO{
     func findAll() throws -> MedicinePrescriptionCollection{
         let request : NSFetchRequest<MedicinePrescription> = MedicinePrescription.fetchRequest()
         do{
-            var medicinePrescripitons = MedicinePrescriptionCollection()
+            let medicinePrescripitons = MedicinePrescriptionCollection()
             try medicinePrescripitons.setMedicinePrescriptions(medicinePrescriptions: self.context.fetch(request))
             return medicinePrescripitons
         }catch let error as NSError{
