@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PatientAddSportController: UIViewController{
+class PatientAddSportController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
-    let days = [
+    let days = [1,2,3,4,5,6,7]
     
     
     
@@ -47,33 +47,49 @@ class PatientAddSportController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponents(in DurationPicker: UIPickerView) -> Int {
-        return 3
-    }
-    func pickerView(_ DurationPicker: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-        case 0:
-            return 25
-        case 1,2:
-            return 60
-            
-        default:
-            return 0
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        if (pickerView.tag == 1){
+            return 2}
+        else{
+            return 1
         }
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (pickerView.tag == 1){
+            switch component {
+            case 0:
+                return 25
+            case 1:
+                return 60
+                
+            default:
+                return 0
+            }}
+        else{
+            return days.count
+        }
+        
+        
+        
     }
    
     
-    func pickerView(_ DurationPicker: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch component {
-        case 0:
-            return "\(row) Hour"
-        case 1:
-            return "\(row) Minute"
-        case 2:
-            return "\(row) Second"
-        default:
-            return ""
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if (pickerView.tag == 1){
+            switch component {
+            case 0:
+                return "\(row) Hour"
+            case 1:
+                return "\(row) Minute"
+            default:
+                return ""
+            }}
+        else{
+            return "\(row)"
         }
+        
     }
+    
     
 }
