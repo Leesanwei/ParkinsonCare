@@ -43,6 +43,7 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
         do{
             try self.specialities = context.fetch(request)
         }catch let error as NSError{
+            print("Unable to reach specialities")
         }
     }
     
