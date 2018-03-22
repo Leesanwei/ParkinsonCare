@@ -1325,6 +1325,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFR-8R-fjo">
                                 <rect key="frame" x="164" y="579" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addDoctor:" destination="6P8-xm-UK6" eventType="touchUpInside" id="Epl-j1-0zQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1364,7 +1367,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addDoctor" destination="fFR-8R-fjo" id="2cO-9a-9g5"/>
                         <outlet property="firstNameText" destination="XmZ-Rf-XvU" id="kuS-5d-LNr"/>
                         <outlet property="lastNameText" destination="l8V-P9-JFL" id="i2b-O7-njy"/>
                         <outlet property="location" destination="Gab-OJ-Jjh" id="7ff-gM-pfy"/>
@@ -1751,7 +1753,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="96Z-ek-Pnm" id="Er4-aY-Dyl">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oag-TK-Wvk">

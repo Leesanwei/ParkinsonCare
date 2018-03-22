@@ -25,7 +25,7 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
             let doctor = self.doctors.find(_byIndex: row)
             let delay = delayPicker.selectedRow(inComponent: 0)
             
-            if persistanceFacade.addMeeting(doctor : doctor,delay : delay,date : datePicker.date){
+            //if persistanceFacade.addMeeting(doctor : doctor,delay : delay,date : datePicker.date){
                 
                 self.navigationController?.popViewController(animated: true)
             }
@@ -34,7 +34,7 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
         
         
         
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -32,6 +32,7 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
             }
         }
     }
+   
     
     
     override func viewDidLoad() {
