@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 extension Event {
     
     // MARK: - Initializater
-    convenience init(name : String){
-        self.init()
+    convenience init(context : NSManagedObjectContext, name : String){
+        self.init(context : context)
         self.name = name
     }
     
