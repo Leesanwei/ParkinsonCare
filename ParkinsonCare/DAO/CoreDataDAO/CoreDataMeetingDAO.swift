@@ -38,8 +38,15 @@ class CoreDataMeetingDAO : MeetingDAO{
         }
     }
     
-    func add(meet: Meeting) -> Bool {
-        return true
+    func add(doctor : Doctor, date : Date, delay : Int) -> Bool {
+        
+       // let meeting = Meeting(doctor : doctor, date : date, delay : delay, context : self.context)
+        do{
+            try context.save()
+            return true
+        }catch {
+            return false
+    }
     }
     
 }

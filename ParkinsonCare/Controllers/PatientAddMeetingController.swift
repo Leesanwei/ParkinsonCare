@@ -24,13 +24,12 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
             let row = doctorPicker.selectedRow(inComponent: 0)
             let doctor = self.doctors.find(_byIndex: row)
             let delay = delayPicker.selectedRow(inComponent: 0)
-            
-            //if persistanceFacade.addMeeting(doctor : doctor,delay : delay,date : datePicker.date){
-                
-                self.navigationController?.popViewController(animated: true)
+        if persistanceFacade.addMeeting(doctor : doctor, date : datePicker.date, delay : delay){
+            self.navigationController?.popViewController(animated: true)
             }
+    }
 
-        
+    
         
         
         

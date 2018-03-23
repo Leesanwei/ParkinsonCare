@@ -157,6 +157,13 @@ class PersistenceFacade {
         return meetingDAO.remove(meet : meet)
     }
     
+    func addMeeting(doctor : Doctor, date : Date, delay : Int) -> Bool {
+        guard let meetingDAO : MeetingDAO = daoFactory.getMeetingDAO() else{
+            return false
+        }
+        
+        return meetingDAO.add(doctor : doctor, date : date, delay : delay)
+    }
     // MARK: - Reporting -
     
     func getAllReportings() -> ReportingCollection?{
