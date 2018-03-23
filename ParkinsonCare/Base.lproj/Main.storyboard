@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2iF-Am-hfM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2iF-Am-hfM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cen-hx-Jug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1737" y="-154"/>
+            <point key="canvasLocation" x="-3346" y="285"/>
         </scene>
         <!--Menu Médecin-->
         <scene sceneID="fEi-TL-hiq">
@@ -55,7 +55,7 @@
                                 </constraints>
                                 <state key="normal" title="Sports"/>
                                 <connections>
-                                    <segue destination="vxv-mo-zp2" kind="show" id="5Th-P1-q2H"/>
+                                    <segue destination="SoA-zH-obI" kind="show" id="jtp-Al-msJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-8Y-g1Q" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUc-SB-1rE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-991.5" y="-1240.5"/>
+            <point key="canvasLocation" x="-1484" y="-764"/>
         </scene>
         <!--Signalements-->
         <scene sceneID="Ep3-3l-Ked">
@@ -134,7 +134,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZMG-YN-NZf" id="DSB-Hz-6PU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx9-br-WC6">
@@ -193,7 +193,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vRg-HD-pN1" id="ln8-dx-Xqt">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5B-So-Oaa">
@@ -276,7 +276,7 @@
                                 </constraints>
                                 <state key="normal" title="Sports"/>
                                 <connections>
-                                    <segue destination="SoA-zH-obI" kind="show" id="F4P-LC-nFq"/>
+                                    <segue destination="SoA-zH-obI" kind="show" id="9AY-6w-qSE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-EL-bgL" customClass="roundButton" customModule="ParkinsonCare">
@@ -362,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB3-kK-igD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-225" y="2008"/>
+            <point key="canvasLocation" x="-1738" y="1124"/>
         </scene>
         <!--Ordonnance-->
         <scene sceneID="uEl-7s-JoJ">
@@ -384,7 +384,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="alO-8A-wWB" id="Jfy-Ea-fBR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="98.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp0-zF-fIs">
@@ -448,12 +448,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gok-9l-L4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="2014.5427286356824"/>
+            <point key="canvasLocation" x="-479" y="1495"/>
         </scene>
-        <!--Sports-->
+        <!--Activités-->
         <scene sceneID="QTM-sU-qEH">
             <objects>
-                <viewController title="Sports" id="SoA-zH-obI" customClass="PatientActivityPrescriptionController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Activités" id="SoA-zH-obI" customClass="ActivityController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KYT-9r-KJn"/>
                         <viewControllerLayoutGuide type="bottom" id="HPq-dH-yPg"/>
@@ -475,11 +475,11 @@
                                 <rect key="frame" x="0.0" y="134" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activityPrescriptionCell" rowHeight="72" id="o6u-Ht-qSH" customClass="ActivityPrescriptionTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activityCell" rowHeight="72" id="o6u-Ht-qSH" customClass="ActivityTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o6u-Ht-qSH" id="mY1-zA-oju">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9u-4e-htl">
@@ -500,10 +500,15 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activityDescriptionLabel" destination="Hur-th-vw3" id="m4a-Ep-zFm"/>
-                                            <outlet property="activityNameLabel" destination="b9u-4e-htl" id="ojn-OP-4RH"/>
+                                            <outlet property="activityDescritption" destination="Hur-th-vw3" id="U6a-UL-uuB"/>
+                                            <outlet property="activityNameLabel" destination="b9u-4e-htl" id="B2D-nB-OCC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SoA-zH-obI" id="SZF-4y-9gG"/>
+                                    <outlet property="delegate" destination="SoA-zH-obI" id="rLP-Ae-6rs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -517,12 +522,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityPrescriptionTableView" destination="z2I-eH-hRh" id="9Z8-JG-YNN"/>
+                        <outlet property="activitiesTableView" destination="z2I-eH-hRh" id="6zv-5u-f53"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3b6-Hn-sqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="2681.1094452773614"/>
+            <point key="canvasLocation" x="-993" y="241"/>
         </scene>
         <!--Rendez-vous-->
         <scene sceneID="ZDu-Fn-q4t">
@@ -553,7 +558,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jin-In-aHW" id="m8n-Kg-OcY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-JC-Y8L">
@@ -596,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLs-0G-SZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="3343.1784107946028"/>
+            <point key="canvasLocation" x="326" y="2421"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Snx-ib-dgS">
@@ -642,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSB-yp-Msj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="4011.5442278860573"/>
+            <point key="canvasLocation" x="-599" y="2376"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="nxW-oL-nuf">
@@ -667,7 +672,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psC-X9-WUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="4699"/>
+            <point key="canvasLocation" x="-1407" y="2375"/>
         </scene>
         <!--Info Utiles-->
         <scene sceneID="glt-V7-zxz">
@@ -692,7 +697,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvV-hR-fAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="5418"/>
+            <point key="canvasLocation" x="-2257" y="2375"/>
         </scene>
         <!--Ajouter RDV-->
         <scene sceneID="Ji8-em-tco">
@@ -790,12 +795,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vY5-wX-WZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368.8" y="3342.2788605697156"/>
+            <point key="canvasLocation" x="1407" y="2448"/>
         </scene>
-        <!--Ajouter sport-->
+        <!--AjouterActivité-->
         <scene sceneID="ybx-1h-Ta6">
             <objects>
-                <viewController title="Ajouter sport" id="i6g-qp-yAk" customClass="PatientAddSportController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AjouterActivité" id="i6g-qp-yAk" customClass="AddActivityController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="90D-we-YIf"/>
                         <viewControllerLayoutGuide type="bottom" id="M5F-3Z-Fxg"/>
@@ -905,7 +910,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAB-Cw-Kxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368.8" y="2680.2098950524742"/>
+            <point key="canvasLocation" x="-185" y="673"/>
         </scene>
         <!--Ajouter une prise-->
         <scene sceneID="lkf-eS-ttf">
@@ -943,7 +948,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMZ-zr-PRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="2015"/>
+            <point key="canvasLocation" x="633" y="1601"/>
         </scene>
         <!--Médecins-->
         <scene sceneID="ljY-SY-spC">
@@ -974,7 +979,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5bg-nu-ozB" id="xru-51-QSm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEk-s1-bF1">
@@ -1029,7 +1034,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIE-ae-YrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="583.3583208395803"/>
+            <point key="canvasLocation" x="714" y="-18"/>
         </scene>
         <!--Synthèse-->
         <scene sceneID="l2b-im-Fiy">
@@ -1063,7 +1068,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5XP-KN-aJ2" id="dmk-Ii-y9Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg1-zY-12A">
@@ -1111,7 +1116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isv-RI-uLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152.80000000000001" y="1230.1349325337333"/>
+            <point key="canvasLocation" x="713" y="826"/>
         </scene>
         <!--Paramètre évaluation-->
         <scene sceneID="IAf-N6-DJM">
@@ -1202,7 +1207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIY-7b-Sge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="1316"/>
+            <point key="canvasLocation" x="1561" y="656"/>
         </scene>
         <!--Show Synthesis Controller-->
         <scene sceneID="nAb-FR-LFS">
@@ -1232,7 +1237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6K-cu-pJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="1316"/>
+            <point key="canvasLocation" x="1561" y="1343"/>
         </scene>
         <!--Ajouter médecin-->
         <scene sceneID="wZ8-6c-mL1">
@@ -1376,127 +1381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCq-Qg-qhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.8" y="582.45877061469275"/>
-        </scene>
-        <!--Sports-->
-        <scene sceneID="9hX-Oh-PpQ">
-            <objects>
-                <viewController title="Sports" id="vxv-mo-zp2" customClass="DoctorActivityController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="znx-og-jsh"/>
-                        <viewControllerLayoutGuide type="bottom" id="es4-RR-Vpw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="etN-OD-ybD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Itn-j3-JTx">
-                                <rect key="frame" x="0.0" y="134" width="375" height="533"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activityCell" rowHeight="65" id="GT7-Zw-3qO" customClass="ActivityTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="65"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GT7-Zw-3qO" id="vCc-cc-sbY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gL-NY-WL3">
-                                                    <rect key="frame" x="15" y="22" width="193" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="activityNameLabel" destination="0gL-NY-WL3" id="jrC-We-Ha9"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="vxv-mo-zp2" id="evK-Iq-jcW"/>
-                                    <outlet property="delegate" destination="vxv-mo-zp2" id="KTt-3z-wsS"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4o0-qX-2Cq">
-                                <rect key="frame" x="156" y="84" width="63" height="30"/>
-                                <state key="normal" title="Ajouter +"/>
-                                <connections>
-                                    <segue destination="oLj-5c-VmZ" kind="show" id="OSw-ee-Nm0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Itn-j3-JTx" firstAttribute="top" secondItem="4o0-qX-2Cq" secondAttribute="bottom" constant="20" id="GDV-pM-P14"/>
-                            <constraint firstItem="es4-RR-Vpw" firstAttribute="top" secondItem="Itn-j3-JTx" secondAttribute="bottom" id="GJ1-2x-ixE"/>
-                            <constraint firstItem="4o0-qX-2Cq" firstAttribute="top" secondItem="znx-og-jsh" secondAttribute="bottom" constant="20" id="aJq-zO-E8O"/>
-                            <constraint firstItem="4o0-qX-2Cq" firstAttribute="centerX" secondItem="etN-OD-ybD" secondAttribute="centerX" id="lXR-Y4-mLk"/>
-                            <constraint firstAttribute="trailing" secondItem="Itn-j3-JTx" secondAttribute="trailing" id="q6d-EO-l84"/>
-                            <constraint firstItem="Itn-j3-JTx" firstAttribute="leading" secondItem="etN-OD-ybD" secondAttribute="leading" id="sO4-ks-Bwn"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="activityTableView" destination="Itn-j3-JTx" id="b6v-mv-WZb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rbm-1p-RCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="344.80000000000001" y="-103.89805097451276"/>
-        </scene>
-        <!--Ajouter Sport-->
-        <scene sceneID="nEE-3M-LOP">
-            <objects>
-                <viewController title="Ajouter Sport" id="oLj-5c-VmZ" customClass="DoctorAddSportController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5ZM-ec-6Fn"/>
-                        <viewControllerLayoutGuide type="bottom" id="l3j-q2-eBZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vzM-yq-Ike">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sport :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2G-V4-t2J">
-                                <rect key="frame" x="26" y="164" width="323" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2P5-rw-xbb">
-                                <rect key="frame" x="26" y="210" width="323" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1X-P7-s2Z">
-                                <rect key="frame" x="164" y="340" width="47" height="30"/>
-                                <state key="normal" title="Valider"/>
-                                <connections>
-                                    <action selector="addSport:" destination="oLj-5c-VmZ" eventType="touchUpInside" id="G4k-Xi-vnL"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="S2G-V4-t2J" secondAttribute="trailing" constant="10" id="0be-Fn-Btk"/>
-                            <constraint firstItem="S2G-V4-t2J" firstAttribute="top" secondItem="5ZM-ec-6Fn" secondAttribute="bottom" constant="100" id="5pn-U5-vCI"/>
-                            <constraint firstItem="S1X-P7-s2Z" firstAttribute="centerX" secondItem="vzM-yq-Ike" secondAttribute="centerX" id="CuS-Bv-sDE"/>
-                            <constraint firstItem="2P5-rw-xbb" firstAttribute="top" secondItem="S2G-V4-t2J" secondAttribute="bottom" constant="25" id="T2X-UV-HCc"/>
-                            <constraint firstItem="2P5-rw-xbb" firstAttribute="leading" secondItem="vzM-yq-Ike" secondAttribute="leadingMargin" constant="10" id="TX4-hI-Pu5"/>
-                            <constraint firstItem="S1X-P7-s2Z" firstAttribute="top" secondItem="2P5-rw-xbb" secondAttribute="bottom" constant="100" id="gZr-Gh-Mnt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2P5-rw-xbb" secondAttribute="trailing" constant="10" id="hMZ-s5-M5W"/>
-                            <constraint firstItem="S2G-V4-t2J" firstAttribute="leading" secondItem="vzM-yq-Ike" secondAttribute="leadingMargin" constant="10" id="wfp-oM-zbI"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="addSportText" destination="2P5-rw-xbb" id="GFk-lZ-QyF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f67-ht-th0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1068" y="-104"/>
+            <point key="canvasLocation" x="1562" y="-17"/>
         </scene>
         <!--Ajouter Médicament-->
         <scene sceneID="MFP-iU-jzq">
@@ -1596,7 +1481,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="igF-PR-NXp" id="t3r-zy-fYm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ami-aH-m3y">
@@ -1674,7 +1559,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apX-mf-nEr" id="prc-Qw-xTR">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkA-lA-LWz">
@@ -1753,7 +1638,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="96Z-ek-Pnm" id="Er4-aY-Dyl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oag-TK-Wvk">
@@ -1816,4 +1701,7 @@
         <image name="icons8-chevron-right-filled-50.png" width="50" height="50"/>
         <image name="icons8-medical-doctor-50.png" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jtp-Al-msJ"/>
+    </inferredMetricsTieBreakers>
 </document>

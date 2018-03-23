@@ -18,7 +18,7 @@ class PersistenceFacade {
     }
     
     // MARK: - Properties
-    private let daoFactory : DAOFactory = DAOFactory.getInstance()
+    private let daoFactory : AbstractDAOFactory = AbstractDAOFactory.getInstance()
     
     // MARK: - Facade Methods -
     
@@ -90,39 +90,11 @@ class PersistenceFacade {
         return activityDAO.remove(act : act)
     }
     
-    func addSport(nameSport : String) -> Bool {
-        guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
-            return false
-        }
-        
-        return activityDAO.add(nameSport : nameSport)
-    }
-    
     func addSport(nameSport : String, duration : Int, frequence : Int) -> Bool {
         guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
             return false
         }
-        
-        return activityDAO.add(nameSport : nameSport, duration : duration, frequence : frequence)
-    }
-    
-    func getAllActivityPrescriptions() -> ActivityPrescriptionCollection?{
-        //Try to get the activityPrescriptionDAO
-        guard let activityPrescriptionDAO : ActivityPrescriptionDAO = daoFactory.getActivityPrescriptionDAO() else{
-            return nil
-        }
-        do{
-            return try activityPrescriptionDAO.findAll()
-        }catch {
-            return nil
-        }
-    }
-    
-    func deleteActivityPrescription(actPres : ActivityPrescription) -> Bool {
-        guard let activityPrescriptionDAO : ActivityPrescriptionDAO = daoFactory.getActivityPrescriptionDAO() else{
-            return false
-        }
-        return activityPrescriptionDAO.remove(ap : actPres)
+        return activityDAO.add(nameSport : nameSport, duration : duration, frequency : frequence)
     }
     
     // MARK: - Doctor -
