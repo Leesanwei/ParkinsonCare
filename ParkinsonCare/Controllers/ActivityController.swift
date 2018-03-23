@@ -9,26 +9,24 @@
 
 import UIKit
 
-class PatientActivityPrescriptionController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ActivityController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     // MARK: - Properties
-    var activityPrescriptions : ActivityPrescriptionCollection = ActivityPrescriptionCollection()
+    var activities : ActivityCollection = ActivityCollection()
     
-    @IBOutlet weak var activityPrescriptionTableView: UITableView!
+    @IBOutlet weak var activitiesTableView: UITableView!
     
     // MARK: - UITableViewDataSource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.activityPrescriptions.count()
+        return self.activities.count()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.activityPrescriptionTableView.dequeueReusableCell(withIdentifier: "activityPrescriptionCell", for: indexPath) as! ActivityPrescriptionTableViewCell
-        let prescription : ActivityPrescription = self.activityPrescriptions.find(_byIndex : indexPath.row)
-       
-        let  activity : Activity = prescription.e_activity
+        let cell = self.activitiesTableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath) as! ActivityTableViewCell
+        let activity : Activity = self.activities.find(_byIndex : indexPath.row)
         
         cell.activityNameLabel.text = activity.e_name
-        cell.activityDescriptionLabel.text = "\(prescription.e_duration) min tous les \(prescription.e_frequency)"
+        cell.activityDescriptionLabel.text = "\(activity.e_duration) min tous les \(activity.e_frequency)"
         
         return cell
     }
@@ -41,15 +39,15 @@ class PatientActivityPrescriptionController: UIViewController, UITableViewDataSo
         
         // Manage only deleting.
         if editingStyle == UITableViewCellEditingStyle.delete {
-            self.activityPrescriptionTableView.beginUpdates()
+            self.activitiesTableView.beginUpdates()
             
             if self.delete(atIndex : indexPath.row) { // Try to delete in persistence
                 // Delete the row in the tableView
-                self.activityPrescriptionTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                self.activitiesTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             }else{
                 self.alertError(errorMsg : "Impossible de supprimer l'élément.", userInfo : "Raison Inconnue")
             }
-            self.activityPrescriptionTableView.endUpdates()
+            self.activitiesTableView.endUpdates()
         }
     }
     
@@ -62,11 +60,11 @@ class PatientActivityPrescriptionController: UIViewController, UITableViewDataSo
         
         
         // try to fetch all the medicines.
-        guard let prescriptions : ActivityPrescriptionCollection = persistanceFacade.getAllActivityPrescriptions()  else {
+        guard let activities : ActivityCollection = persistanceFacade.getAllActivities()  else {
             self.alertError(errorMsg : "Cannot reach the activity prescriptions", userInfo : "Unknown Error")
             return
         }
-        self.activityPrescriptions = prescriptions
+        self.activities = activities
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,8 +78,8 @@ class PatientActivityPrescriptionController: UIViewController, UITableViewDataSo
     
     func delete(atIndex index : Int) -> Bool{
         let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
-        if persistenceFacade.deleteActivityPrescription(actPres : self.activityPrescriptions.find(_byIndex: index)){
-            self.activityPrescriptions.remove(atIndex : index)
+        if persistenceFacade.deleteActivity(act : self.activities.find(_byIndex: index)){
+            self.activities.remove(atIndex : index)
             return true
         }else{
             return false

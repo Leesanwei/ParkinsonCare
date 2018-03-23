@@ -10,15 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class DAOFactory {
-    // MARK: - Singleton implementation
-    private static var daoFactory: DAOFactory = DAOFactory()
-    
-    static func getInstance() -> DAOFactory{
-        return daoFactory
-    }
-    // Empty private intializater.
-    private init(){}
+class CoreDataDAOFactory : AbstractDAOFactory{
     
     // MARK: - Get Application Context
     private func getContext() -> NSManagedObjectContext? {
@@ -29,63 +21,56 @@ class DAOFactory {
     }
     
     // MARK: - DAO Getters
-    func getMedicineDAO() -> MedicineDAO?{
+    override func getMedicineDAO() -> MedicineDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }
         return CoreDataMedicineDAO(context : context)
     }
     
-    func getDoctorDAO() -> DoctorDAO?{
+    override func getDoctorDAO() -> DoctorDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }
         return CoreDataDoctorDAO(context : context)
     }
     
-    func getActivityDAO() -> ActivityDAO?{
+    override func getActivityDAO() -> ActivityDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }
         return CoreDataActivityDAO(context : context)
     }
     
-    func getMedicinePrescriptionDAO() -> MedicinePrescriptionDAO?{
+    override func getMedicinePrescriptionDAO() -> MedicinePrescriptionDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }
         return CoreDataMedicinePrescriptionDAO(context : context)
     }
     
-    func getActivityPrescriptionDAO() -> ActivityPrescriptionDAO?{
-        guard let context : NSManagedObjectContext = self.getContext() else{
-            return nil
-        }
-        return CoreDataActivityPrescriptionDAO(context : context)
-    }
-    
-    func getMeetingDAO() -> MeetingDAO?{
+    override func getMeetingDAO() -> MeetingDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }
         return CoreDataMeetingDAO(context : context)
     }
     
-    func getReportingDAO() -> ReportingDAO?{
+    override func getReportingDAO() -> ReportingDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }
         return CoreDataReportingDAO(context : context)
     }
     
-    func getNotificationDAO() -> NotificationDAO?{
+    override func getNotificationDAO() -> NotificationDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }
         return CoreDataNotificationDAO(context : context)
     }
     
-    func getSynthesisDAO() -> SynthesisDAO?{
+    override func getSynthesisDAO() -> SynthesisDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil
         }

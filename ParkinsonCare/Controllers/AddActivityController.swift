@@ -8,22 +8,16 @@
 
 import UIKit
 
-class PatientAddSportController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
-    
-    
-    
+class AddActivityController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     
     @IBOutlet weak var sportName: UITextField!
-   
-    
-    
-    @IBOutlet weak var DurationPicker: UIPickerView!
+    @IBOutlet weak var durationPicker: UIPickerView!
     @IBOutlet weak var frequencePicker: UIPickerView!
     
     @IBAction func addSport(_ sender: Any) {
         if sportName.hasText{
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-            let duration = (DurationPicker.selectedRow(inComponent: 0)*60)+DurationPicker.selectedRow(inComponent: 1)
+            let duration = (durationPicker.selectedRow(inComponent: 0)*60)+durationPicker.selectedRow(inComponent: 1)
       
             let frequence = frequencePicker.selectedRow(inComponent: 0)+1
             if persistanceFacade.addSport(nameSport: self.sportName.text!,duration: duration,frequence : frequence){
