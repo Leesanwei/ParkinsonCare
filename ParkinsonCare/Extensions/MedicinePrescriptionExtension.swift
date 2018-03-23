@@ -12,7 +12,7 @@ import CoreData
 extension MedicinePrescription {
     
     // MARK: - Initializater
-    convenience init(context : NSManagedObjectContext, medicine : Medicine, morning : Bool, midday : Bool, evening : Bool, frequency : Int, beginDate : NSDate, endDate : NSDate){
+    convenience init(context : NSManagedObjectContext, medicine : Medicine, morning : Bool, midday : Bool, evening : Bool, beginDate : NSDate, endDate : NSDate){
         self.init(context : context)
         self.medicine = medicine
         self.morning = morning
@@ -20,7 +20,7 @@ extension MedicinePrescription {
         self.evening = evening
         self.beginDate = beginDate
         self.endDate = endDate
-        self.frequency = Int16(frequency)
+
     }
     
     // MARK: - Properties -
@@ -37,11 +37,6 @@ extension MedicinePrescription {
         }
     }
     
-    var e_frequency : Int {
-        get{
-            return Int(self.frequency)
-        }
-    }
     
     var e_beginDate : NSDate {
         get{

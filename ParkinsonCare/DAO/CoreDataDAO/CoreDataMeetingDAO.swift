@@ -39,14 +39,19 @@ class CoreDataMeetingDAO : MeetingDAO{
     }
     
     func add(doctor : Doctor, date : Date, delay : Int) -> Bool {
+        let evaluations = EvaluationCollection()
         
-       // let meeting = Meeting(doctor : doctor, date : date, delay : delay, context : self.context)
+       let meeting = Meeting(context : self.context,doctor : doctor, date : date as NSDate, delay : delay, evaluations: evaluations)
+        
         do{
             try context.save()
-            return true
+            print(meeting.date)
+           
         }catch {
+            print(doctor.firstName)
             return false
     }
+         return true
     }
     
 }

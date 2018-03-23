@@ -11,7 +11,7 @@ import Foundation
 protocol ReportingDAO {
     
     func findAll() throws -> ReportingCollection
-    func add(rep : Reporting) -> Bool
+    func add(event : Event, date : Date) -> Bool
     func remove(rep : Reporting) -> Bool
     func addEvent()->Bool
     func findAllEvents() -> [Event]?

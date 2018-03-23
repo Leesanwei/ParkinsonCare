@@ -55,16 +55,6 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // get the persistence facade that hides the storage business logic.
-        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-        
-        
-        // try to fetch all the medicines.
-        guard let activities : ActivityCollection = persistanceFacade.getAllActivities()  else {
-            self.alertError(errorMsg : "Cannot reach the activity prescriptions", userInfo : "Unknown Error")
-            return
-        }
-        self.activities = activities
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,6 +74,22 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
         }else{
             return false
         }
+    }
+    
+    // get the persistence facade that hides the storage business logic.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // get the persistence facade that hides the storage business logic.
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        // try to fetch all the medicines.
+        guard let activities : ActivityCollection = persistanceFacade.getAllActivities()  else {
+            self.alertError(errorMsg : "Cannot reach the activity prescriptions", userInfo : "Unknown Error")
+            return
+        }
+        self.activities = activities
+        self.activitiesTableView.reloadData()
     }
 }
 

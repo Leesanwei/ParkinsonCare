@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
         
-        return persistanceFacade.addSpecialities()
+        return persistanceFacade.addSpecialities() && persistanceFacade.addEvent()
         
     }
 

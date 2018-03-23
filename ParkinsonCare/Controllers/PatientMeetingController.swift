@@ -29,7 +29,6 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         
         cell.meetingDoctorNameLabel.text = doctor.e_fullName
         cell.meetingDescriptionLabel.text = "Le \((meeting.e_date).toString(dateFormat: "dd-MM")) à  \(doctor.e_location)"
-        
         return cell
     }
     
@@ -56,17 +55,7 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
     // MARK: - ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // get the persistence facade that hides the storage business logic.
-        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-        
-        
-        // try to fetch all the medicines.
-        guard let meetings : MeetingCollection = persistanceFacade.getAllMeetings()  else {
-            self.alertError(errorMsg : "Cannot reach the meetings", userInfo : "Unknown Error")
-            return
-        }
-        self.meetings = meetings
+     
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,6 +75,21 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         }else{
             return false
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // get the persistence facade that hides the storage business logic.
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        // try to fetch all the medicines.
+        guard let meetings : MeetingCollection = persistanceFacade.getAllMeetings()  else {
+            self.alertError(errorMsg : "Cannot reach the meetings", userInfo : "Unknown Error")
+            return
+        }
+        self.meetings = meetings
+        self.meetingTableView.reloadData()
     }
 }
 

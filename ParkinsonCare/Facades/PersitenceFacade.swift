@@ -193,6 +193,14 @@ class PersistenceFacade {
         return reportingDAO.remove(rep : rep)
     }
     
+    func addReport(event : Event, date : Date)-> Bool{
+        guard let reportingDAO : ReportingDAO = daoFactory.getReportingDAO() else{
+            return false
+        }
+        return reportingDAO.add(event : event, date : date)
+        
+    }
+    
     func getAllEvents() -> [Event]?{
         //Try to get the doctorDAO
         guard let reportingDAO : ReportingDAO = daoFactory.getReportingDAO() else{
