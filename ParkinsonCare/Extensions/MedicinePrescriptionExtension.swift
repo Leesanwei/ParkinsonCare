@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 extension MedicinePrescription {
     
     // MARK: - Initializater
-    convenience init(medicine : Medicine, morning : Bool, midday : Bool, evening : Bool, frequency : Int, beginDate : NSDate, endDate : NSDate){
-        self.init()
+    convenience init(context : NSManagedObjectContext, medicine : Medicine, morning : Bool, midday : Bool, evening : Bool, frequency : Int, beginDate : NSDate, endDate : NSDate){
+        self.init(context : context)
         self.medicine = medicine
         self.morning = morning
         self.midday = midday

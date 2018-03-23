@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 extension Reporting {
     
     // MARK: - Initializater
-    convenience init(event : Event, date : NSDate){
-        self.init()
+    convenience init(context : NSManagedObjectContext, event : Event, date : NSDate){
+        self.init(context : context)
         self.event = event
         self.date = date
     }

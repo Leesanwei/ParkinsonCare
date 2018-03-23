@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 extension Notification {
     
     // MARK: - Initializater
-    convenience init(type : TypeNotification, date : NSDate){
-        self.init()
+    convenience init(context : NSManagedObjectContext, type : TypeNotification, date : NSDate){
+        self.init(context : context)
         self.typeNotification = type
         self.answered = false
     }

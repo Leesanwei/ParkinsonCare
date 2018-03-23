@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 extension Meeting {
     
     // MARK: - Initializater
-    convenience init(doctor : Doctor, date : NSDate, delay : Int, evaluations : EvaluationCollection){
-        self.init()
+    convenience init(context : NSManagedObjectContext, doctor : Doctor, date : NSDate, delay : Int, evaluations : EvaluationCollection){
+        self.init(context : context)
         self.doctor = doctor
         self.date = date
         self.delay = Int16(delay)

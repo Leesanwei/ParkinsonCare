@@ -13,7 +13,7 @@ extension Activity {
     
     // MARK: - Initializater
     convenience init(context : NSManagedObjectContext, name : String, duration : Int, frequency : Int){
-        self.init()
+        self.init(context : context)
         self.name = name
         self.duration = Int16(duration)
         self.frequency = Int16(frequency)
