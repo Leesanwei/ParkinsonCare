@@ -33,9 +33,9 @@ extension Doctor{
         }
     }
     
-    var e_speciality : Speciality {
+    var e_speciality : String {
         get{
-            return self.speciality!
+            return self.speciality!.name!
         }
     }
     

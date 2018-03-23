@@ -22,6 +22,9 @@ class AddActivityController: UIViewController,UIPickerViewDelegate,UIPickerViewD
             let frequence = frequencePicker.selectedRow(inComponent: 0)+1
             if persistanceFacade.addSport(nameSport: self.sportName.text!,duration: duration,frequence : frequence){
                 
+                // Program notifications to remind the patient to perform the exercice.
+                
+                
                 self.navigationController?.popViewController(animated: true)
             
         }

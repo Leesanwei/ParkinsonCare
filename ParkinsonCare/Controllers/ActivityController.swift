@@ -25,8 +25,8 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = self.activitiesTableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath) as! ActivityTableViewCell
         let activity : Activity = self.activities.find(_byIndex : indexPath.row)
         
-        cell.activityNameLabel.text = activity.e_name
-        cell.activityDescriptionLabel.text = "\(activity.e_duration) min tous les \(activity.e_frequency)"
+        cell.activityNameLabel.numberOfLines = 2
+        cell.activityNameLabel.text = activity.e_name + " : \(activity.e_duration) min tous les \(activity.e_frequency) jours."
         
         return cell
     }

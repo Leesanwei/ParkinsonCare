@@ -25,16 +25,19 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         let cell = self.medicinePrescriptionTableView.dequeueReusableCell(withIdentifier: "medicinePrescriptionCell", for: indexPath) as! MedicinePrescriptionTableViewCell
         let prescription : MedicinePrescription = self.medicinePrescriptions.find(_byIndex : indexPath.row)
         
-        cell.medicineNameLabel.text = prescription.e_medicine.fullDescription
-        
-        cell.prescriptionPeriodLabel.text = "Du \(prescription.e_beginDate) au \(prescription.e_endDate)"
-        
-        cell.prescriptionFrequencyLabel.text = ""
-        if prescription.hasMorningTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Matin "}
-        if prescription.hasMiddayTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Midi "}
-        if prescription.hasEveningTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Soir "}
-        
-        cell.prescriptionFrequencyLabel.text =  cell.prescriptionFrequencyLabel.text! + "tous les \(prescription.e_frequency)"
+        cell.medicineNameLabel.numberOfLines = 3
+        cell.medicineNameLabel.text = prescription.e_medicine.fullDescription + "Du \(prescription.e_beginDate) au \(prescription.e_endDate)"
+            
+        if prescription.hasMorningTake {
+            cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Matin "
+        }
+        if prescription.hasMiddayTake {
+            cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Midi "
+        }
+        if prescription.hasEveningTake {
+            cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Soir "
+        }
+        cell.medicineNameLabel.text =  cell.medicineNameLabel.text! + "tous les \(prescription.e_frequency)"
         
         return cell
     }

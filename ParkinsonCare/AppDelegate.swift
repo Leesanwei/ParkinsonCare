@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Request the authorization to notify user.
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization.
+            if granted {
+                print("User granted notification authorization.")
+            }
+            else{
+                print("User did nont granted notification authorization.")
+            }
+        }
+        
+        // Get notification category
+        let generalCategory = self.getNotificationCategorie()
+        // Register the category.
+        center.setNotificationCategories([generalCategory])
    
         return true
     }
@@ -119,6 +137,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func getNotificationCategorie() -> UNNotificationCategory{
+        let postponeAction = UNNotificationAction(identifier : "POSTPONE",title : "Repousser", options : [])
+        
+        let validateTakeAction = UNNotificationAction(identifier : "VALIDATE",title : "Valider", options : [])
+        
+        let performTakeAction = UNNotificationAction(identifier : "PERFORM",title : "Effectuer", options : [])
+        
+    
+        let notificationCategory = UNNotificationCategory(
+            identifier: "notificationCategory",
+            actions: [postponeAction,validateTakeAction,performTakeAction],
+            intentIdentifiers: [],
+            options: [])
+    
+        return notificationCategory
     }
 
 }

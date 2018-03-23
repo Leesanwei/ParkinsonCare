@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UserNotifications
 
 extension Notification {
     
@@ -35,5 +36,21 @@ extension Notification {
     
     func makeAsAnswered() -> Void{
         self.answered = true
+    }
+    
+    func programActivityReminder(frequency : Int, activity : String){
+        
+        let content = UNMutableNotificationContent()
+        content.title = NSString.localizedUserNotificationString(forKey: "Sport!", arguments: nil)
+        content.body = NSString.localizedUserNotificationString(forKey: "Il est temps d'effectuer votre activite:" + activity,arguments: nil)
+        
+        // Configure the trigger for a 7am wakeup.
+        var dateInfo = DateComponents()
+        dateInfo.hour = 18
+        dateInfo.minute = 0
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
+        
+        // Create the request object.
+        let request = UNNotificationRequest(identifier: "MorningAlarm", content: content, trigger: trigger)
     }
 }

@@ -23,11 +23,10 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.doctorsTableView.dequeueReusableCell(withIdentifier: "doctorCell", for: indexPath) as! DoctorTableViewCell
-        cell.doctorNameLabel.text = self.doctors.find(_byIndex : indexPath.row).e_fullName
-        cell.doctorContactLabel.text = self.doctors.find(_byIndex : indexPath.row).e_contact
-
+        
+        cell.doctorNameLabel.numberOfLines = 2
+        cell.doctorNameLabel.text = self.doctors.find(_byIndex : indexPath.row).e_fullName + " " + self.doctors.find(_byIndex : indexPath.row).e_speciality + " " + self.doctors.find(_byIndex : indexPath.row).e_contact
       
-        cell.doctorSpecialityLabel.text = self.doctors.find(_byIndex : indexPath.row).e_speciality.name
         return cell
     }
     
