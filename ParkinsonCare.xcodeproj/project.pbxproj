@@ -76,6 +76,7 @@
 		A1768D862046AECD007A76D6 /* ParkinsonCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D852046AECD007A76D6 /* ParkinsonCareTests.swift */; };
 		A1768D912046AECD007A76D6 /* ParkinsonCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D902046AECD007A76D6 /* ParkinsonCareUITests.swift */; };
 		A183CD242062C8A10033698E /* AddActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183CD232062C8A10033698E /* AddActivityController.swift */; };
+		A1B71E792064F50600AE1BD2 /* PatientAddReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B71E782064F50600AE1BD2 /* PatientAddReportController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		A1768D902046AECD007A76D6 /* ParkinsonCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkinsonCareUITests.swift; sourceTree = "<group>"; };
 		A1768D922046AECD007A76D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A183CD232062C8A10033698E /* AddActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityController.swift; sourceTree = "<group>"; };
+		A1B71E782064F50600AE1BD2 /* PatientAddReportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientAddReportController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				96B3679D2063D7A8008CBC91 /* DoctorSynthesisController.swift */,
 				96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */,
 				A105FD4A2063EFBB0004A7A8 /* PatientAddMeetingController.swift */,
+				A1B71E782064F50600AE1BD2 /* PatientAddReportController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				960897FF205ACAB800211064 /* MedicinePrescription.swift in Sources */,
 				96EDA747205D55CF00ED2AB4 /* PatientMedicinePrescriptionController.swift in Sources */,
 				960897DE205AA78C00211064 /* MedicineDAO.swift in Sources */,
+				A1B71E792064F50600AE1BD2 /* PatientAddReportController.swift in Sources */,
 				96089805205ACD0300211064 /* NotificationDAO.swift in Sources */,
 				960897F7205ACA6600211064 /* DoctorDAO.swift in Sources */,
 				96EDA73D205D335300ED2AB4 /* ActivityTableViewCell.swift in Sources */,

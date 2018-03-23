@@ -60,5 +60,25 @@ class CoreDataDoctorDAO : DoctorDAO{
             return nil
         }
     }
-
+    
+    func addSpecialities() -> Bool{
+    
+    let specialities : [String] = ["Kinésithérapeute","Orthophoniste","Infirmier","Psychologue Clinicien","Neuropsychologue","Ergothérapeute","Psychomotricien","Pédicure-podologue","Diététicien(ne)","Neurologue","Medecin Generaliste","Psychiatre","Neurochirurgien","Médecin de structure antidouleur","Gériatre","Médecin spécialiste en médecine","Orthoptiste","Physique","Gastro-entérologue","Urologue, Gynécologue, Sexologue","Ophtalmologiste","ORL-phoniatre","Rhumatologue","Chirurgien","Orthopédique","Pneumologue","Cardiologue","Médecin du travail","Chirurgien-Dentiste","Assistant de service social","Personnels de transport sanitaire","Personnels de soins infirmiers à domicile","Personnels des services d’aide à domicile","Personnels des services d’aide à la personne","Personnels de coordination gérontologique","Maisons départementales des personnes handicapées", "Educateur médico-sportif","Associations de patients"]
+    
+    
+        
+    for speciality in specialities {
+    let spec = Speciality(context : self.context)
+    spec.name = speciality
+    do{
+    try context.save()
+        
+    }catch {
+    return false
+    }
+        
+    
+    }
+return true
+    }
 }

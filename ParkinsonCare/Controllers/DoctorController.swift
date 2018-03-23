@@ -54,16 +54,6 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // get the persistence facade that hides the storage business logic.
-        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-        
-        
-        // try to fetch all the medicines.
-        guard let docs : DoctorCollection = persistanceFacade.getAllDoctors()  else {
-            self.alertError(errorMsg : "Cannot reach the doctors", userInfo : "Unknown Error")
-            return
-        }
-        self.doctors = docs
     }
     
     override func didReceiveMemoryWarning() {

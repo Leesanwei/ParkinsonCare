@@ -40,7 +40,6 @@ class CoreDataActivityDAO : ActivityDAO{
     
     func add(nameSport: String, duration : Int, frequency : Int) -> Bool{
         let activity = Activity(context : self.context, name : nameSport, duration : duration, frequency : frequency)
-        activity.name = nameSport
         do{
             try context.save()
             return true

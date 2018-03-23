@@ -135,6 +135,14 @@ class PersistenceFacade {
        
     }
     
+    func addSpecialities() -> Bool{
+        
+        guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
+            return false
+        }
+        return  doctorDAO.addSpecialities()
+    }
+    
     
     // MARK: - Meeting -
     
@@ -185,6 +193,30 @@ class PersistenceFacade {
         return reportingDAO.remove(rep : rep)
     }
     
+    func addReport(event : Event, date : Date)-> Bool{
+        guard let reportingDAO : ReportingDAO = daoFactory.getReportingDAO() else{
+            return false
+        }
+        return reportingDAO.add(event : event, date : date)
+        
+    }
+    
+    func getAllEvents() -> [Event]?{
+        //Try to get the doctorDAO
+        guard let reportingDAO : ReportingDAO = daoFactory.getReportingDAO() else{
+            return nil
+        }
+        return  reportingDAO.findAllEvents()
+        
+    }
+    
+    func addEvent()-> Bool{
+    guard let reportingDAO : ReportingDAO = daoFactory.getReportingDAO() else{
+    return false
+    }
+    return reportingDAO.addEvent()
+}
+
     // MARK: - Synthesis -
     
     func getAllSynthesis() -> SynthesisCollection?{
