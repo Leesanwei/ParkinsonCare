@@ -13,4 +13,6 @@ protocol ReportingDAO {
     func findAll() throws -> ReportingCollection
     func add(rep : Reporting) -> Bool
     func remove(rep : Reporting) -> Bool
+    func addEvent()->Bool
+    func findAllEvents() -> [Event]?
 }

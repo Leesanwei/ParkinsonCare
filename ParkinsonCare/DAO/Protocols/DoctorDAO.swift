@@ -15,4 +15,6 @@ protocol DoctorDAO {
     func remove(doc : Doctor) -> Bool
     
     func findAllSpecialities() -> [Speciality]?
+    
+    func addSpecialities() -> Bool
 }

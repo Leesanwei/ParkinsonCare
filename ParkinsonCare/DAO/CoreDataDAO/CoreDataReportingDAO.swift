@@ -42,5 +42,36 @@ class CoreDataReportingDAO : ReportingDAO{
         return true
     }
     
+    func addEvent()->Bool{
+        
+        let events : [String] = ["Somnolence","Chute","Hallucination","Prise de dispersible","Clic / bolus d’Apokinon"]
+        
+        
+        for eve in events {
+            let event = Event(context : self.context)
+            event.name = eve
+            do{
+                try context.save()
+                
+            }catch {
+                return false
+            }
+            
+            
+        }
+        return true
+        
+    }
+    
+    func findAllEvents() -> [Event]?{
+    let request : NSFetchRequest<Event> = Event.fetchRequest()
+    do{
+    return try self.context.fetch(request)
+    
+    }catch {
+    return nil
+    }
+}
+
 }
 
