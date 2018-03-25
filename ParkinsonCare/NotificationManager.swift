@@ -53,7 +53,7 @@ class NotificationManager{
         let request = UNNotificationRequest(identifier: "MorningAlarm", content: content, trigger: trigger)
     }
     
-    func scheduleEvaluations(beginDate : DateComponents, minHour : Int, maxHour : Int, frequency : Int) -> Bool {
+    func scheduleEvaluations(beginDate : DateComponents, minHour : Int, maxHour : Int) -> Bool {
         
         //Define notification content
         let content = UNMutableNotificationContent()
@@ -61,24 +61,23 @@ class NotificationManager{
         content.body = "Comment vous sentez-vous ?"
         content.categoryIdentifier = "evaluationCategory"
         
-        //Schedule notifications for the five days before the meeting
-        let interval : Int = (maxHour - minHour) / frequency
-        
+        var date = beginDate
+        date.hour = minHour
         for i in 0..<5{// five days before the meeting
             
-            for j in 0..<frequency{// number of notifications per day
-                var date = DateComponents()
-                date.year = beginDate.year
-                date.month = beginDate.month
-                date.day = beginDate.day! + i
-                date.hour = minHour + j * interval
+            for j in minHour..<maxHour{// number of notifications per day
+                
                 let trigger = UNCalendarNotificationTrigger(dateMatching : date, repeats : false)
 
                 // Register the j notification of the i day
                 let request = UNNotificationRequest(identifier: "evalNotification", content : content, trigger : trigger)
                 UNUserNotificationCenter.current().add(request)
-    
+                
+                date.hour = date.hour! + 1
+              
             }
+            date.day = date.day! + 1
+
         }
         
         return true

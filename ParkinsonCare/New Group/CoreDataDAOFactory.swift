@@ -63,13 +63,6 @@ class CoreDataDAOFactory : AbstractDAOFactory{
         return CoreDataReportingDAO(context : context)
     }
     
-    override func getNotificationDAO() -> NotificationDAO?{
-        guard let context : NSManagedObjectContext = self.getContext() else{
-            return nil
-        }
-        return CoreDataNotificationDAO(context : context)
-    }
-    
     override func getSynthesisDAO() -> SynthesisDAO?{
         guard let context : NSManagedObjectContext = self.getContext() else{
             return nil

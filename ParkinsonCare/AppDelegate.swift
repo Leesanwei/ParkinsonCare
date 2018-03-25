@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Register the category.
         center.setNotificationCategories(notificationCategories)
         center.delegate = self
-   
+
         return true
     }
     

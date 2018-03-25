@@ -19,14 +19,23 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBAction func addMeeting(_ sender: Any) {
         
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        let row = doctorPicker.selectedRow(inComponent: 0)
+        let doctor = self.doctors.find(_byIndex: row)
+        let delay = delayPicker.selectedRow(inComponent: 0)
         
-            let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-            let row = doctorPicker.selectedRow(inComponent: 0)
-            let doctor = self.doctors.find(_byIndex: row)
-            let delay = delayPicker.selectedRow(inComponent: 0)
         if persistanceFacade.addMeeting(doctor : doctor, date : datePicker.date, delay : delay){
-            self.navigationController?.popViewController(animated: true)
+            if doctor.e_speciality == "Neurologue" { // schedule evaluations before the meeting
+                
+                // get default stored parameters.
+                let minHour = 18
+                let maxHour = 19
+                let frequency = 120
+                if NotificationManager.getInstance().scheduleEvaluations(beginDate: (datePicker.date as NSDate).getComponent(), minHour: minHour, maxHour: maxHour){}
             }
+            
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     

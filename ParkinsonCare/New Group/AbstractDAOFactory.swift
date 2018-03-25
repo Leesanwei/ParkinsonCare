@@ -35,9 +35,6 @@ class AbstractDAOFactory {
     func getSynthesisDAO() -> SynthesisDAO?{
         return nil
     }
-    func getNotificationDAO() -> NotificationDAO?{
-        return nil
-    }
     
     
 }

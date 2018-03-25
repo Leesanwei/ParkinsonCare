@@ -17,4 +17,16 @@ extension NSDate
         return dateFormatter.string(from: self as Date)
     }
     
+    func getComponent() -> DateComponents{
+        var component  = DateComponents()
+        component.year = NSCalendar.current.component(Calendar.Component.year, from: self as Date)
+        component.month = NSCalendar.current.component(Calendar.Component.month, from: self as Date)
+        component.day = NSCalendar.current.component(Calendar.Component.day, from: self as Date)
+        component.hour = NSCalendar.current.component(Calendar.Component.hour, from: self as Date)
+        component.minute = NSCalendar.current.component(Calendar.Component.minute, from: self as Date)
+        component.second = NSCalendar.current.component(Calendar.Component.second, from: self as Date)
+
+        return component
+    }
+    
 }
