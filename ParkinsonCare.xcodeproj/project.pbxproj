@@ -43,7 +43,6 @@
 		96270A4320611AEF001A6BDE /* ReportingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4220611AEF001A6BDE /* ReportingExtension.swift */; };
 		96270A4520611B76001A6BDE /* MeetingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4420611B76001A6BDE /* MeetingExtension.swift */; };
 		96270A4720611D02001A6BDE /* EvaluationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4620611D02001A6BDE /* EvaluationCollection.swift */; };
-		96270A492061203B001A6BDE /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A482061203B001A6BDE /* NotificationExtension.swift */; };
 		96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96270A4A206123DA001A6BDE /* EventExtension.swift */; };
 		968DD4E72064DDE600C66416 /* AbstractDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968DD4E62064DDE600C66416 /* AbstractDAOFactory.swift */; };
 		96B3679E2063D7A8008CBC91 /* DoctorSynthesisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3679D2063D7A8008CBC91 /* DoctorSynthesisController.swift */; };
@@ -55,6 +54,7 @@
 		96B367AD2063E366008CBC91 /* icons8-chevron-right-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B367AB2063E366008CBC91 /* icons8-chevron-right-filled-50.png */; };
 		96B367AE2063E366008CBC91 /* icons8-medical-doctor-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B367AC2063E366008CBC91 /* icons8-medical-doctor-50.png */; };
 		96B367B02063E8F6008CBC91 /* ShowSynthesisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */; };
+		96BFC1052067ED740026723B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFC1042067ED740026723B /* NotificationManager.swift */; };
 		96DF3005205D6E0100FD5B57 /* PatientMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3004205D6E0100FD5B57 /* PatientMeetingController.swift */; };
 		96DF3007205D6F1B00FD5B57 /* MeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3006205D6F1B00FD5B57 /* MeetingTableViewCell.swift */; };
 		96DF3009205D73E900FD5B57 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF3008205D73E900FD5B57 /* DateExtension.swift */; };
@@ -135,7 +135,6 @@
 		96270A4220611AEF001A6BDE /* ReportingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingExtension.swift; sourceTree = "<group>"; };
 		96270A4420611B76001A6BDE /* MeetingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingExtension.swift; sourceTree = "<group>"; };
 		96270A4620611D02001A6BDE /* EvaluationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCollection.swift; sourceTree = "<group>"; };
-		96270A482061203B001A6BDE /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		96270A4A206123DA001A6BDE /* EventExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExtension.swift; sourceTree = "<group>"; };
 		968DD4E62064DDE600C66416 /* AbstractDAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractDAOFactory.swift; sourceTree = "<group>"; };
 		96B3679D2063D7A8008CBC91 /* DoctorSynthesisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSynthesisController.swift; sourceTree = "<group>"; };
@@ -147,6 +146,7 @@
 		96B367AB2063E366008CBC91 /* icons8-chevron-right-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-chevron-right-filled-50.png"; sourceTree = "<group>"; };
 		96B367AC2063E366008CBC91 /* icons8-medical-doctor-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-medical-doctor-50.png"; sourceTree = "<group>"; };
 		96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSynthesisController.swift; sourceTree = "<group>"; };
+		96BFC1042067ED740026723B /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		96DF3004205D6E0100FD5B57 /* PatientMeetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMeetingController.swift; sourceTree = "<group>"; };
 		96DF3006205D6F1B00FD5B57 /* MeetingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTableViewCell.swift; sourceTree = "<group>"; };
 		96DF3008205D73E900FD5B57 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -284,7 +284,6 @@
 				96270A3E20611956001A6BDE /* ActivityExtension.swift */,
 				96270A4220611AEF001A6BDE /* ReportingExtension.swift */,
 				96270A4420611B76001A6BDE /* MeetingExtension.swift */,
-				96270A482061203B001A6BDE /* NotificationExtension.swift */,
 				96270A4A206123DA001A6BDE /* EventExtension.swift */,
 				96B367A12063D9A6008CBC91 /* SynthesisExtension.swift */,
 			);
@@ -387,6 +386,7 @@
 				A1768D792046AECD007A76D6 /* LaunchScreen.storyboard */,
 				A1768D7C2046AECD007A76D6 /* Info.plist */,
 				A1768D742046AECD007A76D6 /* ParkinsonCare.xcdatamodeld */,
+				96BFC1042067ED740026723B /* NotificationManager.swift */,
 			);
 			path = ParkinsonCare;
 			sourceTree = "<group>";
@@ -559,7 +559,6 @@
 				A1768D702046AECD007A76D6 /* ViewController.swift in Sources */,
 				960897C920591BD400211064 /* NotificationCollection.swift in Sources */,
 				96270A3F20611956001A6BDE /* ActivityExtension.swift in Sources */,
-				96270A492061203B001A6BDE /* NotificationExtension.swift in Sources */,
 				96B3679E2063D7A8008CBC91 /* DoctorSynthesisController.swift in Sources */,
 				96EDA741205D3B1C00ED2AB4 /* DoctorController.swift in Sources */,
 				96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */,
@@ -593,6 +592,7 @@
 				96089801205ACB6A00211064 /* MedicinePrescriptionCollection.swift in Sources */,
 				96270A4720611D02001A6BDE /* EvaluationCollection.swift in Sources */,
 				960897ED205AC9AD00211064 /* CoreDataMedicinePrescriptionDAO.swift in Sources */,
+				96BFC1052067ED740026723B /* NotificationManager.swift in Sources */,
 				960897E7205AC95800211064 /* CoreDataNotificationDAO.swift in Sources */,
 				96DF3007205D6F1B00FD5B57 /* MeetingTableViewCell.swift in Sources */,
 				96B367A22063D9A6008CBC91 /* SynthesisExtension.swift in Sources */,
