@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84078C642067E93900394564 /* PatientAddMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84078C632067E93800394564 /* PatientAddMedicineController.swift */; };
 		843CA8EC20517B4F00DC7D3C /* roundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CA8EB20517B4F00DC7D3C /* roundButton.swift */; };
 		845FB4D5205ED581009245EC /* DoctorAddMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */; };
+		8467A0552067FEED0043F433 /* DoctorAddSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */; };
 		84E8F9362060349A00D24419 /* DoctorAddDoctorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */; };
 		960897C320591BC900211064 /* DoctorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C220591BC900211064 /* DoctorCollection.swift */; };
 		960897C520591BCC00211064 /* MedicineCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C420591BCC00211064 /* MedicineCollection.swift */; };
@@ -97,8 +99,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84078C632067E93800394564 /* PatientAddMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientAddMedicineController.swift; sourceTree = "<group>"; };
 		843CA8EB20517B4F00DC7D3C /* roundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundButton.swift; sourceTree = "<group>"; };
 		845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddMedicineController.swift; sourceTree = "<group>"; };
+		8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddSettingsController.swift; sourceTree = "<group>"; };
 		84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddDoctorController.swift; sourceTree = "<group>"; };
 		960897C220591BC900211064 /* DoctorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCollection.swift; sourceTree = "<group>"; };
 		960897C420591BCC00211064 /* MedicineCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollection.swift; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 				96B367AF2063E8F6008CBC91 /* ShowSynthesisController.swift */,
 				A105FD4A2063EFBB0004A7A8 /* PatientAddMeetingController.swift */,
 				A1B71E782064F50600AE1BD2 /* PatientAddReportController.swift */,
+				84078C632067E93800394564 /* PatientAddMedicineController.swift */,
+				8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -560,6 +566,7 @@
 				A183CD242062C8A10033698E /* AddActivityController.swift in Sources */,
 				96B367A62063DD8A008CBC91 /* SynthesisDAO.swift in Sources */,
 				96EDA749205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift in Sources */,
+				84078C642067E93900394564 /* PatientAddMedicineController.swift in Sources */,
 				960897EB205AC99B00211064 /* CoreDataActivityDAO.swift in Sources */,
 				960897F5205ACA4700211064 /* ActivityDAO.swift in Sources */,
 				96EDA74D205D678700ED2AB4 /* ActivityController.swift in Sources */,
@@ -593,6 +600,7 @@
 				96B367B02063E8F6008CBC91 /* ShowSynthesisController.swift in Sources */,
 				96DF3009205D73E900FD5B57 /* DateExtension.swift in Sources */,
 				84E8F9362060349A00D24419 /* DoctorAddDoctorController.swift in Sources */,
+				8467A0552067FEED0043F433 /* DoctorAddSettingsController.swift in Sources */,
 				A1768D6E2046AECD007A76D6 /* AppDelegate.swift in Sources */,
 				96B367A02063D86D008CBC91 /* SynthesisCollection.swift in Sources */,
 				960897C720591BCF00211064 /* MeetingCollection.swift in Sources */,

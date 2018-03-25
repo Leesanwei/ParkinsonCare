@@ -27,8 +27,7 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         
         let doctor : Doctor = meeting.e_doctor
         
-        cell.meetingDoctorNameLabel.text = doctor.e_fullName
-        cell.meetingDescriptionLabel.text = "Le \((meeting.e_date).toString(dateFormat: "dd-MM")) à  \(doctor.e_location)"
+        cell.meetingDoctorNameLabel.text = doctor.e_fullName + " Le \((meeting.e_date).toString(dateFormat: "dd-MM")) à  \(doctor.e_location)"
         return cell
     }
     

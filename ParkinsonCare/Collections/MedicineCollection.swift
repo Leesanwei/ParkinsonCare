@@ -35,4 +35,10 @@ class MedicineCollection{
     func find(_byIndex index : Int) -> Medicine{
         return self.medicines[index]
     }
+    
+    func sort(){
+        self.medicines = self.medicines.sorted{
+            $0.name! < $1.name!
+        }
+    }
 }

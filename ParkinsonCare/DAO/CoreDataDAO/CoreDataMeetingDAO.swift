@@ -45,10 +45,9 @@ class CoreDataMeetingDAO : MeetingDAO{
         
         do{
             try context.save()
-            print(meeting.date)
+           
            
         }catch {
-            print(doctor.firstName)
             return false
     }
          return true

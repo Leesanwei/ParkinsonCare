@@ -12,9 +12,6 @@ class MedicinePrescriptionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var medicineNameLabel : UILabel!
     
-    @IBOutlet weak var prescriptionPeriodLabel : UILabel!
-
-    @IBOutlet weak var prescriptionFrequencyLabel : UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
