@@ -912,7 +912,7 @@
         <!--Ajouter une prise-->
         <scene sceneID="lkf-eS-ttf">
             <objects>
-                <viewController title="Ajouter une prise" id="3ZU-Yt-HlT" sceneMemberID="viewController">
+                <viewController title="Ajouter une prise" id="3ZU-Yt-HlT" customClass="PatientAddMedicineController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RGB-33-WbF"/>
                         <viewControllerLayoutGuide type="bottom" id="Een-ZM-ADs"/>
@@ -921,31 +921,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Médicaments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmm-av-s8X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Médicament :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmm-av-s8X">
                                 <rect key="frame" x="135" y="92" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dni-d1-mBX">
-                                <rect key="frame" x="0.0" y="142" width="375" height="106"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dni-d1-mBX">
+                                <rect key="frame" x="16" y="142" width="343" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="mAH-hU-CDr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="3ZU-Yt-HlT" id="9ce-6I-TCs"/>
+                                    <outlet property="delegate" destination="3ZU-Yt-HlT" id="DUF-nT-8bo"/>
+                                </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKv-Ti-mAB">
-                                <rect key="frame" x="166" y="288" width="39" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prise :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKv-Ti-mAB">
+                                <rect key="frame" x="164" y="277" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-Mm-qLV">
+                                <rect key="frame" x="235" y="318" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6W-Gl-zV3">
+                                <rect key="frame" x="233" y="366" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myL-RI-Q8F">
+                                <rect key="frame" x="234" y="414" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ6-pC-VVh">
+                                <rect key="frame" x="120" y="323" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxk-XT-flZ">
+                                <rect key="frame" x="125" y="371" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-b2-8k0">
+                                <rect key="frame" x="126" y="419" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GG-8G-gdf">
+                                <rect key="frame" x="164" y="553" width="47" height="30"/>
+                                <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addMedicinePrescription:" destination="3ZU-Yt-HlT" eventType="touchUpInside" id="4Vw-7a-6EK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durée :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzO-zZ-4kb">
+                                <rect key="frame" x="45" y="490" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfl-rj-s43">
+                                <rect key="frame" x="135" y="463" width="224" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="XwA-aR-cEu"/>
+                                    <constraint firstAttribute="height" constant="75" id="iDd-ZR-vh3"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="3ZU-Yt-HlT" id="MXX-Rg-QWA"/>
+                                    <outlet property="delegate" destination="3ZU-Yt-HlT" id="4jp-hp-xua"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pzO-zZ-4kb" firstAttribute="leading" secondItem="amO-Rb-RPD" secondAttribute="leadingMargin" constant="29" id="1wI-1G-QPr"/>
+                            <constraint firstItem="gfl-rj-s43" firstAttribute="top" secondItem="myL-RI-Q8F" secondAttribute="bottom" constant="18" id="26o-TI-lGv"/>
+                            <constraint firstItem="cmm-av-s8X" firstAttribute="centerX" secondItem="amO-Rb-RPD" secondAttribute="centerX" id="5gs-MO-xR2"/>
+                            <constraint firstItem="myL-RI-Q8F" firstAttribute="top" secondItem="O6W-Gl-zV3" secondAttribute="bottom" constant="17" id="7MS-JQ-T2t"/>
+                            <constraint firstItem="ot3-b2-8k0" firstAttribute="top" secondItem="Pxk-XT-flZ" secondAttribute="bottom" constant="27" id="9IC-6M-xp0"/>
+                            <constraint firstItem="bKv-Ti-mAB" firstAttribute="top" secondItem="Dni-d1-mBX" secondAttribute="bottom" constant="29" id="GR9-zr-Sw5"/>
+                            <constraint firstItem="bKv-Ti-mAB" firstAttribute="centerX" secondItem="amO-Rb-RPD" secondAttribute="centerX" id="GhE-kq-DVs"/>
+                            <constraint firstItem="1GG-8G-gdf" firstAttribute="centerX" secondItem="amO-Rb-RPD" secondAttribute="centerX" id="HAE-SQ-9YD"/>
+                            <constraint firstItem="pzO-zZ-4kb" firstAttribute="top" secondItem="Dni-d1-mBX" secondAttribute="bottom" constant="242" id="HaZ-ie-JAZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O6W-Gl-zV3" secondAttribute="trailing" constant="77" id="Hor-GE-pN8"/>
+                            <constraint firstItem="Pxk-XT-flZ" firstAttribute="top" secondItem="rJ6-pC-VVh" secondAttribute="bottom" constant="27" id="JkK-NZ-y5E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dni-d1-mBX" secondAttribute="trailing" id="LlE-G7-wKl"/>
+                            <constraint firstItem="ot3-b2-8k0" firstAttribute="leading" secondItem="amO-Rb-RPD" secondAttribute="leadingMargin" constant="110" id="Mgh-Su-otA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="myL-RI-Q8F" secondAttribute="trailing" constant="76" id="N0K-GL-hP3"/>
+                            <constraint firstItem="cmm-av-s8X" firstAttribute="top" secondItem="RGB-33-WbF" secondAttribute="bottom" constant="28" id="Tbg-qS-zrl"/>
+                            <constraint firstItem="O6W-Gl-zV3" firstAttribute="top" secondItem="fcd-Mm-qLV" secondAttribute="bottom" constant="17" id="VW3-If-v9y"/>
+                            <constraint firstItem="Pxk-XT-flZ" firstAttribute="leading" secondItem="amO-Rb-RPD" secondAttribute="leadingMargin" constant="109" id="W5h-kN-Fls"/>
+                            <constraint firstItem="fcd-Mm-qLV" firstAttribute="top" secondItem="Dni-d1-mBX" secondAttribute="bottom" constant="70" id="aHi-XA-dw0"/>
+                            <constraint firstItem="rJ6-pC-VVh" firstAttribute="leading" secondItem="amO-Rb-RPD" secondAttribute="leadingMargin" constant="104" id="d5M-f8-xTx"/>
+                            <constraint firstItem="Dni-d1-mBX" firstAttribute="leading" secondItem="amO-Rb-RPD" secondAttribute="leadingMargin" id="ggi-4d-w3F"/>
+                            <constraint firstItem="rJ6-pC-VVh" firstAttribute="top" secondItem="Dni-d1-mBX" secondAttribute="bottom" constant="75" id="iWQ-hz-GzA"/>
+                            <constraint firstItem="gfl-rj-s43" firstAttribute="trailing" secondItem="amO-Rb-RPD" secondAttribute="trailingMargin" id="kvK-KG-OzR"/>
+                            <constraint firstItem="1GG-8G-gdf" firstAttribute="top" secondItem="gfl-rj-s43" secondAttribute="bottom" constant="15" id="o2S-dF-5Bv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fcd-Mm-qLV" secondAttribute="trailing" constant="75" id="sRZ-x6-iVj"/>
+                            <constraint firstItem="Dni-d1-mBX" firstAttribute="top" secondItem="cmm-av-s8X" secondAttribute="bottom" constant="29" id="tf1-B5-deM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="durationPicker" destination="gfl-rj-s43" id="Qz2-eN-Ohi"/>
+                        <outlet property="matinSwitch" destination="fcd-Mm-qLV" id="BKb-f3-3ES"/>
+                        <outlet property="medicinePicker" destination="Dni-d1-mBX" id="lvn-qA-XTg"/>
+                        <outlet property="midiSwitch" destination="O6W-Gl-zV3" id="41Q-8T-JsB"/>
+                        <outlet property="soirSwitch" destination="myL-RI-Q8F" id="TTp-zL-dgQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMZ-zr-PRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632.79999999999995" y="1600.7496251874063"/>
+            <point key="canvasLocation" x="632.79999999999995" y="1599.8500749625189"/>
         </scene>
         <!--Médecins-->
         <scene sceneID="ljY-SY-spC">

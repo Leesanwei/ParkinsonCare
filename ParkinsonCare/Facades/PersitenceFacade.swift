@@ -69,6 +69,13 @@ class PersistenceFacade {
         return medicinePrescriptionDAO.remove(mp : medPres)
     }
     
+    func addMedicinePrescription(medicine : Medicine, beginDate : Date, endDate : Date ,matin : Bool, midi : Bool, soir: Bool) -> Bool{
+        guard let medicinePrescriptionDAO : MedicinePrescriptionDAO = daoFactory.getMedicinePrescriptionDAO() else{
+            return false
+        }
+        return medicinePrescriptionDAO.add(medicine : medicine, beginDate : beginDate, endDate : endDate,matin : matin, midi : midi, soir: soir)
+    }
+    
     // MARK: - Activity -
     
     func getAllActivities() -> ActivityCollection?{

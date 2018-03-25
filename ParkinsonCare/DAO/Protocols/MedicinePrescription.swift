@@ -11,6 +11,7 @@ import Foundation
 protocol MedicinePrescriptionDAO {
     
     func findAll() throws -> MedicinePrescriptionCollection
-    func add(mp : MedicinePrescription) -> Bool
+    func add(medicine : Medicine, beginDate : Date, endDate : Date ,matin : Bool, midi : Bool, soir: Bool) -> Bool
     func remove(mp : MedicinePrescription) -> Bool
+    
 }
