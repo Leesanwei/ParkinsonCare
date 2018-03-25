@@ -11,7 +11,7 @@ import CoreData
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     
@@ -32,9 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Get notification category
-        let generalCategory = self.getNotificationCategorie()
+        let notificationCategories = self.getNotificationCategorie()
         // Register the category.
-        center.setNotificationCategories([generalCategory])
+        center.setNotificationCategories(notificationCategories)
+        center.delegate = self
    
         return true
     }
@@ -129,21 +130,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func getNotificationCategorie() -> UNNotificationCategory{
+    func getNotificationCategorie() -> Set<UNNotificationCategory>{
+        
+        //Medicine category
         let postponeAction = UNNotificationAction(identifier : "POSTPONE",title : "Repousser", options : [])
         
         let validateTakeAction = UNNotificationAction(identifier : "VALIDATE",title : "Valider", options : [])
-        
-        let performTakeAction = UNNotificationAction(identifier : "PERFORM",title : "Effectuer", options : [])
-        
     
-        let notificationCategory = UNNotificationCategory(
-            identifier: "notificationCategory",
-            actions: [postponeAction,validateTakeAction,performTakeAction],
+        let medicineCategory = UNNotificationCategory(
+            identifier: "medicineCategory",
+            actions: [postponeAction,validateTakeAction],
             intentIdentifiers: [],
             options: [])
     
-        return notificationCategory
+        
+        // Evaluation category
+        let onAction = UNNotificationAction(identifier: "ON", title: "On", options: [])
+        let offAction = UNNotificationAction(identifier: "OFF", title: "Off", options: [])
+        let dysAction = UNNotificationAction(identifier: "DYSKINESIE", title: "Diskinésie", options: [])
+
+        let evalCategory = UNNotificationCategory(identifier: "evaluationCategory", actions: [onAction,offAction,dysAction], intentIdentifiers: [], options: [])
+        
+        var set : Set<UNNotificationCategory> = Set<UNNotificationCategory>()
+        set.insert(medicineCategory)
+        set.insert(evalCategory)
+        
+        return set
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        NotificationManager.getInstance().handleResponse(response : response)
     }
 
 }
