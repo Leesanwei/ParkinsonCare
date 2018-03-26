@@ -25,14 +25,13 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         let cell = self.medicinePrescriptionTableView.dequeueReusableCell(withIdentifier: "medicinePrescriptionCell", for: indexPath) as! MedicinePrescriptionTableViewCell
         let prescription : MedicinePrescription = self.medicinePrescriptions.find(_byIndex : indexPath.row)
         
-        cell.medicineNameLabel.numberOfLines = 3
-        cell.medicineNameLabel.text = prescription.e_medicine.fullDescription + "Du \(prescription.e_beginDate) au \(prescription.e_endDate)"
+        cell.medicineNameLabel.text = prescription.e_medicine.fullDescription + "\n" + "Du \(prescription.e_beginDate.toString(dateFormat: "dd-MM")) au \(prescription.e_endDate.toString(dateFormat: "dd-MM"))" + "\n"
             
         if prescription.hasMorningTake {
-            cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Matin "
+            cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Matin - "
         }
         if prescription.hasMiddayTake {
-            cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Midi "
+            cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Midi - "
         }
         if prescription.hasEveningTake {
             cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Soir "
@@ -101,6 +100,11 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         }
         self.medicinePrescriptions = prescriptions
         self.medicinePrescriptionTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 80.0;//Choose your custom row height
     }
 }
 

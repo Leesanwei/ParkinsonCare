@@ -28,7 +28,7 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         
         let event : Event = reporting.e_event
         
-        cell.reportingDescriptionLabel.text = " \(event.e_name) le \(reporting.e_date.toString(dateFormat: "dd-MM"))"
+        cell.reportingDescriptionLabel.text = " \(event.e_name) le \(reporting.e_date.toString(dateFormat: "dd-MM h:mm a"))"
     
         return cell
     }
