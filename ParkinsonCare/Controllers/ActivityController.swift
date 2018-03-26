@@ -24,9 +24,9 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.activitiesTableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath) as! ActivityTableViewCell
         let activity : Activity = self.activities.find(_byIndex : indexPath.row)
-        
-        cell.activityNameLabel.numberOfLines = 2
-        cell.activityNameLabel.text = activity.e_name + " : \(activity.e_duration) min tous les \(activity.e_frequency) jours."
+        let hour = activity.e_duration/60
+        let minute = activity.e_duration - hour*60
+        cell.activityNameLabel.text = activity.e_name + " : \(hour) heure \(minute) minutes" + "\n" + "Tous les \(activity.e_frequency) jours"
         
         return cell
     }
@@ -90,6 +90,11 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         self.activities = activities
         self.activitiesTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 50.0;//Choose your custom row height
     }
 }
 

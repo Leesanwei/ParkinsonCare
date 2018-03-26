@@ -38,81 +38,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtQ-KI-WHY" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="121" y="515" width="133" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Signalements"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtQ-KI-WHY" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
+                                <rect key="frame" x="115" y="495" width="145" height="145"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="Baj-Oo-bRI"/>
+                                    <constraint firstAttribute="width" constant="145" id="elI-cG-R0E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Signalements">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="HJb-Sg-v9j" kind="show" id="7fw-SB-VzH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-9O-EuY" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="204" y="114" width="145" height="145"/>
-                                <color key="backgroundColor" red="1" green="0.029626705872060732" blue="0.93469386609015448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="214" y="114" width="145" height="145"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="Y80-hn-d3n"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="bIE-nI-BvC"/>
+                                    <constraint firstAttribute="width" constant="145" id="3x2-AS-61m"/>
+                                    <constraint firstAttribute="height" constant="145" id="qdN-KE-1Jj"/>
                                 </constraints>
-                                <state key="normal" title="Sports"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Sports">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="SoA-zH-obI" kind="show" id="jtp-Al-msJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-8Y-g1Q" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="26" y="309" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.038803651078940127" green="0.060398401615078257" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="324" width="145" height="145"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="JsN-oO-iEU"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="sJz-g2-XFV"/>
+                                    <constraint firstAttribute="height" constant="145" id="Vbs-En-ZI8"/>
+                                    <constraint firstAttribute="width" constant="145" id="kZG-tk-E1D"/>
                                 </constraints>
-                                <state key="normal" title="Médecin"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Médecin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="SYe-Yg-bv2" kind="show" id="hDw-od-xPi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY2-3b-agc" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
-                                <rect key="frame" x="220" y="309" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.13449819924359185" green="0.075984146831056254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="3Th-Mq-UMt"/>
-                                    <constraint firstAttribute="height" constant="145" id="N02-p9-ngg"/>
-                                </constraints>
-                                <state key="normal" title="Tableau de Synthèse"/>
-                                <connections>
-                                    <segue destination="Jrx-ik-NSu" kind="show" id="qky-Nx-FHV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri2-zR-lof" customClass="roundButton" customModule="ParkinsonCare">
-                                <rect key="frame" x="26" y="114" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.99587111398963735" green="0.18546171229026742" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="114" width="145" height="145"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="3lj-PE-Xq9"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="VvS-XZ-pns"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="d9U-Lr-cnb"/>
+                                    <constraint firstAttribute="width" constant="145" id="55v-LV-xCa"/>
+                                    <constraint firstAttribute="height" constant="145" id="Q6Z-tN-UEW"/>
                                 </constraints>
-                                <state key="normal" title="Médicaments"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Médicaments">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="7Yf-st-22v" kind="show" identifier="showMedicines" id="dgJ-kA-gaj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY2-3b-agc" customClass="roundButton" customModule="ParkinsonCare" customModuleProvider="target">
+                                <rect key="frame" x="214" y="324" width="145" height="145"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="1BX-TG-9RU"/>
+                                    <constraint firstAttribute="height" constant="145" id="ffQ-co-VyZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Tableau Synthèse">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jrx-ik-NSu" kind="show" id="qky-Nx-FHV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" constant="10" id="1H0-J5-uIk"/>
-                            <constraint firstItem="ri2-zR-lof" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" constant="10" id="Ahe-HH-Fe1"/>
-                            <constraint firstItem="ZtB-9O-EuY" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="50" id="GqJ-a1-4LL"/>
-                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="top" secondItem="ri2-zR-lof" secondAttribute="bottom" constant="50" id="Vbp-eU-DHw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZtB-9O-EuY" secondAttribute="trailing" constant="10" id="VlC-5k-37b"/>
-                            <constraint firstAttribute="trailing" secondItem="iY2-3b-agc" secondAttribute="trailing" constant="10" id="dLg-zP-C9C"/>
-                            <constraint firstItem="ri2-zR-lof" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="50" id="peS-B4-Wpr"/>
-                            <constraint firstItem="iY2-3b-agc" firstAttribute="top" secondItem="ZtB-9O-EuY" secondAttribute="bottom" constant="50" id="xGa-Av-Woy"/>
+                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" id="2Bj-Sl-Lq3"/>
+                            <constraint firstItem="AtQ-KI-WHY" firstAttribute="centerX" secondItem="xSN-Sc-JQe" secondAttribute="centerX" id="2WF-Hv-YBs"/>
+                            <constraint firstItem="ZtB-9O-EuY" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="50" id="3UO-Eu-1WA"/>
+                            <constraint firstItem="ri2-zR-lof" firstAttribute="top" secondItem="szi-If-DAi" secondAttribute="bottom" constant="50" id="5jD-RI-7Ft"/>
+                            <constraint firstItem="WPh-8Y-g1Q" firstAttribute="top" secondItem="ri2-zR-lof" secondAttribute="bottom" constant="65" id="FAf-Fe-2fi"/>
+                            <constraint firstItem="ri2-zR-lof" firstAttribute="leading" secondItem="xSN-Sc-JQe" secondAttribute="leadingMargin" id="HZk-oT-cpe"/>
+                            <constraint firstItem="iY2-3b-agc" firstAttribute="top" secondItem="ZtB-9O-EuY" secondAttribute="bottom" constant="65" id="LV7-ER-8Go"/>
+                            <constraint firstItem="AtQ-KI-WHY" firstAttribute="top" secondItem="WPh-8Y-g1Q" secondAttribute="bottom" constant="26" id="Tnf-py-nh0"/>
+                            <constraint firstItem="ZtB-9O-EuY" firstAttribute="trailing" secondItem="xSN-Sc-JQe" secondAttribute="trailingMargin" id="ZVD-vl-o8I"/>
+                            <constraint firstItem="iY2-3b-agc" firstAttribute="trailing" secondItem="xSN-Sc-JQe" secondAttribute="trailingMargin" id="fZN-o8-Eak"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu Médecin" id="Tf6-Y0-EMx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUc-SB-1rE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1484" y="-764"/>
+            <point key="canvasLocation" x="-1484" y="-764.16791604197908"/>
         </scene>
         <!--Signalements-->
         <scene sceneID="Ep3-3l-Ked">
@@ -257,72 +277,90 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q85-n0-Jng" customClass="roundButton" customModule="ParkinsonCare">
                                 <rect key="frame" x="16" y="126" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="ATt-MF-swA"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="Eai-5b-gPE"/>
                                 </constraints>
-                                <state key="normal" title="Médicaments"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Médicaments">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="vOb-pr-ztY" kind="show" id="Ebe-4h-7q7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHo-6f-9Pz" customClass="roundButton" customModule="ParkinsonCare">
                                 <rect key="frame" x="214" y="126" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="2fM-Q8-geA"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="BOG-jb-dLW"/>
                                 </constraints>
-                                <state key="normal" title="Sports"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Sports">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="SoA-zH-obI" kind="show" id="9AY-6w-qSE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-EL-bgL" customClass="roundButton" customModule="ParkinsonCare">
                                 <rect key="frame" x="16" y="307" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="AtE-W1-TnW"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="Jrz-Pg-xKX"/>
                                 </constraints>
-                                <state key="normal" title="Rendez-vous"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Rendez-vous">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="U10-qP-Ego" kind="show" id="J9F-JW-MaP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-Hk-SF1" customClass="roundButton" customModule="ParkinsonCare">
                                 <rect key="frame" x="214" y="307" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="Dnl-dg-LOF"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="Nm7-bf-bsJ"/>
                                 </constraints>
-                                <state key="normal" title="Signaler"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Signaler">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="bk8-70-54F" kind="show" id="fvQ-OH-a4P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-Je-SvS" customClass="roundButton" customModule="ParkinsonCare">
                                 <rect key="frame" x="16" y="488" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="3RH-hs-gvC"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="Ids-H7-Sy1"/>
                                 </constraints>
-                                <state key="normal" title="Notifications"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Notifications">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="FTJ-X0-DlJ" kind="show" id="09d-AN-NPi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMz-NL-TiX" customClass="roundButton" customModule="ParkinsonCare">
                                 <rect key="frame" x="214" y="488" width="145" height="145"/>
-                                <color key="backgroundColor" red="0.99587111399999995" green="0.1854617123" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="4W9-fC-1IV"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="dq3-IQ-NY7"/>
                                 </constraints>
-                                <state key="normal" title="Infos"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Infos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="g9q-Pt-Rbs" kind="show" id="DkR-9u-vDB"/>
                                 </connections>
@@ -472,19 +510,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9u-4e-htl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9u-4e-htl">
+                                                    <rect key="frame" x="10" y="0.0" width="355" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="b9u-4e-htl" secondAttribute="trailing" id="8u5-UP-0k3"/>
-                                                <constraint firstItem="b9u-4e-htl" firstAttribute="leading" secondItem="mY1-zA-oju" secondAttribute="leading" id="ARJ-tV-GPj"/>
-                                                <constraint firstAttribute="bottom" secondItem="b9u-4e-htl" secondAttribute="bottom" id="JD6-08-J6O"/>
-                                                <constraint firstItem="b9u-4e-htl" firstAttribute="top" secondItem="mY1-zA-oju" secondAttribute="top" id="tKg-R1-foF"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activityNameLabel" destination="b9u-4e-htl" id="B2D-nB-OCC"/>
@@ -547,7 +580,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-JC-Y8L">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-JC-Y8L">
                                                     <rect key="frame" x="15" y="11" width="345" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1061,15 +1094,15 @@
                                 <rect key="frame" x="0.0" y="134" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doctorCell" rowHeight="73" id="5bg-nu-ozB" customClass="DoctorTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doctorCell" rowHeight="159" id="5bg-nu-ozB" customClass="DoctorTableViewCell" customModule="ParkinsonCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5bg-nu-ozB" id="xru-51-QSm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEk-s1-bF1">
-                                                    <rect key="frame" x="15" y="11" width="345" height="51"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEk-s1-bF1">
+                                                    <rect key="frame" x="15" y="11" width="345" height="137"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1109,7 +1142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIE-ae-YrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714" y="-18"/>
+            <point key="canvasLocation" x="712.79999999999995" y="-18.440779610194905"/>
         </scene>
         <!--Synthèse-->
         <scene sceneID="l2b-im-Fiy">
@@ -1347,12 +1380,6 @@
                                     <outlet property="delegate" destination="6P8-xm-UK6" id="D8q-QI-r01"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-gg-i2o">
-                                <rect key="frame" x="26" y="382" width="32" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prenom :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3G-ZH-4EM">
                                 <rect key="frame" x="26" y="180" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1378,9 +1405,10 @@
                                 </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWa-d3-Q7F">
-                                <rect key="frame" x="26" y="312" width="343" height="40"/>
+                                <rect key="frame" x="26" y="312" width="343" height="62"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Fdl-GB-2iS"/>
+                                    <constraint firstAttribute="height" constant="62" id="ALE-rl-m9K"/>
+                                    <constraint firstAttribute="width" constant="343" id="RMM-KS-R7w"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="6P8-xm-UK6" id="jmP-oD-RwW"/>
@@ -1409,41 +1437,47 @@
                                     <action selector="addDoctor:" destination="6P8-xm-UK6" eventType="touchUpInside" id="Epl-j1-0zQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-gg-i2o">
+                                <rect key="frame" x="26" y="389" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LJi-VT-t4I" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leading" constant="26" id="1Lg-0G-cZw"/>
+                            <constraint firstItem="LJi-VT-t4I" firstAttribute="top" secondItem="r5T-gg-i2o" secondAttribute="bottom" constant="8" id="1ce-GN-fxM"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EfS-4A-fX9" secondAttribute="trailing" constant="10" id="1yW-lX-pKC"/>
+                            <constraint firstAttribute="trailing" secondItem="LJi-VT-t4I" secondAttribute="trailing" constant="6" id="2Nr-27-1Lu"/>
                             <constraint firstItem="t3G-ZH-4EM" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="4cz-ZB-QdC"/>
-                            <constraint firstItem="r5T-gg-i2o" firstAttribute="top" secondItem="WWa-d3-Q7F" secondAttribute="bottom" constant="30" id="66m-iS-ZdZ"/>
-                            <constraint firstItem="Gab-OJ-Jjh" firstAttribute="top" secondItem="U6p-YP-SgF" secondAttribute="bottom" constant="20" id="6BU-SR-dy5"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="r5T-gg-i2o" secondAttribute="trailing" constant="10" id="6dr-Ll-4hg"/>
-                            <constraint firstItem="LJi-VT-t4I" firstAttribute="top" secondItem="r5T-gg-i2o" secondAttribute="bottom" constant="15" id="6z0-cj-YnR"/>
-                            <constraint firstItem="LJi-VT-t4I" firstAttribute="trailing" secondItem="TtV-1F-699" secondAttribute="trailingMargin" constant="10" id="7mw-8m-DmS"/>
                             <constraint firstItem="EfS-4A-fX9" firstAttribute="top" secondItem="XmZ-Rf-XvU" secondAttribute="bottom" constant="30" id="8XV-dT-Aca"/>
+                            <constraint firstItem="U6p-YP-SgF" firstAttribute="top" secondItem="LJi-VT-t4I" secondAttribute="bottom" constant="30" id="91I-9R-snK"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="t3G-ZH-4EM" secondAttribute="trailing" constant="10" id="9Uy-LM-Oju"/>
+                            <constraint firstItem="r5T-gg-i2o" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="9ca-Dk-xKh"/>
                             <constraint firstItem="U6p-YP-SgF" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="F4D-1X-wGE"/>
+                            <constraint firstItem="Gab-OJ-Jjh" firstAttribute="top" secondItem="U6p-YP-SgF" secondAttribute="bottom" constant="20" id="HcB-fC-lYC"/>
                             <constraint firstItem="EfS-4A-fX9" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="ILs-6P-Su6"/>
                             <constraint firstItem="XmZ-Rf-XvU" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="IbN-di-tI4"/>
-                            <constraint firstItem="Gab-OJ-Jjh" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leading" constant="10" id="KT8-2h-EhP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XmZ-Rf-XvU" secondAttribute="trailing" constant="10" id="LVF-vs-WrY"/>
                             <constraint firstItem="l8V-P9-JFL" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="NzW-A4-WuD"/>
+                            <constraint firstItem="r5T-gg-i2o" firstAttribute="top" secondItem="WWa-d3-Q7F" secondAttribute="bottom" constant="15" id="Oes-hx-RFO"/>
                             <constraint firstItem="7EN-WS-Kes" firstAttribute="top" secondItem="lls-cm-ylS" secondAttribute="bottom" constant="20" id="PJ5-ye-WBc"/>
-                            <constraint firstItem="WWa-d3-Q7F" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="R9i-op-gfP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l8V-P9-JFL" secondAttribute="trailing" constant="10" id="RXE-CU-z2R"/>
-                            <constraint firstItem="r5T-gg-i2o" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="RtN-Bt-frM"/>
                             <constraint firstItem="XmZ-Rf-XvU" firstAttribute="top" secondItem="t3G-ZH-4EM" secondAttribute="bottom" constant="15" id="S5a-gP-vCb"/>
-                            <constraint firstItem="WWa-d3-Q7F" firstAttribute="top" secondItem="EfS-4A-fX9" secondAttribute="bottom" constant="15" id="XUp-9D-SJL"/>
-                            <constraint firstItem="U6p-YP-SgF" firstAttribute="top" secondItem="LJi-VT-t4I" secondAttribute="bottom" constant="30" id="ZQY-tc-6MX"/>
-                            <constraint firstItem="WWa-d3-Q7F" firstAttribute="trailing" secondItem="TtV-1F-699" secondAttribute="trailingMargin" constant="10" id="fHQ-Ix-oGq"/>
+                            <constraint firstItem="r5T-gg-i2o" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="StC-ch-uo3"/>
+                            <constraint firstItem="WWa-d3-Q7F" firstAttribute="top" secondItem="EfS-4A-fX9" secondAttribute="bottom" constant="15" id="WK9-04-Oeo"/>
+                            <constraint firstAttribute="trailing" secondItem="Gab-OJ-Jjh" secondAttribute="trailing" constant="10" id="a62-pa-LLQ"/>
+                            <constraint firstItem="U6p-YP-SgF" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="c1e-Ti-lsw"/>
+                            <constraint firstItem="WWa-d3-Q7F" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leading" constant="26" id="eHv-hC-Xth"/>
+                            <constraint firstItem="fFR-8R-fjo" firstAttribute="centerX" secondItem="TtV-1F-699" secondAttribute="centerX" id="ekN-C7-sqx"/>
                             <constraint firstItem="7EN-WS-Kes" firstAttribute="leading" secondItem="l8V-P9-JFL" secondAttribute="leading" id="hay-pR-jYe"/>
-                            <constraint firstItem="LJi-VT-t4I" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leadingMargin" constant="10" id="jkN-c2-uCv"/>
+                            <constraint firstItem="Gab-OJ-Jjh" firstAttribute="leading" secondItem="TtV-1F-699" secondAttribute="leading" constant="10" id="lY7-Pl-FSD"/>
                             <constraint firstItem="t3G-ZH-4EM" firstAttribute="top" secondItem="l8V-P9-JFL" secondAttribute="bottom" constant="30" id="mO2-Zf-Cpl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7EN-WS-Kes" secondAttribute="trailing" constant="10" id="mQC-UE-q5r"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="U6p-YP-SgF" secondAttribute="trailing" constant="10" id="q4D-JD-2Bc"/>
                             <constraint firstItem="l8V-P9-JFL" firstAttribute="top" secondItem="7EN-WS-Kes" secondAttribute="bottom" constant="15" id="sId-TQ-LYv"/>
-                            <constraint firstItem="fFR-8R-fjo" firstAttribute="centerX" secondItem="TtV-1F-699" secondAttribute="centerX" id="sa9-gO-Mc9"/>
-                            <constraint firstItem="fFR-8R-fjo" firstAttribute="top" secondItem="Gab-OJ-Jjh" secondAttribute="bottom" constant="30" id="tVS-vs-eYT"/>
-                            <constraint firstAttribute="trailing" secondItem="Gab-OJ-Jjh" secondAttribute="trailing" constant="10" id="xgi-DF-Joj"/>
+                            <constraint firstItem="fFR-8R-fjo" firstAttribute="top" secondItem="Gab-OJ-Jjh" secondAttribute="bottom" constant="30" id="wFf-Kz-4DI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1456,7 +1490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCq-Qg-qhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="-17"/>
+            <point key="canvasLocation" x="1560.8" y="-17.541229385307346"/>
         </scene>
         <!--Ajouter Médicament-->
         <scene sceneID="MFP-iU-jzq">

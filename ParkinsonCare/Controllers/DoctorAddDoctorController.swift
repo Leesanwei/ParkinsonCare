@@ -10,7 +10,7 @@
 import UIKit
 import CoreData
 
-class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate{
     
     var specialities = [Speciality]()
     
@@ -65,6 +65,11 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return specialities[row].name
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return (true)
     }
 }
 

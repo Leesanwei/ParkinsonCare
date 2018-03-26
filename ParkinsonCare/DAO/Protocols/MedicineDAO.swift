@@ -12,5 +12,6 @@ protocol MedicineDAO {
     
     func findAll() throws -> MedicineCollection
     func add(name: String, amount : String) -> Bool
+    func add() -> Bool
     func remove(med: Medicine) -> Bool
 }

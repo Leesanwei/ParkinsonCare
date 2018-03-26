@@ -37,14 +37,7 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         if prescription.hasEveningTake {
             cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Soir "
         }
-        cell.prescriptionPeriodLabel.text = "Du \(prescription.e_beginDate) au \(prescription.e_endDate)"
-        
-        cell.prescriptionFrequencyLabel.text = ""
-        if prescription.hasMorningTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Matin "}
-        if prescription.hasMiddayTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Midi "}
-        if prescription.hasEveningTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Soir "}
-        
-        
+ 
         return cell
     }
     
@@ -73,16 +66,7 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // get the persistence facade that hides the storage business logic.
-        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
-        
-        
-        // try to fetch all the medicines.
-        guard let prescriptions : MedicinePrescriptionCollection = persistanceFacade.getAllMedicinePrescriptions()  else {
-            self.alertError(errorMsg : "Cannot reach the doctors", userInfo : "Unknown Error")
-            return
-        }
-        self.medicinePrescriptions = prescriptions
+       
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,6 +86,21 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         }else{
             return false
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // get the persistence facade that hides the storage business logic.
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        
+        
+        // try to fetch all the medicines.
+        guard let prescriptions : MedicinePrescriptionCollection = persistanceFacade.getAllMedicinePrescriptions()  else {
+            self.alertError(errorMsg : "Cannot reach the doctors", userInfo : "Unknown Error")
+            return
+        }
+        self.medicinePrescriptions = prescriptions
+        self.medicinePrescriptionTableView.reloadData()
     }
 }
 
