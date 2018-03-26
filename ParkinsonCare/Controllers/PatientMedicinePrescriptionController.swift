@@ -37,14 +37,6 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         if prescription.hasEveningTake {
             cell.medicineNameLabel.text = cell.medicineNameLabel.text! + "Soir "
         }
-        cell.prescriptionPeriodLabel.text = "Du \(prescription.e_beginDate) au \(prescription.e_endDate)"
-        
-        cell.prescriptionFrequencyLabel.text = ""
-        if prescription.hasMorningTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Matin "}
-        if prescription.hasMiddayTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Midi "}
-        if prescription.hasEveningTake { cell.prescriptionFrequencyLabel.text = cell.prescriptionFrequencyLabel.text! + "Soir "}
-        
-        
         return cell
     }
     

@@ -246,7 +246,7 @@
         <!--Menu-->
         <scene sceneID="KqG-29-ioA">
             <objects>
-                <viewController id="c2X-wJ-kwf" sceneMemberID="viewController">
+                <viewController id="c2X-wJ-kwf" customClass="ViewController" customModule="ParkinsonCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NbU-aD-U19"/>
                         <viewControllerLayoutGuide type="bottom" id="b7l-jE-1vY"/>
@@ -327,6 +327,15 @@
                                     <segue destination="g9q-Pt-Rbs" kind="show" id="DkR-9u-vDB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1j-Rg-8lo">
+                                <rect key="frame" x="131" y="637" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Try Notifications"/>
+                                <connections>
+                                    <action selector="test:" destination="c2X-wJ-kwf" eventType="touchUpInside" id="oZN-D2-BaO"/>
+                                    <action selector="test:" destination="Vvp-db-2iZ" eventType="touchUpInside" id="uyW-kl-NjC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -362,6 +371,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB3-kK-igD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vvp-db-2iZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1738" y="1124"/>
         </scene>
@@ -1769,6 +1779,6 @@
         <image name="icons8-medical-doctor-50.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jtp-Al-msJ"/>
+        <segue reference="9AY-6w-qSE"/>
     </inferredMetricsTieBreakers>
 </document>

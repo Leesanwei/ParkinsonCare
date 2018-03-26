@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         // Request the authorization to notify user.
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        center.delegate = self
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             // Enable or disable features based on authorization.
             if granted {
                 print("User granted notification authorization.")
@@ -35,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let notificationCategories = self.getNotificationCategorie()
         // Register the category.
         center.setNotificationCategories(notificationCategories)
-        center.delegate = self
 
         return true
     }
@@ -142,12 +142,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             actions: [postponeAction,validateTakeAction],
             intentIdentifiers: [],
             options: [])
-    
         
         // Evaluation category
         let onAction = UNNotificationAction(identifier: "ON", title: "On", options: [])
         let offAction = UNNotificationAction(identifier: "OFF", title: "Off", options: [])
-        let dysAction = UNNotificationAction(identifier: "DYSKINESIE", title: "Diskinésie", options: [])
+        let dysAction = UNNotificationAction(identifier: "DYSKINESIE", title: "Dyskinésie", options: [])
 
         let evalCategory = UNNotificationCategory(identifier: "evaluationCategory", actions: [onAction,offAction,dysAction], intentIdentifiers: [], options: [])
         
@@ -159,8 +158,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
+        print("coucou f1")
+        completionHandler()
         NotificationManager.getInstance().handleResponse(response : response)
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // EZAlertController.alert("you have new meeting ")
+        print("coucou f2")
+        completionHandler( [.alert, .badge, .sound])
     }
 
 }
