@@ -29,6 +29,7 @@ class PatientAddMedicineController : UIViewController, UIPickerViewDelegate, UIP
         let endDate = Calendar.current.date(byAdding: dateComponent, to: date)
         
         if persistanceFacade.addMedicinePrescription(medicine : medicine, beginDate : date, endDate : endDate!,matin : matinSwitch.isOn, midi : midiSwitch.isOn, soir: soirSwitch.isOn){
+            NotificationManager.getInstance().scheduleMedicineTakeNotifications(beginDate: date, description : medicine.fullDescription, endDate : endDate!, morning :matinSwitch.isOn,noon : midiSwitch.isOn, evening: soirSwitch.isOn)
             self.navigationController?.popViewController(animated: true)
         }
     }
