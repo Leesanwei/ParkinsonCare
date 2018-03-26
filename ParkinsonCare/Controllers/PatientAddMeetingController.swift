@@ -22,7 +22,7 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
         let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
         let row = doctorPicker.selectedRow(inComponent: 0)
         let doctor = self.doctors.find(_byIndex: row)
-        let delay = delayPicker.selectedRow(inComponent: 0)
+        let delay = delayPicker.selectedRow(inComponent: 0) + 1
         
         if persistanceFacade.addMeeting(doctor : doctor, date : datePicker.date, delay : delay){
             if doctor.e_speciality == "Neurologue" { // schedule evaluations before the meeting
@@ -84,7 +84,7 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
             return (self.doctors.find(_byIndex: row).firstName! + " " + self.doctors.find(_byIndex: row).lastName!)
             }
         else{
-            return "\(row)"
+            return "\(row + 1) minutes"
         }
     }
     

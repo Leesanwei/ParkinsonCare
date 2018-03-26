@@ -24,8 +24,6 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.doctorsTableView.dequeueReusableCell(withIdentifier: "doctorCell", for: indexPath) as! DoctorTableViewCell
         
-        cell.doctorNameLabel.numberOfLines = 0
-        cell.doctorNameLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.doctorNameLabel.text = self.doctors.find(_byIndex : indexPath.row).e_fullName + "\n" + self.doctors.find(_byIndex : indexPath.row).e_speciality + "\n" + self.doctors.find(_byIndex : indexPath.row).e_contact + "\n" + self.doctors.find(_byIndex: indexPath.row).e_location
    
         return cell

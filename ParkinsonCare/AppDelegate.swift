@@ -46,6 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if(!UserDefaults.standard.bool(forKey: "wasLaunched")){
             if(preloadData()){
                 UserDefaults.standard.set(true, forKey: "wasLaunched")
+                UserDefaults.standard.set(8, forKey:"beginHour")
+                UserDefaults.standard.set(19, forKey:"endHour")
+                print(UserDefaults.standard.integer(forKey: "beginHour"))
+                print(UserDefaults.standard.integer(forKey: "endHour"))
             return true
             }
             return false
