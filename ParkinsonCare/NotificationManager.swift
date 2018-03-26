@@ -53,31 +53,37 @@ class NotificationManager{
         let request = UNNotificationRequest(identifier: "MorningAlarm", content: content, trigger: trigger)
     }
     
-    func scheduleEvaluations(beginDate : DateComponents, minHour : Int, maxHour : Int) -> Bool {
+    func scheduleEvaluations(meetingDate : Date, minHour : Int, maxHour : Int) -> Bool {
         
         //Define notification content
         let content = UNMutableNotificationContent()
         content.title = "Evaluation"
         content.body = "Comment vous sentez-vous ?"
         content.categoryIdentifier = "evaluationCategory"
+        // Start the notification five days before the meeting at minHour
         
-        var date = beginDate
-        date.hour = minHour
-        for i in 0..<5{// five days before the meeting
-            
-            for j in minHour..<maxHour{// number of notifications per day
-                
-                let trigger = UNCalendarNotificationTrigger(dateMatching : date, repeats : false)
+        guard let beginDay : Date =  Calendar.current.date(byAdding: .day, value: -5, to: meetingDate) else{
+            return false
+        }
+        guard let beginDate : Date = Calendar.current.date(byAdding: .hour, value: minHour, to: beginDay) else{
+            return false
+        }
+        for i in 0..<5{// schedule notification for the five days
+            guard var date : Date = Calendar.current.date(byAdding: .day, value: i, to: beginDate) else{
+                return false
+            }
+            for _ in minHour..<maxHour{// schedule one notification per hour.
+                let trigger = UNCalendarNotificationTrigger(dateMatching : (date as NSDate).getComponent(), repeats : false)
 
-                // Register the j notification of the i day
+                // Register the current notification
                 let request = UNNotificationRequest(identifier: "evalNotification", content : content, trigger : trigger)
                 UNUserNotificationCenter.current().add(request)
                 
-                date.hour = date.hour! + 1
-              
+                guard let d : Date = Calendar.current.date(byAdding: .hour, value: 1, to: date) else{
+                    return false
+                }
+                date = d
             }
-            date.day = date.day! + 1
-
         }
         
         return true

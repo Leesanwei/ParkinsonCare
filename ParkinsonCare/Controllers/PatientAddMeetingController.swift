@@ -30,8 +30,9 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
                 // get default stored parameters.
                 let minHour = 18
                 let maxHour = 19
-                let frequency = 120
-                if NotificationManager.getInstance().scheduleEvaluations(beginDate: (datePicker.date as NSDate).getComponent(), minHour: minHour, maxHour: maxHour){}
+                if !NotificationManager.getInstance().scheduleEvaluations(meetingDate: datePicker.date, minHour: minHour, maxHour: maxHour){
+                    print("Cannot schedule the notifications")
+                }
             }
             
             self.navigationController?.popViewController(animated: true)
