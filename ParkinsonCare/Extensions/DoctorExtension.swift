@@ -23,7 +23,8 @@ extension Doctor{
     
     var e_contact : String {
         get {
-            return "\(self.phoneNumber!) \(self.location!)"
+            return  self.phoneNumber!
+            
         }
     }
     

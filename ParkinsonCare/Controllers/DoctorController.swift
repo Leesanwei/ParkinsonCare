@@ -24,9 +24,10 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.doctorsTableView.dequeueReusableCell(withIdentifier: "doctorCell", for: indexPath) as! DoctorTableViewCell
         
-        cell.doctorNameLabel.numberOfLines = 2
-        cell.doctorNameLabel.text = self.doctors.find(_byIndex : indexPath.row).e_fullName + " " + self.doctors.find(_byIndex : indexPath.row).e_speciality + " " + self.doctors.find(_byIndex : indexPath.row).e_contact
-      
+        cell.doctorNameLabel.numberOfLines = 0
+        cell.doctorNameLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.doctorNameLabel.text = self.doctors.find(_byIndex : indexPath.row).e_fullName + "\n" + self.doctors.find(_byIndex : indexPath.row).e_speciality + "\n" + self.doctors.find(_byIndex : indexPath.row).e_contact + "\n" + self.doctors.find(_byIndex: indexPath.row).e_location
+   
         return cell
     }
     
@@ -86,6 +87,11 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
         }else{
             return false
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100.0;//Choose your custom row height
     }
 }
 

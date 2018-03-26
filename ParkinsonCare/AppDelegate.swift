@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
         
-        return persistanceFacade.addSpecialities() && persistanceFacade.addEvent()
+        return persistanceFacade.addSpecialities() && persistanceFacade.addEvent() && persistanceFacade.addMedicines()
         
     }
 

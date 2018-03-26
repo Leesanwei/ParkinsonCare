@@ -11,11 +11,11 @@ import UIKit
 class DoctorTableViewCell: UITableViewCell {
     
     
-    @IBOutlet weak var doctorSpecialityLabel: UILabel!
     
     @IBOutlet weak var doctorNameLabel: UILabel!
     
-    @IBOutlet weak var doctorContactLabel: UILabel!
+
+    @IBOutlet weak var doctorLocationLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -26,8 +26,7 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         let meeting : Meeting = self.meetings.find(_byIndex : indexPath.row)
         
         let doctor : Doctor = meeting.e_doctor
-        
-        cell.meetingDoctorNameLabel.text = doctor.e_fullName + " Le \((meeting.e_date).toString(dateFormat: "dd-MM")) à  \(doctor.e_location)"
+        cell.meetingDoctorNameLabel.text = doctor.e_fullName + "\n" + "Le \((meeting.e_date).toString(dateFormat: "dd-MM h:mm a"))" + "\n" + "à  \(doctor.e_location)"
         return cell
     }
     
@@ -89,6 +88,11 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         }
         self.meetings = meetings
         self.meetingTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 80.0;//Choose your custom row height
     }
 }
 

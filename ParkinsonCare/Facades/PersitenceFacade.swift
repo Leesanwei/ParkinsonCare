@@ -50,6 +50,13 @@ class PersistenceFacade {
         return medicineDAO.add(name : name, amount : amount)
     }
     
+    func addMedicines() -> Bool {
+        guard let medicineDAO : MedicineDAO = daoFactory.getMedicineDAO() else{
+            return false
+        }
+        return medicineDAO.add()
+    }
+    
     func getAllMedicinePrescriptions() -> MedicinePrescriptionCollection?{
         //Try to get the medicinePrescriptionDAO
         guard let medicinePrescriptionDAO : MedicinePrescriptionDAO = daoFactory.getMedicinePrescriptionDAO() else{
