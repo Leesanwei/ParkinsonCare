@@ -115,6 +115,9 @@ class NotificationManager{
         content.body = "\(description)"
         content.sound = UNNotificationSound.default()
 
+        if meetingDate.timeIntervalSinceNow - Double(60 * delay) <= 0 {
+            return false
+        }
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (meetingDate.timeIntervalSinceNow - Double(60 * delay)) , repeats:false)
 
         // Register the notification
