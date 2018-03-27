@@ -76,6 +76,7 @@
 		A1768D862046AECD007A76D6 /* ParkinsonCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D852046AECD007A76D6 /* ParkinsonCareTests.swift */; };
 		A1768D912046AECD007A76D6 /* ParkinsonCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1768D902046AECD007A76D6 /* ParkinsonCareUITests.swift */; };
 		A183CD242062C8A10033698E /* AddActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183CD232062C8A10033698E /* AddActivityController.swift */; };
+		A188E1AB206A64DF00E787C0 /* imageedit_3_9535946231.png in Resources */ = {isa = PBXBuildFile; fileRef = A188E1AA206A64DF00E787C0 /* imageedit_3_9535946231.png */; };
 		A1B71E792064F50600AE1BD2 /* PatientAddReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B71E782064F50600AE1BD2 /* PatientAddReportController.swift */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,7 @@
 		A1768D902046AECD007A76D6 /* ParkinsonCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkinsonCareUITests.swift; sourceTree = "<group>"; };
 		A1768D922046AECD007A76D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A183CD232062C8A10033698E /* AddActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityController.swift; sourceTree = "<group>"; };
+		A188E1AA206A64DF00E787C0 /* imageedit_3_9535946231.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageedit_3_9535946231.png; sourceTree = "<group>"; };
 		A1B71E782064F50600AE1BD2 /* PatientAddReportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientAddReportController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,6 +291,7 @@
 		960897D72059405C00211064 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A188E1AA206A64DF00E787C0 /* imageedit_3_9535946231.png */,
 				96E179932063FC87007ACCD2 /* pills.png */,
 				96B367AB2063E366008CBC91 /* icons8-chevron-right-filled-50.png */,
 				96B367AC2063E366008CBC91 /* icons8-medical-doctor-50.png */,
@@ -523,6 +526,7 @@
 				A1768D782046AECD007A76D6 /* Assets.xcassets in Resources */,
 				96B367AE2063E366008CBC91 /* icons8-medical-doctor-50.png in Resources */,
 				A1768D732046AECD007A76D6 /* Main.storyboard in Resources */,
+				A188E1AB206A64DF00E787C0 /* imageedit_3_9535946231.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
