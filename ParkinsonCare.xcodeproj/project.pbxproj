@@ -12,6 +12,7 @@
 		845FB4D5205ED581009245EC /* DoctorAddMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */; };
 		8467A0552067FEED0043F433 /* DoctorAddSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */; };
 		84E8F9362060349A00D24419 /* DoctorAddDoctorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */; };
+		96051181206A5533001E34B3 /* EvaluationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96051180206A5533001E34B3 /* EvaluationExtension.swift */; };
 		960897C320591BC900211064 /* DoctorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C220591BC900211064 /* DoctorCollection.swift */; };
 		960897C520591BCC00211064 /* MedicineCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C420591BCC00211064 /* MedicineCollection.swift */; };
 		960897C720591BCF00211064 /* MeetingCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C620591BCF00211064 /* MeetingCollection.swift */; };
@@ -102,6 +103,7 @@
 		845FB4D4205ED581009245EC /* DoctorAddMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddMedicineController.swift; sourceTree = "<group>"; };
 		8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddSettingsController.swift; sourceTree = "<group>"; };
 		84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddDoctorController.swift; sourceTree = "<group>"; };
+		96051180206A5533001E34B3 /* EvaluationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationExtension.swift; sourceTree = "<group>"; };
 		960897C220591BC900211064 /* DoctorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCollection.swift; sourceTree = "<group>"; };
 		960897C420591BCC00211064 /* MedicineCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollection.swift; sourceTree = "<group>"; };
 		960897C620591BCF00211064 /* MeetingCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCollection.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				96270A4420611B76001A6BDE /* MeetingExtension.swift */,
 				96270A4A206123DA001A6BDE /* EventExtension.swift */,
 				96B367A12063D9A6008CBC91 /* SynthesisExtension.swift */,
+				96051180206A5533001E34B3 /* EvaluationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				96B3679E2063D7A8008CBC91 /* DoctorSynthesisController.swift in Sources */,
 				96EDA741205D3B1C00ED2AB4 /* DoctorController.swift in Sources */,
 				96270A4B206123DA001A6BDE /* EventExtension.swift in Sources */,
+				96051181206A5533001E34B3 /* EvaluationExtension.swift in Sources */,
 				A183CD242062C8A10033698E /* AddActivityController.swift in Sources */,
 				96B367A62063DD8A008CBC91 /* SynthesisDAO.swift in Sources */,
 				96EDA749205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift in Sources */,

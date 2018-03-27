@@ -252,6 +252,21 @@ class PersistenceFacade {
         return synthesisDAO.remove(syn : syn)
     }
     
+    func registerEvaluation(state : String) -> Bool{
+        guard let synthesisDAO : SynthesisDAO = daoFactory.getSynthesisDAO() else{
+            return false
+        }
+        do{
+            let synthesis : Synthesis = try synthesisDAO.findUpcommingSynthesis()
+            synthesisDAO.addEvaluation(syn: synthesis, state : state, date : Date())
+            
+        }catch {
+            print("Unable to reach the next meeting with a neurologist.")
+            fatalError()
+        }
+        return true
+    }
+    
     
     
 }

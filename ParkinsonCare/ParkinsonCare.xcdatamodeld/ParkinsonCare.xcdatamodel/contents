@@ -15,8 +15,8 @@
     </entity>
     <entity name="Evaluation" representedClassName="Evaluation" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="meeting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meeting" inverseName="evaluations" inverseEntity="Meeting" syncable="YES"/>
-        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="evaluations" inverseEntity="State" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="synthesis" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Synthesis" inverseName="evaluations" inverseEntity="Synthesis" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -39,7 +39,6 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="delay" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="doctor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Doctor" inverseName="meetings" inverseEntity="Doctor" syncable="YES"/>
-        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Evaluation" inverseName="meeting" inverseEntity="Evaluation" syncable="YES"/>
         <relationship name="synthesis" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Synthesis" inverseName="meeting" inverseEntity="Synthesis" syncable="YES"/>
     </entity>
     <entity name="Reporting" representedClassName="Reporting" syncable="YES" codeGenerationType="class">
@@ -50,11 +49,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="doctors" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Doctor" inverseName="speciality" inverseEntity="Doctor" syncable="YES"/>
     </entity>
-    <entity name="State" representedClassName="State" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Evaluation" inverseName="state" inverseEntity="Evaluation" syncable="YES"/>
-    </entity>
     <entity name="Synthesis" representedClassName="Synthesis" syncable="YES" codeGenerationType="class">
+        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Evaluation" inverseName="synthesis" inverseEntity="Evaluation" syncable="YES"/>
         <relationship name="meeting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meeting" inverseName="synthesis" inverseEntity="Meeting" syncable="YES"/>
     </entity>
     <elements>
@@ -64,10 +60,9 @@
         <element name="Event" positionX="151" positionY="-153" width="128" height="75"/>
         <element name="Medicine" positionX="-198" positionY="-54" width="128" height="90"/>
         <element name="MedicinePrescription" positionX="-216" positionY="108" width="128" height="135"/>
-        <element name="Meeting" positionX="169" positionY="362" width="128" height="120"/>
+        <element name="Meeting" positionX="169" positionY="362" width="128" height="105"/>
         <element name="Reporting" positionX="214" positionY="-6" width="128" height="75"/>
         <element name="Speciality" positionX="-207" positionY="440" width="128" height="75"/>
-        <element name="State" positionX="180" positionY="102" width="128" height="75"/>
-        <element name="Synthesis" positionX="358" positionY="396" width="128" height="60"/>
+        <element name="Synthesis" positionX="358" positionY="396" width="128" height="75"/>
     </elements>
 </model>

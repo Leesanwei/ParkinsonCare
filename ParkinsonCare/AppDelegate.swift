@@ -48,8 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 UserDefaults.standard.set(true, forKey: "wasLaunched")
                 UserDefaults.standard.set(8, forKey:"beginHour")
                 UserDefaults.standard.set(19, forKey:"endHour")
-                print(UserDefaults.standard.integer(forKey: "beginHour"))
-                print(UserDefaults.standard.integer(forKey: "endHour"))
             return true
             }
             return false
@@ -162,13 +160,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("coucou f1")
         completionHandler()
         NotificationManager.getInstance().handleResponse(response : response)
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         // EZAlertController.alert("you have new meeting ")
-        print("coucou f2")
         completionHandler( [.alert, .badge, .sound])
     }
 
