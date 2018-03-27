@@ -74,7 +74,7 @@ class PatientAddReportController: UIViewController, UIPickerViewDataSource, UIPi
         }
         if(fifth.isOn){
             if(text.hasText){
-            self.behaviourDescription = "J'ai oublié prises " + text.text! + " prises"
+            self.behaviourDescription = "J'ai oublié " + text.text! + " prises"
             }
         }
         
