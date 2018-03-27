@@ -22,22 +22,6 @@ class NotificationManager{
         return notificationManager
     }
     
-    // MARK: - Notification Actions
-    
-    func handleResponse(response : UNNotificationResponse){
-        switch response.actionIdentifier{
-            // Medicine take actions
-        case "POSTPONE": print("Postpone"); break
-        case "VALIDATE": print("validate"); break
-            //Evaluation actions
-        case "ON": print("on"); break
-        case "OFF": print("off"); break
-        case "DYSKINESIE": print("dys"); break
-    
-        default: print("Unknown Action")
-        }
-    }
-    
     private func pushNotification(content : UNNotificationContent, trigger : UNTimeIntervalNotificationTrigger, identifier : String){
         
         let request = UNNotificationRequest(identifier: "\(identifier)\(NSUUID().uuidString)", content : content, trigger : trigger)
@@ -63,6 +47,8 @@ class NotificationManager{
         // Create the request object.
         let request = UNNotificationRequest(identifier: "MorningAlarm", content: content, trigger: trigger)
     }
+    
+    // MARK: - Meeting
  
     func scheduleEvaluations(meetingDate : Date, minHour : Int, maxHour : Int) -> Bool {
         
@@ -74,35 +60,30 @@ class NotificationManager{
         content.categoryIdentifier = "evaluationCategory"
         content.sound = UNNotificationSound.default()
 
-        if meetingDate.timeIntervalSinceNow <= 5 * 24 * 60 * 60{
+        if meetingDate.timeIntervalSinceNow <= 6 * 24 * 60 * 60{
             // Case where we can't schedule notification five days before.
             // Meeting is in less than five days
             return false
         }
         // Start the notification five days before the meeting at minHour
         guard let beginDay : Date =  Calendar.current.date(byAdding: .day, value: -5, to: meetingDate) else{
+            print("Cannot remove 5 days")
             return false
         }
-        guard let beginDate : Date = Calendar.current.date(byAdding: .hour, value: minHour, to: beginDay) else{
-            return false
-        }
+        // Get the number of seconds until the first evaluation.
+        let beginTimeInterval = NSCalendar.current.startOfDay(for: beginDay).timeIntervalSinceNow
         
-        // MARK: - Meeting
         // Schedule notifications related to a meeting (evaluation and reminder)
-        
         for i in 0..<5{// schedule notification for the five days
-            guard var date : Date = Calendar.current.date(byAdding: .day, value: i, to: beginDate) else{
-                return false
-            }
-            for _ in minHour..<maxHour{// schedule one notification per hour.
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: date.timeIntervalSinceNow, repeats:false)
+            
+            // timeInterval to the current day we are scheduling the notifications at minHour.
+            let timeInterval = beginTimeInterval + Double(i * 24 * 60 * 60 + minHour * 60 * 60)
+            
+            for j in minHour..<maxHour{// schedule one notification per hour.
+        
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval + Double(j * 60 * 60), repeats:false)
                 // Register the current notification
                 self.pushNotification(content: content, trigger: trigger, identifier: "evalNotification")
-                
-                guard let d : Date = Calendar.current.date(byAdding: .hour, value: 1, to: date) else{
-                    return false
-                }
-                date = d
             }
         }
         return true
@@ -115,6 +96,7 @@ class NotificationManager{
         content.body = "\(description)"
         content.sound = UNNotificationSound.default()
 
+        // Check if delay is note before current date.
         if meetingDate.timeIntervalSinceNow - Double(60 * delay) <= 0 {
             return false
         }
@@ -165,6 +147,40 @@ class NotificationManager{
             }
             // Forward until midnight the day after.
             i = i + 4 * 60 * 60
+        }
+    }
+    
+    // MARK: - Action Methods -
+    
+    func handleResponse(response : UNNotificationResponse){
+        switch response.actionIdentifier{
+        // Medicine take actions
+        case "POSTPONE": self.postponeMedicineTake(response: response); break
+        case "VALIDATE": self.validateMedicineTake(); break
+        //Evaluation actions
+        case "ON": self.addEvaluation(state: "On"); break
+        case "OFF": self.addEvaluation(state: "Off"); break
+        case "DYSKINESIE": self.addEvaluation(state: "Dyskinesie"); break
+        default: print("Unknown Action")
+        }
+    }
+    
+    private func postponeMedicineTake(response : UNNotificationResponse){
+        let content : UNNotificationContent = response.notification.request.content
+        let trigger : UNTimeIntervalNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval : Double(5 * 60), repeats : false)
+        self.pushNotification(content: content, trigger: trigger, identifier: "postponeMedicineTake")
+    }
+    
+    private func validateMedicineTake(){
+        print("Medicine taken.")
+    }
+    
+    // Register the evaluation.
+    private func addEvaluation(state : String){
+        if PersistenceFacade.getInstance().registerEvaluation(state : state){
+            print("Evaluation registered")
+        }else{
+            print("Unable to register the evaluation")
         }
     }
     

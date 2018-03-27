@@ -28,21 +28,18 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
             if doctor.e_speciality == "Neurologue" { // schedule evaluations before the meeting
                 
                 // get default stored parameters.
-                let minHour = 0
-                let maxHour = 3
+                
+                let minHour = UserDefaults.standard.integer(forKey:"beginHour")
+                let maxHour = UserDefaults.standard.integer(forKey: "endHour")
                 if !NotificationManager.getInstance().scheduleEvaluations(meetingDate: datePicker.date, minHour: minHour, maxHour: maxHour){
                     print("Cannot schedule the notifications")
                 }
             }
-            NotificationManager.getInstance().scheduleMeetingDelayReminder(meetingDate: datePicker.date, delay: delay, description: "Vous avez rendez-vous avec \(doctor.e_fullName) dans \(delay) minutes.")
+            if !NotificationManager.getInstance().scheduleMeetingDelayReminder(meetingDate: datePicker.date, delay: delay, description: "Vous avez rendez-vous avec \(doctor.e_fullName) dans \(delay) minutes."){}
+            
             self.navigationController?.popViewController(animated: true)
         }
     }
-
-    
-        
-        
-        
     
     override func viewDidLoad() {
         super.viewDidLoad()

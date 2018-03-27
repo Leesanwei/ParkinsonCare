@@ -12,12 +12,11 @@ import CoreData
 extension Meeting {
     
     // MARK: - Initializater
-    convenience init(context : NSManagedObjectContext, doctor : Doctor, date : NSDate, delay : Int, evaluations : EvaluationCollection){
+    convenience init(context : NSManagedObjectContext, doctor : Doctor, date : NSDate, delay : Int){
         self.init(context : context)
         self.doctor = doctor
         self.date = date
         self.delay = Int16(delay)
-        self.evaluations = evaluations.castToNSSet()
     }
     
     // MARK: - Properties -
@@ -35,14 +34,6 @@ extension Meeting {
     var e_delay : Int {
         get{
             return Int(self.delay)
-        }
-    }
-    
-    var e_evaluations : EvaluationCollection {
-        get{
-            let evals : EvaluationCollection = EvaluationCollection()
-            evals.setEvaluations(evaluations: Array(self.evaluations!) as! [Evaluation])
-            return evals
         }
     }
 }
