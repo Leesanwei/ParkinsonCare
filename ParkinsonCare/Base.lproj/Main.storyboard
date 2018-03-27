@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -378,7 +377,6 @@
                             <constraint firstItem="Nyc-Hk-SF1" firstAttribute="top" secondItem="RHo-6f-9Pz" secondAttribute="bottom" constant="36" id="NVl-jI-ACF"/>
                             <constraint firstItem="s5r-Je-SvS" firstAttribute="top" secondItem="2Zg-EL-bgL" secondAttribute="bottom" constant="36" id="QpS-1W-Sjd"/>
                             <constraint firstItem="Q85-n0-Jng" firstAttribute="leading" secondItem="64D-we-dVK" secondAttribute="leadingMargin" id="bGb-VH-kUM"/>
-                            <constraint firstAttribute="trailing" secondItem="64D-we-dVK" secondAttribute="trailingMargin" id="hC5-xp-AKh"/>
                             <constraint firstItem="TMz-NL-TiX" firstAttribute="top" secondItem="Nyc-Hk-SF1" secondAttribute="bottom" constant="36" id="oUT-ll-qnB"/>
                             <constraint firstItem="2Zg-EL-bgL" firstAttribute="leading" secondItem="64D-we-dVK" secondAttribute="leadingMargin" id="ocp-k2-8cV"/>
                             <constraint firstItem="s5r-Je-SvS" firstAttribute="leading" secondItem="64D-we-dVK" secondAttribute="leadingMargin" id="ovo-Si-8bc"/>
