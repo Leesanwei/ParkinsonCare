@@ -26,7 +26,13 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         let meeting : Meeting = self.meetings.find(_byIndex : indexPath.row)
         
         let doctor : Doctor = meeting.e_doctor
-        cell.meetingDoctorNameLabel.text = doctor.e_fullName + "\n" + "Le \((meeting.e_date).toString(dateFormat: "dd-MM h:mm a"))" + "\n" + "à  \(doctor.e_location)"
+        let french = DateFormatter()
+        french.dateStyle = .medium
+        french.timeStyle = .medium
+        french.locale = Locale(identifier: "FR-fr")
+        french.dateFormat = "dd-MM à HH:mm"
+        let date24 = french.string(from: meeting.e_date as Date)
+        cell.meetingDoctorNameLabel.text = doctor.e_fullName + "\n" + "Le \(date24)" + "\n" + "à  \(doctor.e_location)"
         return cell
     }
     

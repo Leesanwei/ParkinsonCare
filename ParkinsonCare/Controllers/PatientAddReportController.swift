@@ -12,9 +12,78 @@ import CoreData
 class PatientAddReportController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     var events = [Event]()
+    var behaviourDescription: String = ""
+   
     
     @IBOutlet weak var eventPicker: UIPickerView!
 
+    @IBOutlet weak var text: UITextField!
+    @IBOutlet weak var first: UISwitch!
+    @IBOutlet weak var second: UISwitch!
+    @IBOutlet weak var third: UISwitch!
+    @IBOutlet weak var fourth: UISwitch!
+    @IBOutlet weak var fifth: UISwitch!
+    @IBAction func firstSwitch(_ sender: Any) {
+        second.setOn(false, animated: true)
+        third.setOn(false, animated: true)
+        fourth.setOn(false, animated: true)
+        fifth.setOn(false, animated: true)
+    }
+    
+    @IBAction func secondSwitch(_ sender: Any) {
+        first.setOn(false, animated: true)
+        third.setOn(false, animated: true)
+        fourth.setOn(false, animated: true)
+        fifth.setOn(false, animated: true)
+    }
+    
+    @IBAction func thirdSwitch(_ sender: Any) {
+        first.setOn(false, animated: true)
+        second.setOn(false, animated: true)
+        fourth.setOn(false, animated: true)
+        fifth.setOn(false, animated: true)
+    }
+    @IBAction func fourthSwitch(_ sender: Any) {
+        second.setOn(false, animated: true)
+        third.setOn(false, animated: true)
+        first.setOn(false, animated: true)
+        fifth.setOn(false, animated: true)
+    }
+    @IBAction func fifthSwitch(_ sender: Any) {
+        second.setOn(false, animated: true)
+        third.setOn(false, animated: true)
+        fourth.setOn(false, animated: true)
+        first.setOn(false, animated: true)
+    }
+    
+    /// Button that triggers the add of a new reporting.
+    /// Tells whether the patient took the medicine on time
+    /// - Parameter sender: <#sender description#>
+    @IBAction func addBehaviour(_ sender: Any) {
+        if(first.isOn){
+            self.behaviourDescription = "Toutes les prises"
+        }
+        if(second.isOn){
+            self.behaviourDescription = "La plupart des prises"
+        }
+        if(third.isOn){
+            self.behaviourDescription = "Quelques prises"
+        }
+        if(fourth.isOn){
+            self.behaviourDescription = "Aucune des prises"
+        }
+        if(fifth.isOn){
+            if(text.hasText){
+            self.behaviourDescription = "J'ai oublié prises " + text.text! + " prises"
+            }
+        }
+        
+        let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
+        let date = Date()
+        
+        persistanceFacade.addBehaviour(behaviourDescription : self.behaviourDescription, date : date)
+        self.navigationController?.popViewController(animated: true)
+    }
     
     /// Button that triggers the add of a new reporting.
     ///
@@ -47,6 +116,14 @@ class PatientAddReportController: UIViewController, UIPickerViewDataSource, UIPi
         self.events = self.events.sorted {
             $0.name! < $1.name!
         }
+        first.setOn(false, animated: true)
+        second.setOn(false, animated: true)
+        third.setOn(false, animated: true)
+        
+        fourth.setOn(false, animated: true)
+        fifth.setOn(false, animated: true)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

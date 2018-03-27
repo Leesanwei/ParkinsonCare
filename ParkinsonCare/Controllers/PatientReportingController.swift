@@ -13,24 +13,45 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
     
     // MARK: - Properties
     var reportings : ReportingCollection = ReportingCollection()
+    var behaviours : BehaviourCollection = BehaviourCollection()
     
     @IBOutlet weak var reportingTableView: UITableView!
     
     // MARK: - UITableViewDataSource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.reportings.count()
+        return self.reportings.count() + self.behaviours.count()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if(indexPath.row < self.reportings.count()){
         let cell = self.reportingTableView.dequeueReusableCell(withIdentifier: "reportingCell", for: indexPath) as! ReportingTableViewCell
         let reporting : Reporting = self.reportings.find(_byIndex : indexPath.row)
         
         
-        let event : Event = reporting.e_event
         
-        cell.reportingDescriptionLabel.text = " \(event.e_name) \n Le \(reporting.e_date.toString(dateFormat: "dd-MM h:mm a"))"
-    
+        let event : Event = reporting.e_event
+        let french = DateFormatter()
+        french.dateStyle = .medium
+        french.timeStyle = .medium
+        french.locale = Locale(identifier: "FR-fr")
+        french.dateFormat = "dd-MM à HH:mm"
+        let date24 = french.string(from: reporting.e_date as Date)
+        cell.reportingDescriptionLabel.text = " \(event.e_name) \n Le \(date24)"
         return cell
+        }
+        else{
+            let cell = self.reportingTableView.dequeueReusableCell(withIdentifier: "reportingCell", for: indexPath) as! ReportingTableViewCell
+            let behaviour : Behaviour = self.behaviours.find(_byIndex : indexPath.row - self.reportings.count() )
+            
+            let french = DateFormatter()
+            french.dateStyle = .medium
+            french.timeStyle = .medium
+            french.locale = Locale(identifier: "FR-fr")
+            french.dateFormat = "dd-MM à HH:mm"
+            let date24 = french.string(from: behaviour.e_date as Date)
+            cell.reportingDescriptionLabel.text = "Synthèse : \(behaviour.e_description) \n Le \(date24)"
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -72,6 +93,12 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
             return
         }
         self.reportings = reportings
+        
+        guard let behaviours : BehaviourCollection = persistanceFacade.getAllBehaviours()  else {
+            self.alertError(errorMsg : "Cannot reach the reportings", userInfo : "Unknown Error")
+            return
+        }
+        self.behaviours = behaviours
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,6 +126,7 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
             return false
         }
     }
+    
 }
 
 

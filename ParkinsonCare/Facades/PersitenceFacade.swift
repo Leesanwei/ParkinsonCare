@@ -310,6 +310,21 @@ class PersistenceFacade {
         }
     }
     
+    /// Get all the stored behaviours.
+    ///
+    /// - Returns: collection of behaviours.
+    func getAllBehaviours() -> BehaviourCollection?{
+        //Try to get the reportingDAO
+        guard let behaviourDAO : BehaviourDAO = daoFactory.getBehaviourDAO() else{
+            return nil
+        }
+        do{
+            return try behaviourDAO.findAll()
+        }catch {
+            return nil
+        }
+    }
+    
     
     /// Delete the specified reporting.
     ///
@@ -334,6 +349,20 @@ class PersistenceFacade {
             return nil
         }
         return reportingDAO.add(event : event, date : date)
+        
+    }
+    
+    /// Create and store a new behaviour.
+    ///
+    /// - Parameters:
+    ///   - behaviourDescription: the behaviour reported.
+    ///   - date: when the behaviour occured.
+    /// - Returns: The newly created behaviour or nil if something went wrong.
+    func addBehaviour(behaviourDescription : String, date : Date) -> Behaviour?{
+        guard let behaviourDAO : BehaviourDAO = daoFactory.getBehaviourDAO() else{
+            return nil
+        }
+        return behaviourDAO.add(behaviourDescription : behaviourDescription, date : date)
         
     }
     

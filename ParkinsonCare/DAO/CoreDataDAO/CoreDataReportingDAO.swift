@@ -67,6 +67,8 @@ class CoreDataReportingDAO : ReportingDAO{
     }
     
     
+    
+    
     /// Store the default events. Called only at first launch.
     ///
     /// - Returns: Bool if successful.

@@ -71,4 +71,11 @@ class CoreDataDAOFactory : AbstractDAOFactory{
         }
         return CoreDataSynthesisDAO(context : context)
     }
+    
+    override func getBehaviourDAO() -> BehaviourDAO?{
+        guard let context : NSManagedObjectContext = self.getContext() else{
+            return nil
+        }
+        return CoreDataBehaviourDAO(context : context)
+    }
 }

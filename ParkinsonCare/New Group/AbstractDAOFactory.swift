@@ -38,6 +38,9 @@ class AbstractDAOFactory {
         return nil
     }
     
+    func getBehaviourDAO() -> BehaviourDAO?{
+        return nil
+    }
     
 }
 
