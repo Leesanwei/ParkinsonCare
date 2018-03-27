@@ -20,9 +20,9 @@ class PatientAddReportController: UIViewController, UIPickerViewDataSource, UIPi
         let row = eventPicker.selectedRow(inComponent: 0)
         let event = events[row]
         let date = Date()
-        if persistanceFacade.addReport(event : event, date : date){
+        
+        persistanceFacade.addReport(event : event, date : date)
         self.navigationController?.popViewController(animated: true)
-    }
     
     }
     

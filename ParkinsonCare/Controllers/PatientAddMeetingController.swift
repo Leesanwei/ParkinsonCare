@@ -24,21 +24,25 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
         let doctor = self.doctors.find(_byIndex: row)
         let delay = delayPicker.selectedRow(inComponent: 0) + 1
         
-        if persistanceFacade.addMeeting(doctor : doctor, date : datePicker.date, delay : delay){
-            if doctor.e_speciality == "Neurologue" { // schedule evaluations before the meeting
-                
+        let meeting : Meeting? = persistanceFacade.addMeeting(doctor : doctor, date : datePicker.date, delay : delay)
+        if let meet: Meeting = meeting{
+            
+            if meet.e_doctor.e_speciality == "Neurologue" { // schedule evaluations before the meeting
+        
                 // get default stored parameters.
-                
                 let minHour = UserDefaults.standard.integer(forKey:"beginHour")
                 let maxHour = UserDefaults.standard.integer(forKey: "endHour")
-                if !NotificationManager.getInstance().scheduleEvaluations(meetingDate: datePicker.date, minHour: minHour, maxHour: maxHour){
+                
+                //Schedule evaluations for neurologist.
+                if !NotificationManager.getInstance().scheduleEvaluations(meeting : meet, minHour: minHour, maxHour: maxHour){
                     print("Cannot schedule the notifications")
                 }
             }
-            if !NotificationManager.getInstance().scheduleMeetingDelayReminder(meetingDate: datePicker.date, delay: delay, description: "Vous avez rendez-vous avec \(doctor.e_fullName) dans \(delay) minutes."){}
-            
-            self.navigationController?.popViewController(animated: true)
+            // Schedule meeting reminder
+            if !NotificationManager.getInstance().scheduleMeetingDelayReminder(meeting: meet, delay: delay, description: "Vous avez rendez-vous avec \(doctor.e_fullName) dans \(delay) minutes."){}
         }
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     override func viewDidLoad() {

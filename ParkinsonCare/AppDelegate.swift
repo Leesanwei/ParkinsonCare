@@ -152,9 +152,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
         let evalCategory = UNNotificationCategory(identifier: "evaluationCategory", actions: [onAction,offAction,dysAction], intentIdentifiers: [], options: [])
         
+        // Activity category
+        let didAction = UNNotificationAction(identifier: "DID", title: "Je l'ai fait!", options: [])
+        let didNotAction = UNNotificationAction(identifier: "DIDNOT", title: "Je ne l'ai pas fait.", options: [])
+        let activityCategory = UNNotificationCategory(identifier: "activityCategory", actions: [didAction,didNotAction], intentIdentifiers: [], options: [])
+        
         var set : Set<UNNotificationCategory> = Set<UNNotificationCategory>()
         set.insert(medicineCategory)
         set.insert(evalCategory)
+        set.insert(activityCategory)
         
         return set
     }

@@ -39,15 +39,15 @@ class CoreDataDoctorDAO : DoctorDAO{
     }
     
     
-    func add(firstName : String, lastName : String, speciality : Speciality, phoneNumber : String, location: String) -> Bool {
+    func add(firstName : String, lastName : String, speciality : Speciality, phoneNumber : String, location: String) -> Doctor? {
         
          let doctor = Doctor(context : self.context, firstName : firstName, lastName : lastName, location : location, phoneNumber : phoneNumber, speciality : speciality)
 
         do{
             try self.context.save()
-            return true
+            return doctor
         }catch {
-            return false
+            return nil
         }
     }
     

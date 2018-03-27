@@ -22,7 +22,7 @@ class NotificationManager{
         return notificationManager
     }
     
-    private func pushNotification(content : UNNotificationContent, trigger : UNTimeIntervalNotificationTrigger, identifier : String){
+    private func pushNotification(content : UNNotificationContent, trigger : UNNotificationTrigger, identifier : String){
         
         let request = UNNotificationRequest(identifier: "\(identifier)\(NSUUID().uuidString)", content : content, trigger : trigger)
         UNUserNotificationCenter.current().add(request){ (error) in
@@ -32,25 +32,57 @@ class NotificationManager{
         }
         
     }
-    func programActivityReminder(frequency : Int, activity : String){
+    func scheduleActivityReminder(activity : Activity){
         
         let content = UNMutableNotificationContent()
-        content.title = NSString.localizedUserNotificationString(forKey: "Sport!", arguments: nil)
-        content.body = NSString.localizedUserNotificationString(forKey: "Il est temps d'effectuer votre activite:" + activity,arguments: nil)
+        content.title = "ParkinsonCare"
+        content.subtitle = "Avez-vous pratiquez cette activité ?"
+        let hour = activity.e_duration / 60
+        let minute = activity.e_duration - hour * 60
+        content.body = "\(activity.e_name) pendant \(hour) heure(s)  et \(minute) minute(s)"
+        content.sound = UNNotificationSound.default()
+        content.categoryIdentifier = "activityCategory"
         
-        // Configure the trigger for a 7am wakeup.
-        var dateInfo = DateComponents()
-        dateInfo.hour = 18
-        dateInfo.minute = 0
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
-        
-        // Create the request object.
-        let request = UNNotificationRequest(identifier: "MorningAlarm", content: content, trigger: trigger)
+        if activity.isAMondayActivity {
+            let monday = DateComponents(hour :18, minute:30, weekday: 2)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: monday, repeats: true)
+            self.pushNotification(content: content, trigger: trigger, identifier: "mondayActivityReminderNotification")
+        }
+        if activity.isATuesdayActivity {
+            let tuesday = DateComponents(hour :18, minute:30, weekday: 3)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: tuesday, repeats: true)
+            self.pushNotification(content: content, trigger: trigger, identifier: "tuesdayActivityreminderNotification")
+        }
+        if activity.isAWednesdayActivity {
+            let wednesday = DateComponents(hour :18, minute:30, weekday: 4)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: wednesday, repeats: true)
+            self.pushNotification(content: content, trigger: trigger, identifier: "wednesdayActivityReminderNotification")
+        }
+        if activity.isAThursdayActivity {
+            let thursday = DateComponents(hour :18, minute:30, weekday: 5)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: thursday, repeats: true)
+            self.pushNotification(content: content, trigger: trigger, identifier: "thursdayActivityReminderNotification")
+        }
+        if activity.isAFridayActivity {
+            let friday = DateComponents(hour :18, minute:30, weekday: 6)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: friday, repeats: true)
+            self.pushNotification(content: content, trigger: trigger, identifier: "fridayActivityReminderNotification")
+        }
+        if activity.isASaturdayActivity {
+            let saturday = DateComponents(hour :18, minute:30, weekday: 7)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: saturday, repeats: true)
+            self.pushNotification(content: content, trigger: trigger, identifier: "saturdayActivityReminderNotification")
+        }
+        if activity.isASundayActivity {
+            let sunday = DateComponents(hour :18, minute:30, weekday: 1)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: sunday, repeats: true)
+            self.pushNotification(content: content, trigger: trigger, identifier: "sundayActivityReminderNotification")
+        }
     }
     
     // MARK: - Meeting
  
-    func scheduleEvaluations(meetingDate : Date, minHour : Int, maxHour : Int) -> Bool {
+    func scheduleEvaluations(meeting : Meeting, minHour : Int, maxHour : Int) -> Bool {
         
         //Define notification content
         let content = UNMutableNotificationContent()
@@ -60,7 +92,8 @@ class NotificationManager{
         content.categoryIdentifier = "evaluationCategory"
         content.sound = UNNotificationSound.default()
 
-        if meetingDate.timeIntervalSinceNow <= 6 * 24 * 60 * 60{
+        let meetingDate = meeting.e_date as Date
+        if meetingDate.timeIntervalSinceNow <= 5 * 24 * 60 * 60{
             // Case where we can't schedule notification five days before.
             // Meeting is in less than five days
             return false
@@ -79,9 +112,10 @@ class NotificationManager{
             // timeInterval to the current day we are scheduling the notifications at minHour.
             let timeInterval = beginTimeInterval + Double(i * 24 * 60 * 60 + minHour * 60 * 60)
             
-            for j in minHour..<maxHour{// schedule one notification per hour.
-        
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval + Double(j * 60 * 60), repeats:false)
+            for j in minHour..<(maxHour + 15){// schedule one notification per hour.
+
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval + Double(j * 60), repeats:false)
+                
                 // Register the current notification
                 self.pushNotification(content: content, trigger: trigger, identifier: "evalNotification")
             }
@@ -89,7 +123,7 @@ class NotificationManager{
         return true
     }
     
-    func scheduleMeetingDelayReminder(meetingDate : Date, delay : Int, description : String) -> Bool{
+    func scheduleMeetingDelayReminder(meeting : Meeting, delay : Int, description : String) -> Bool{
         let content = UNMutableNotificationContent()
         content.title = "ParkinsonCare"
         content.subtitle = "Il est temps de partir!"
@@ -97,10 +131,10 @@ class NotificationManager{
         content.sound = UNNotificationSound.default()
 
         // Check if delay is note before current date.
-        if meetingDate.timeIntervalSinceNow - Double(60 * delay) <= 0 {
+        if meeting.e_date.timeIntervalSinceNow - Double(60 * delay) <= 0 {
             return false
         }
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (meetingDate.timeIntervalSinceNow - Double(60 * delay)) , repeats:false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (meeting.e_date.timeIntervalSinceNow - Double(60 * delay)) , repeats:false)
 
         // Register the notification
         self.pushNotification(content: content, trigger: trigger, identifier: "meetingRemindNotification")
@@ -109,38 +143,38 @@ class NotificationManager{
     
     // MARK: - Medicine
     // Schedule notifications related to a meeting.
-    func scheduleMedicineTakeNotifications(beginDate: Date, description :String, endDate : Date, morning : Bool, noon:Bool, evening: Bool){
+    func scheduleMedicineTakeNotifications(medicinePrescription : MedicinePrescription){
         // Set the content of the notification
         let content = UNMutableNotificationContent()
         content.title = "ParkinsonCare"
         content.subtitle = "Prise de médicament."
-        content.body = "Il est temps de prendre un \(description)."
+        content.body = "Il est temps de prendre un \(medicinePrescription.e_medicine.fullDescription)."
         content.sound = UNNotificationSound.default()
         content.categoryIdentifier = "medicineCategory"
         // Get the end time interval of the prescription.
-        let endTimeInterval = endDate.timeIntervalSince1970
+        let endTimeInterval = medicinePrescription.e_endDate.timeIntervalSince1970
         // Start the counter at midnight the first day
-        var i = NSCalendar.current.startOfDay(for: beginDate).timeIntervalSince1970
+        var i = NSCalendar.current.startOfDay(for: medicinePrescription.e_beginDate as Date).timeIntervalSince1970
         
         while i <= endTimeInterval{// schedule notification for the five days
             
             // Forward time until 8 AM
             i  = i + 8 * 60 * 60
-            if morning{
+            if medicinePrescription.hasMorningTake{
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: i, repeats:false)
                 // Register the current notification
                 self.pushNotification(content: content, trigger: trigger, identifier: "morningTakeNotification")
             }
             // Forward until 1 PM
             i = i + 4 * 60 * 60
-            if noon{
+            if medicinePrescription.hasMiddayTake{
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: i, repeats:false)
                 // Register the current notification
                 self.pushNotification(content: content, trigger: trigger, identifier: "noonTakeNotification")
             }
             // forward until 8 PM
             i = i + 7 * 60 * 60
-            if evening{
+            if medicinePrescription.hasEveningTake{
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: i, repeats:false)
                 // Register the current notification
                 self.pushNotification(content: content, trigger: trigger, identifier: "eveningTakeNotification")
@@ -161,16 +195,19 @@ class NotificationManager{
         case "ON": self.addEvaluation(state: "On"); break
         case "OFF": self.addEvaluation(state: "Off"); break
         case "DYSKINESIE": self.addEvaluation(state: "Dyskinesie"); break
+        case "DID" : self.activityHasBeenPerformed(); break
+        case "DIDNOT" : self.activityHasNotBeenPerformed(); break
         default: print("Unknown Action")
         }
     }
     
     private func postponeMedicineTake(response : UNNotificationResponse){
         let content : UNNotificationContent = response.notification.request.content
-        let trigger : UNTimeIntervalNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval : Double(5 * 60), repeats : false)
+        let trigger : UNTimeIntervalNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval : Double(30 * 5), repeats : false)
         self.pushNotification(content: content, trigger: trigger, identifier: "postponeMedicineTake")
     }
     
+    // Handle medicine take
     private func validateMedicineTake(){
         print("Medicine taken.")
     }
@@ -182,6 +219,29 @@ class NotificationManager{
         }else{
             print("Unable to register the evaluation")
         }
+    }
+    
+    //Handle activity done
+    private func activityHasBeenPerformed(){
+        let congratulations = [
+            "Nous sommes fiers de vous! Continuez comme ça! :)",
+            "Bravo! Quel courage?! x)",
+            "Félicitations! C'est n'était pas facile! :-)",
+            "Wahou! Encore un défi relevé haut la main! ^^"
+        ]
+        
+        let content = UNMutableNotificationContent()
+        content.title = "ParkinsonCare"
+        content.subtitle = "Felicitations!"
+        content.body = congratulations[Int(arc4random_uniform(UInt32(congratulations.count)))]
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats:false)
+        self.pushNotification(content: content, trigger: trigger, identifier: "congratNotification")
+    }
+    
+    private func activityHasNotBeenPerformed(){
+        print("Dommage! La prochaine fois peut-être!")
     }
     
 }

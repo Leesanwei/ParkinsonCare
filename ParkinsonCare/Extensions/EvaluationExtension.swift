@@ -31,4 +31,10 @@ extension Evaluation {
         }
     }
     
+    var e_description : String {
+        get{
+            return "\(self.e_state) à \(self.date!.toString(dateFormat : "h:mm a"))"
+        }
+    }
+    
 }

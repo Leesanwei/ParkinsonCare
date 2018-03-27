@@ -11,7 +11,7 @@ import Foundation
 protocol SynthesisDAO {
     
     func findAll() throws -> SynthesisCollection
-    func add(syn : Synthesis) -> Bool
+    func add(syn : Synthesis) -> Synthesis?
     func remove(syn: Synthesis) -> Bool
     func findUpcommingSynthesis() throws -> Synthesis
     func addEvaluation(syn : Synthesis, state : String, date : Date) -> Bool

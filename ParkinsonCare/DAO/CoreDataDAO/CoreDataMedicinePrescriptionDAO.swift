@@ -38,13 +38,13 @@ class CoreDataMedicinePrescriptionDAO : MedicinePrescriptionDAO{
         }
     }
     
-    func add(medicine : Medicine, beginDate : Date, endDate : Date ,matin : Bool, midi : Bool, soir: Bool) -> Bool {
+    func add(medicine : Medicine, beginDate : Date, endDate : Date ,matin : Bool, midi : Bool, soir: Bool) -> MedicinePrescription? {
         let medicinePrescription = MedicinePrescription(context : self.context, medicine : medicine, morning : matin, midday : midi, evening : soir, beginDate : beginDate as NSDate, endDate : endDate as NSDate)
         do{
             try context.save()
-            return true
+            return medicinePrescription
         }catch{
-            return false
+            return nil
         }
     }
     

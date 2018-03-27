@@ -38,13 +38,13 @@ class CoreDataActivityDAO : ActivityDAO{
         }
     }
     
-    func add(nameSport: String, duration : Int, frequency : Int) -> Bool{
-        let activity = Activity(context : self.context, name : nameSport, duration : duration, frequency : frequency)
+    func add(nameSport: String, duration : Int, days : [Bool]) -> Activity?{
+        let activity = Activity(context : self.context, name : nameSport, duration : duration, days : days)
         do{
             try context.save()
-            return true
+            return activity
         }catch{
-            return false
+            return nil
         }
         
     }

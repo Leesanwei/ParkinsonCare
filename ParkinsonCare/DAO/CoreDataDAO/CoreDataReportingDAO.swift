@@ -38,14 +38,14 @@ class CoreDataReportingDAO : ReportingDAO{
         }
     }
     
-    func add(event : Event, date : Date) -> Bool {
+    func add(event : Event, date : Date) -> Reporting? {
         
         let reporting = Reporting(context : self.context, event : event, date : date as NSDate)
         do{
             try context.save()
-            return true
+            return reporting
         }catch {
-            return false
+            return nil
         }
     }
     

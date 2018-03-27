@@ -12,23 +12,38 @@ class AddActivityController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     
     @IBOutlet weak var sportName: UITextField!
     @IBOutlet weak var durationPicker: UIPickerView!
-    @IBOutlet weak var frequencePicker: UIPickerView!
+
+    @IBOutlet weak var lundi: UISwitch!
+    
+    @IBOutlet weak var mercredi: UISwitch!
+    @IBOutlet weak var mardi: UISwitch!
+    
+    @IBOutlet weak var jeudi: UISwitch!
+    
+    @IBOutlet weak var vendredi: UISwitch!
+    
+    @IBOutlet weak var samedi: UISwitch!
+    
+    @IBOutlet weak var dimanche: UISwitch!
     
     @IBAction func addSport(_ sender: Any) {
         if sportName.hasText{
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
             let duration = (durationPicker.selectedRow(inComponent: 0)*60)+durationPicker.selectedRow(inComponent: 1)
       
-            let frequence = frequencePicker.selectedRow(inComponent: 0)+1
-            if persistanceFacade.addSport(nameSport: self.sportName.text!,duration: duration,frequence : frequence){
-                
-                // Program notifications to remind the patient to perform the exercice.
-                
-                
-                self.navigationController?.popViewController(animated: true)
+            let days : [Bool] = [lundi.isOn, mardi.isOn, mercredi.isOn, jeudi.isOn, vendredi.isOn, samedi.isOn, dimanche.isOn]
+            let activity : Activity? = persistanceFacade.addActivity(nameSport: self.sportName.text!,duration: duration, days : days)
+            
+            if let act : Activity = activity {
+                NotificationManager.getInstance().scheduleActivityReminder(activity: act)
+            }else{
+                print("Unable to add the activity.")
+            }
+            // Program notifications to remind the patient to perform the exercice.
+            self.navigationController?.popViewController(animated: true)
+            
             
         }
-    }
     }
   
     

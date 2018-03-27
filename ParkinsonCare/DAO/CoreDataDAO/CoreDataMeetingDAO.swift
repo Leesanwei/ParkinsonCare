@@ -38,21 +38,16 @@ class CoreDataMeetingDAO : MeetingDAO{
         }
     }
     
-    func add(doctor : Doctor, date : Date, delay : Int) -> Bool {
-        let evaluations = EvaluationCollection()
-        
+    func add(doctor : Doctor, date : Date, delay : Int) -> Meeting? {
        let meeting = Meeting(context : self.context,doctor : doctor, date : date as NSDate, delay : delay)
-        
-        let synthesis = Synthesis(context : self.context, meeting : meeting)
+        _ = Synthesis(context : self.context, meeting : meeting)
         
         do{
             try context.save()
-           
-           
+            return meeting
         }catch {
-            return false
-    }
-         return true
+            return nil
+        }
     }
     
 }

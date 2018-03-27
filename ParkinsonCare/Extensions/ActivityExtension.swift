@@ -12,11 +12,18 @@ import CoreData
 extension Activity {
     
     // MARK: - Initializater
-    convenience init(context : NSManagedObjectContext, name : String, duration : Int, frequency : Int){
+    convenience init(context : NSManagedObjectContext, name : String, duration : Int, days : [Bool]){
         self.init(context : context)
         self.name = name
         self.duration = Int16(duration)
-        self.frequency = Int16(frequency)
+        self.monday = days[0]
+        self.tuesday = days[1]
+        self.wednesday = days[2]
+        self.thursday = days[3]
+        self.friday = days[4]
+        self.saturday = days[5]
+        self.sunday = days[6]
+
     }
     
     // MARK: - Properties -
@@ -32,10 +39,39 @@ extension Activity {
             return Int(self.duration)
         }
     }
-    
-    var e_frequency : Int {
+    var isAMondayActivity : Bool {
         get{
-            return Int(self.frequency)
+            return self.monday
+        }
+    }
+    var isATuesdayActivity : Bool {
+        get{
+            return self.tuesday
+        }
+    }
+    var isAWednesdayActivity : Bool {
+        get{
+            return self.wednesday
+        }
+    }
+    var isAThursdayActivity : Bool {
+        get{
+            return self.thursday
+        }
+    }
+    var isAFridayActivity : Bool {
+        get{
+            return self.friday
+        }
+    }
+    var isASaturdayActivity : Bool {
+        get{
+            return self.saturday
+        }
+    }
+    var isASundayActivity : Bool {
+        get{
+            return self.sunday
         }
     }
 }

@@ -38,8 +38,8 @@ class CoreDataSynthesisDAO : SynthesisDAO{
         }
     }
     
-    func add(syn: Synthesis) -> Bool {
-        return true
+    func add(syn: Synthesis) -> Synthesis?{
+        return nil
     }
     
     func findUpcommingSynthesis() throws -> Synthesis {

@@ -28,13 +28,18 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         
         let event : Event = reporting.e_event
         
-        cell.reportingDescriptionLabel.text = " \(event.e_name) le \(reporting.e_date.toString(dateFormat: "dd-MM h:mm a"))"
+        cell.reportingDescriptionLabel.text = " \(event.e_name) \n Le \(reporting.e_date.toString(dateFormat: "dd-MM h:mm a"))"
     
         return cell
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 60.0;//Choose your custom row height
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -11,7 +11,7 @@ import Foundation
 protocol DoctorDAO {
     
     func findAll() throws -> DoctorCollection
-    func add(firstName : String, lastName : String, speciality : Speciality, phoneNumber : String, location : String) -> Bool
+    func add(firstName : String, lastName : String, speciality : Speciality, phoneNumber : String, location : String) -> Doctor?
     func remove(doc : Doctor) -> Bool
     
     func findAllSpecialities() -> [Speciality]?

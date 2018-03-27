@@ -26,7 +26,28 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
         let activity : Activity = self.activities.find(_byIndex : indexPath.row)
         let hour = activity.e_duration/60
         let minute = activity.e_duration - hour*60
-        cell.activityNameLabel.text = activity.e_name + " : \(hour) heure \(minute) minutes" + "\n" + "Tous les \(activity.e_frequency) jours"
+        cell.activityNameLabel.text = activity.e_name + " : \(hour) heure \(minute) minutes" + "\n"
+        if activity.isAMondayActivity {
+            cell.activityNameLabel.text = cell.activityNameLabel.text! + "Lundi -"
+        }
+        if activity.isATuesdayActivity {
+            cell.activityNameLabel.text = cell.activityNameLabel.text! + "Mardi -"
+        }
+        if activity.isAWednesdayActivity {
+            cell.activityNameLabel.text = cell.activityNameLabel.text! + "Mercredi -"
+        }
+        if activity.isAThursdayActivity {
+            cell.activityNameLabel.text = cell.activityNameLabel.text! + "Jeudi -"
+        }
+        if activity.isAFridayActivity {
+            cell.activityNameLabel.text = cell.activityNameLabel.text! + "Vendredi -"
+        }
+        if activity.isASaturdayActivity {
+            cell.activityNameLabel.text = cell.activityNameLabel.text! + "Samedi -"
+        }
+        if activity.isASundayActivity {
+            cell.activityNameLabel.text = cell.activityNameLabel.text! + "Dimanche"
+        }
         
         return cell
     }

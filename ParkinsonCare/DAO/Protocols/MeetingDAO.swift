@@ -11,6 +11,6 @@ import Foundation
 protocol MeetingDAO {
     
     func findAll() throws -> MeetingCollection
-    func add(doctor : Doctor, date : Date, delay : Int) -> Bool
+    func add(doctor : Doctor, date : Date, delay : Int) -> Meeting?
     func remove(meet : Meeting) -> Bool
 }

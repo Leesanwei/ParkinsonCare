@@ -13,6 +13,7 @@
 		8467A0552067FEED0043F433 /* DoctorAddSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */; };
 		84E8F9362060349A00D24419 /* DoctorAddDoctorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */; };
 		96051181206A5533001E34B3 /* EvaluationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96051180206A5533001E34B3 /* EvaluationExtension.swift */; };
+		96051185206A71E3001E34B3 /* StateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96051184206A71E3001E34B3 /* StateLabel.swift */; };
 		960897C320591BC900211064 /* DoctorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C220591BC900211064 /* DoctorCollection.swift */; };
 		960897C520591BCC00211064 /* MedicineCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C420591BCC00211064 /* MedicineCollection.swift */; };
 		960897C720591BCF00211064 /* MeetingCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960897C620591BCF00211064 /* MeetingCollection.swift */; };
@@ -104,6 +105,7 @@
 		8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddSettingsController.swift; sourceTree = "<group>"; };
 		84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddDoctorController.swift; sourceTree = "<group>"; };
 		96051180206A5533001E34B3 /* EvaluationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationExtension.swift; sourceTree = "<group>"; };
+		96051184206A71E3001E34B3 /* StateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLabel.swift; sourceTree = "<group>"; };
 		960897C220591BC900211064 /* DoctorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCollection.swift; sourceTree = "<group>"; };
 		960897C420591BCC00211064 /* MedicineCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollection.swift; sourceTree = "<group>"; };
 		960897C620591BCF00211064 /* MeetingCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCollection.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				843CA8EB20517B4F00DC7D3C /* roundButton.swift */,
+				96051184206A71E3001E34B3 /* StateLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				96051181206A5533001E34B3 /* EvaluationExtension.swift in Sources */,
 				A183CD242062C8A10033698E /* AddActivityController.swift in Sources */,
 				96B367A62063DD8A008CBC91 /* SynthesisDAO.swift in Sources */,
+				96051185206A71E3001E34B3 /* StateLabel.swift in Sources */,
 				96EDA749205D58B500ED2AB4 /* MedicinePrescriptionTableViewCell.swift in Sources */,
 				84078C642067E93900394564 /* PatientAddMedicineController.swift in Sources */,
 				960897EB205AC99B00211064 /* CoreDataActivityDAO.swift in Sources */,

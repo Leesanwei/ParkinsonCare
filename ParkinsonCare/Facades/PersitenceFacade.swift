@@ -76,9 +76,9 @@ class PersistenceFacade {
         return medicinePrescriptionDAO.remove(mp : medPres)
     }
     
-    func addMedicinePrescription(medicine : Medicine, beginDate : Date, endDate : Date ,matin : Bool, midi : Bool, soir: Bool) -> Bool{
+    func addMedicinePrescription(medicine : Medicine, beginDate : Date, endDate : Date ,matin : Bool, midi : Bool, soir: Bool) -> MedicinePrescription?{
         guard let medicinePrescriptionDAO : MedicinePrescriptionDAO = daoFactory.getMedicinePrescriptionDAO() else{
-            return false
+            return nil
         }
         return medicinePrescriptionDAO.add(medicine : medicine, beginDate : beginDate, endDate : endDate,matin : matin, midi : midi, soir: soir)
     }
@@ -104,11 +104,11 @@ class PersistenceFacade {
         return activityDAO.remove(act : act)
     }
     
-    func addSport(nameSport : String, duration : Int, frequence : Int) -> Bool {
+    func addActivity(nameSport : String, duration : Int, days : [Bool]) -> Activity?{
         guard let activityDAO : ActivityDAO = daoFactory.getActivityDAO() else{
-            return false
+            return nil
         }
-        return activityDAO.add(nameSport : nameSport, duration : duration, frequency : frequence)
+        return activityDAO.add(nameSport : nameSport, duration : duration, days : days)
     }
     
     // MARK: - Doctor -
@@ -132,9 +132,9 @@ class PersistenceFacade {
         return doctorDAO.remove(doc : doc)
     }
     
-    func addDoctor(firstName: String, lastName : String, speciality : Speciality, phoneNumber: String, location: String) -> Bool {
+    func addDoctor(firstName: String, lastName : String, speciality : Speciality, phoneNumber: String, location: String) -> Doctor? {
         guard let doctorDAO : DoctorDAO = daoFactory.getDoctorDAO() else{
-            return false
+            return nil
         }
         
         return doctorDAO.add(firstName : firstName, lastName : lastName, speciality : speciality, phoneNumber : phoneNumber, location : location)
@@ -179,9 +179,9 @@ class PersistenceFacade {
         return meetingDAO.remove(meet : meet)
     }
     
-    func addMeeting(doctor : Doctor, date : Date, delay : Int) -> Bool {
+    func addMeeting(doctor : Doctor, date : Date, delay : Int) -> Meeting? {
         guard let meetingDAO : MeetingDAO = daoFactory.getMeetingDAO() else{
-            return false
+            return nil
         }
         
         return meetingDAO.add(doctor : doctor, date : date, delay : delay)
@@ -207,9 +207,9 @@ class PersistenceFacade {
         return reportingDAO.remove(rep : rep)
     }
     
-    func addReport(event : Event, date : Date)-> Bool{
+    func addReport(event : Event, date : Date)-> Reporting?{
         guard let reportingDAO : ReportingDAO = daoFactory.getReportingDAO() else{
-            return false
+            return nil
         }
         return reportingDAO.add(event : event, date : date)
         

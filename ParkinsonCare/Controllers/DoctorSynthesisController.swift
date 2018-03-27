@@ -22,7 +22,7 @@ class DoctorSynthesisController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.synthesisTableView.dequeueReusableCell(withIdentifier: "synthesisCell", for: indexPath) as! SynthesisTableViewCell
-        cell.synthesisDateLabel.text = self.synthesisList.find(_byIndex : indexPath.row).e_meeting.e_date.toString(dateFormat: "mm-DD")
+        cell.synthesisDateLabel.text = self.synthesisList.find(_byIndex : indexPath.row).e_meeting.e_date.toString(dateFormat: "dd-MM h:mm a")
         return cell
     }
     
