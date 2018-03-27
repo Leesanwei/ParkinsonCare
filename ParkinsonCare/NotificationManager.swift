@@ -81,7 +81,6 @@ class NotificationManager{
             
             for j in minHour..<maxHour{// schedule one notification per hour.
         
-                //
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval + Double(j * 60 * 60), repeats:false)
                 // Register the current notification
                 self.pushNotification(content: content, trigger: trigger, identifier: "evalNotification")
