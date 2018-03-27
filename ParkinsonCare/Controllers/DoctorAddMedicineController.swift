@@ -28,7 +28,7 @@ class DoctorAddMedicineController: UIViewController{
             
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
             
-            persistanceFacade.addMedicine(name: name, amount: amount)
+            _ = persistanceFacade.addMedicine(name: name, amount: amount)
             self.addMedicineText.text = ""
             self.navigationController?.popViewController(animated: true)
             

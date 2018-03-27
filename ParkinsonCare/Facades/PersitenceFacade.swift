@@ -431,7 +431,7 @@ class PersistenceFacade {
         }
         do{
             let synthesis : Synthesis = try synthesisDAO.findUpcommingSynthesis()
-            synthesisDAO.addEvaluation(syn: synthesis, state : state, date : Date())
+            _ = synthesisDAO.addEvaluation(syn: synthesis, state : state, date : Date())
             
         }catch {
             print("Unable to reach the next meeting with a neurologist.")

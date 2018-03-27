@@ -112,7 +112,7 @@ class NotificationManager{
         content.sound = UNNotificationSound.default()
 
         let meetingDate = meeting.e_date as Date
-        if meetingDate.timeIntervalSinceNow <= 5 * 24 * 60 * 60{
+        if meetingDate.timeIntervalSinceNow <= 6 * 24 * 60 * 60{
             // Case where we can't schedule notification five days before.
             // Meeting is in less than five days
             return false

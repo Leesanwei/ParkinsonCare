@@ -30,7 +30,7 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
             let row = specialityPicker.selectedRow(inComponent: 0)
             let speciality = specialities[row]
-            persistanceFacade.addDoctor(firstName: self.firstNameText.text!,lastName : self.lastNameText.text!,speciality : speciality,phoneNumber: self.phoneNumberText.text!, location : self.location.text!)
+            _ = persistanceFacade.addDoctor(firstName: self.firstNameText.text!,lastName : self.lastNameText.text!,speciality : speciality,phoneNumber: self.phoneNumberText.text!, location : self.location.text!)
                 
             self.navigationController?.popViewController(animated: true)
             
