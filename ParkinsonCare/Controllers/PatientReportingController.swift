@@ -118,6 +118,8 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
     /// - Parameter index: of the reporting to be deleted.
     /// - Returns: Bool true if the deletion was successful.
     func delete(atIndex index : Int) -> Bool{
+        if(index < self.reportings.count())
+        {
         let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
         if persistenceFacade.deleteReporting(rep : self.reportings.find(_byIndex: index)){
             self.reportings.remove(atIndex : index)
@@ -125,6 +127,17 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         }else{
             return false
         }
+        }
+        else{
+            let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+            if persistenceFacade.deleteBehaviour(bev : self.behaviours.find(_byIndex: index - self.reportings.count())){
+                self.behaviours.remove(atIndex : index - self.reportings.count())
+                return true
+            }else{
+                return false
+            }
+        }
+        
     }
     
 }

@@ -366,6 +366,17 @@ class PersistenceFacade {
         
     }
     
+    /// Delete the specified behaviour.
+    ///
+    /// - Parameter bev: behaviour to be deleted.
+    /// - Returns: Bool true if the deletion was successful.
+    func deleteBehaviour(bev : Behaviour) -> Bool {
+        guard let behaviourDAO : BehaviourDAO = daoFactory.getBehaviourDAO() else{
+            return false
+        }
+        return behaviourDAO.remove(bev : bev)
+    }
+    
     
     /// Get all the stored events.
     ///

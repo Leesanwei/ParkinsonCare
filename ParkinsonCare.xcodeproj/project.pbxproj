@@ -15,6 +15,7 @@
 		848A8676206AD429007D2645 /* BehaviourCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A8675206AD429007D2645 /* BehaviourCollection.swift */; };
 		848A8678206AD9A0007D2645 /* BehaviourDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A8677206AD9A0007D2645 /* BehaviourDAO.swift */; };
 		848A867A206ADA00007D2645 /* CoreDataBehaviourDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A8679206ADA00007D2645 /* CoreDataBehaviourDAO.swift */; };
+		848A867C206AE8A3007D2645 /* PatientInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A867B206AE8A3007D2645 /* PatientInfoController.swift */; };
 		84E8F9362060349A00D24419 /* DoctorAddDoctorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */; };
 		96051181206A5533001E34B3 /* EvaluationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96051180206A5533001E34B3 /* EvaluationExtension.swift */; };
 		96051185206A71E3001E34B3 /* StateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96051184206A71E3001E34B3 /* StateLabel.swift */; };
@@ -112,6 +113,7 @@
 		848A8675206AD429007D2645 /* BehaviourCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourCollection.swift; sourceTree = "<group>"; };
 		848A8677206AD9A0007D2645 /* BehaviourDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourDAO.swift; sourceTree = "<group>"; };
 		848A8679206ADA00007D2645 /* CoreDataBehaviourDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBehaviourDAO.swift; sourceTree = "<group>"; };
+		848A867B206AE8A3007D2645 /* PatientInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfoController.swift; sourceTree = "<group>"; };
 		84E8F9352060349A00D24419 /* DoctorAddDoctorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAddDoctorController.swift; sourceTree = "<group>"; };
 		96051180206A5533001E34B3 /* EvaluationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationExtension.swift; sourceTree = "<group>"; };
 		96051184206A71E3001E34B3 /* StateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLabel.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				A1B71E782064F50600AE1BD2 /* PatientAddReportController.swift */,
 				84078C632067E93800394564 /* PatientAddMedicineController.swift */,
 				8467A0542067FEED0043F433 /* DoctorAddSettingsController.swift */,
+				848A867B206AE8A3007D2645 /* PatientInfoController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				960897D6205936F400211064 /* MedicineExtension.swift in Sources */,
 				848A8676206AD429007D2645 /* BehaviourCollection.swift in Sources */,
 				960897E1205AA7C600211064 /* CoreDataMedicineDAO.swift in Sources */,
+				848A867C206AE8A3007D2645 /* PatientInfoController.swift in Sources */,
 				960897CD20591C6800211064 /* ActivityCollection.swift in Sources */,
 				96270A3D206115F5001A6BDE /* MedicinePrescriptionExtension.swift in Sources */,
 				96DF3005205D6E0100FD5B57 /* PatientMeetingController.swift in Sources */,
