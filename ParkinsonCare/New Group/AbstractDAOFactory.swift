@@ -2,6 +2,8 @@
 //  AbstractDAOFactory.swift
 //  ParkinsonCare
 //
+// Define methods that need to be implemented in order to cover all the necessary functionaalities of the app storage.
+//
 //  Created by Loic Combis on 23/03/2018.
 //  Copyright © 2018 San-Wei LEE. All rights reserved.
 //

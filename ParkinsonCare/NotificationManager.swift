@@ -22,6 +22,13 @@ class NotificationManager{
         return notificationManager
     }
     
+    
+    /// Register the notification.
+    ///
+    /// - Parameters:
+    ///   - content: Content of the notifiction.
+    ///   - trigger: fire moment description.
+    ///   - identifier: of the notification.
     private func pushNotification(content : UNNotificationContent, trigger : UNNotificationTrigger, identifier : String){
         
         let request = UNNotificationRequest(identifier: "\(identifier)\(NSUUID().uuidString)", content : content, trigger : trigger)
@@ -32,6 +39,10 @@ class NotificationManager{
         }
         
     }
+    
+    /// Schedule all the reminders of all a newly created activity.
+    ///
+    /// - Parameter activity: activity newly created.
     func scheduleActivityReminder(activity : Activity){
         
         let content = UNMutableNotificationContent()
@@ -82,6 +93,14 @@ class NotificationManager{
     
     // MARK: - Meeting
  
+    
+    /// Schedule all the evaluations during the five previous days of the specified meeting.
+    ///
+    /// - Parameters:
+    ///   - meeting: Meeting needing evaluations.
+    ///   - minHour: minimum hour to begin the evaluations.
+    ///   - maxHour: maximum hour to make evaluations.
+    /// - Returns: Bool true if the evaluations are scheduled.
     func scheduleEvaluations(meeting : Meeting, minHour : Int, maxHour : Int) -> Bool {
         
         //Define notification content
@@ -123,6 +142,14 @@ class NotificationManager{
         return true
     }
     
+    
+    /// Schedule a reminder of the specified meeting with its delay.
+    ///
+    /// - Parameters:
+    ///   - meeting: meeting to be reminded.
+    ///   - delay: necessary time to be prepared and arrive on time at the meeting.
+    ///   - description: description of the meeting.
+    /// - Returns: Bool true if the meeting is scheduled.
     func scheduleMeetingDelayReminder(meeting : Meeting, delay : Int, description : String) -> Bool{
         let content = UNMutableNotificationContent()
         content.title = "ParkinsonCare"
@@ -142,7 +169,11 @@ class NotificationManager{
     }
     
     // MARK: - Medicine
-    // Schedule notifications related to a meeting.
+    
+    
+    /// Schedule notifications related to a medicine take.
+    ///
+    /// - Parameter medicinePrescription: the prescription that we schedule reminders for.
     func scheduleMedicineTakeNotifications(medicinePrescription : MedicinePrescription){
         // Set the content of the notification
         let content = UNMutableNotificationContent()
@@ -186,6 +217,10 @@ class NotificationManager{
     
     // MARK: - Action Methods -
     
+    
+    /// Handle the logic of all notification actions.
+    ///
+    /// - Parameter response: Response of the action that has been responded tp.
     func handleResponse(response : UNNotificationResponse){
         switch response.actionIdentifier{
         // Medicine take actions
@@ -201,6 +236,10 @@ class NotificationManager{
         }
     }
     
+    
+    /// Postpone the medicine take by shceduling a new notification 5 minutes later.
+    ///
+    /// - Parameter response: <#response description#>
     private func postponeMedicineTake(response : UNNotificationResponse){
         let content : UNNotificationContent = response.notification.request.content
         let trigger : UNTimeIntervalNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval : Double(30 * 5), repeats : false)
@@ -212,7 +251,10 @@ class NotificationManager{
         print("Medicine taken.")
     }
     
-    // Register the evaluation.
+    
+    /// Register the evaluation to its synthesis.
+    ///
+    /// - Parameter state: <#state description#>
     private func addEvaluation(state : String){
         if PersistenceFacade.getInstance().registerEvaluation(state : state){
             print("Evaluation registered")
@@ -221,7 +263,10 @@ class NotificationManager{
         }
     }
     
-    //Handle activity done
+    
+    
+    /// Congrats the user because he has performed an activity.
+    /// congratulations are made by firing a notification.
     private func activityHasBeenPerformed(){
         let congratulations = [
             "Nous sommes fiers de vous! Continuez comme ça! :)",
@@ -240,6 +285,7 @@ class NotificationManager{
         self.pushNotification(content: content, trigger: trigger, identifier: "congratNotification")
     }
     
+    // Activity has not been performed action.
     private func activityHasNotBeenPerformed(){
         print("Dommage! La prochaine fois peut-être!")
     }

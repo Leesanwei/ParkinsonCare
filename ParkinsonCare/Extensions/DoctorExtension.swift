@@ -21,6 +21,7 @@ extension Doctor{
         self.speciality = speciality
     }
     
+    // MARK: - Properties -
     var e_contact : String {
         get {
             return  self.phoneNumber!

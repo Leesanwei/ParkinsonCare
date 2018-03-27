@@ -16,7 +16,7 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
     
     @IBOutlet weak var doctorsTableView: UITableView!
     
-    // MARK: - UITableViewDataSource methods
+    // MARK: - UITableViewDataSource methods -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.doctors.count()
     }
@@ -49,7 +49,12 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
-    // MARK: - ViewController methods
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100.0;//Choose your custom row height
+    }
+    
+    // MARK: - ViewController methods -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,10 +78,16 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
         self.doctorsTableView.reloadData()
     }
     
+    // MARK: - Other Methods -
     func alertError(errorMsg msg : String, userInfo info : String){
         
     }
     
+    
+    /// Delete the doctor at the specified index from the storage.
+    ///
+    /// - Parameter index: index of the doctor to be deleted.
+    /// - Returns: Bool true if the doctor has been deleted.
     func delete(atIndex index : Int) -> Bool{
         let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
         if persistenceFacade.deleteDoctor(doc : self.doctors.find(_byIndex: index)){
@@ -87,9 +98,5 @@ class DoctorController: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 100.0;//Choose your custom row height
-    }
 }
 

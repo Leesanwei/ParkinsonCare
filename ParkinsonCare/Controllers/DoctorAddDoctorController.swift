@@ -21,6 +21,10 @@ class DoctorAddDoctorController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet weak var lastNameText: UITextField!
     @IBOutlet weak var location: UITextField!
     
+    
+    /// Button that triggers the add of a new doctor.
+    ///
+    /// - Parameter sender: <#sender description#>
     @IBAction func addDoctor(_ sender: Any) {
         if lastNameText.hasText && firstNameText.hasText && phoneNumberText.hasText && location.hasText{
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()

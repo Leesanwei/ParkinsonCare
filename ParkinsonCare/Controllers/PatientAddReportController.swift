@@ -15,6 +15,10 @@ class PatientAddReportController: UIViewController, UIPickerViewDataSource, UIPi
     
     @IBOutlet weak var eventPicker: UIPickerView!
 
+    
+    /// Button that triggers the add of a new reporting.
+    ///
+    /// - Parameter sender: <#sender description#>
     @IBAction func addReport(_ sender: Any) {
         let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
         let row = eventPicker.selectedRow(inComponent: 0)

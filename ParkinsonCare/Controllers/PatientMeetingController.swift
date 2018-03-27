@@ -16,7 +16,7 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var meetingTableView: UITableView!
     
-    // MARK: - UITableViewDataSource methods
+    // MARK: - UITableViewDataSource methods -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.meetings.count()
     }
@@ -50,7 +50,12 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    // MARK: - ViewController methods
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 80.0;//Choose your custom row height
+    }
+    
+    // MARK: - ViewController methods -
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -59,20 +64,6 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func alertError(errorMsg msg : String, userInfo info : String){
-        
-    }
-    
-    func delete(atIndex index : Int) -> Bool{
-        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
-        if persistenceFacade.deleteMeeting(meet : self.meetings.find(_byIndex: index)){
-            self.meetings.remove(atIndex : index)
-            return true
-        }else{
-            return false
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,10 +81,26 @@ class PatientMeetingController: UIViewController, UITableViewDataSource, UITable
         self.meetingTableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 80.0;//Choose your custom row height
+    
+    func alertError(errorMsg msg : String, userInfo info : String){
+        
     }
+    
+    
+    /// Delete the meeting at the specified index from the storage.
+    ///
+    /// - Parameter index: of the meeting to be deleted.
+    /// - Returns: Bool true if the deletion was successful.
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteMeeting(meet : self.meetings.find(_byIndex: index)){
+            self.meetings.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
+    }
+    
 }
 
 

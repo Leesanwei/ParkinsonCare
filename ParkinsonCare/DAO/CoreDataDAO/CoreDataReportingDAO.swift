@@ -17,6 +17,11 @@ class CoreDataReportingDAO : ReportingDAO{
         self.context = context
     }
     
+    
+    /// Retrieve all the rstored reportings.
+    ///
+    /// - Returns: A collection of reportings.
+    /// - Throws: NSError when cannot fetch the data.
     func findAll() throws -> ReportingCollection{
         let request : NSFetchRequest<Reporting> = Reporting.fetchRequest()
         do{
@@ -28,6 +33,11 @@ class CoreDataReportingDAO : ReportingDAO{
         }
     }
     
+    
+    /// Delete the specified reporting.
+    ///
+    /// - Parameter rep: the reporting to be deleted.
+    /// - Returns: Bool true if the deletion was successful.
     func remove(rep: Reporting) -> Bool {
         self.context.delete(rep)
         do{
@@ -38,6 +48,13 @@ class CoreDataReportingDAO : ReportingDAO{
         }
     }
     
+    
+    /// Create and store a new reporting.
+    ///
+    /// - Parameters:
+    ///   - event: the event reported.
+    ///   - date: when the event occured.
+    /// - Returns: The newly created reporting or nil if something went wrong.
     func add(event : Event, date : Date) -> Reporting? {
         
         let reporting = Reporting(context : self.context, event : event, date : date as NSDate)
@@ -49,6 +66,10 @@ class CoreDataReportingDAO : ReportingDAO{
         }
     }
     
+    
+    /// Store the default events. Called only at first launch.
+    ///
+    /// - Returns: Bool if successful.
     func addEvent()->Bool{
         
         let events : [String] = ["Somnolence","Chute","Hallucination","Prise de dispersible","Clic / bolus d’Apokinon"]
@@ -70,14 +91,18 @@ class CoreDataReportingDAO : ReportingDAO{
         
     }
     
-    func findAllEvents() -> [Event]?{
-    let request : NSFetchRequest<Event> = Event.fetchRequest()
-    do{
-    return try self.context.fetch(request)
     
-    }catch {
-    return nil
-    }
+    /// Retrieve all the stored events.
+    ///
+    /// - Returns: Array of events.
+    func findAllEvents() -> [Event]?{
+        let request : NSFetchRequest<Event> = Event.fetchRequest()
+        do{
+            return try self.context.fetch(request)
+        
+        }catch {
+            return nil
+        }
 }
 
 }

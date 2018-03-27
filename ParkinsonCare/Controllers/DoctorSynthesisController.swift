@@ -68,7 +68,7 @@ class DoctorSynthesisController: UIViewController, UITableViewDataSource, UITabl
         performSegue(withIdentifier: "showSynthesis", sender: self)
     }
     
-    // MARK: - ViewController methods
+    // MARK: - ViewController methods -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,10 +87,16 @@ class DoctorSynthesisController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Other Methods -
     func alertError(errorMsg msg : String, userInfo info : String){
         
     }
     
+    
+    /// Delete the synthesis at the specified index.
+    ///
+    /// - Parameter index: of the synthesis to be deleted.
+    /// - Returns: Bool true if the deletion was successful.
     func delete(atIndex index : Int) -> Bool{
         let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
         if persistenceFacade.deleteSynthesis(syn : self.synthesisList.find(_byIndex: index)){

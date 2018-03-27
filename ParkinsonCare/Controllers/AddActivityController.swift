@@ -26,6 +26,10 @@ class AddActivityController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     
     @IBOutlet weak var dimanche: UISwitch!
     
+    
+    /// Button that triggers the add of a new activity.
+    ///
+    /// - Parameter sender: <#sender description#>
     @IBAction func addSport(_ sender: Any) {
         if sportName.hasText{
             let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()

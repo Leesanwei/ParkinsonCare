@@ -10,6 +10,7 @@ import Foundation
 
 extension NSDate
 {
+    // MARK: - Methods -
     func toString( dateFormat format  : String ) -> String
     {
         let dateFormatter = DateFormatter()

@@ -32,7 +32,10 @@ class SynthesisCollection {
         return self.synthesisList[index]
     }
     
-    // Get closer future synthesis in the collection
+    
+    /// Get the closer and future synthesis of the collection.
+    ///
+    /// - Returns: A synthesis if there is one or nil if not.
     func getCloserOne() -> Synthesis?{
         var closerSynIndex : Int = -1
         var closerSynTimeInterval : Double = -1

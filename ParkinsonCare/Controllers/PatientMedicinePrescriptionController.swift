@@ -60,8 +60,12 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 80.0;//Choose your custom row height
+    }
     
-    // MARK: - ViewController methods
+    // MARK: - ViewController methods -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,20 +75,6 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func alertError(errorMsg msg : String, userInfo info : String){
-        
-    }
-    
-    func delete(atIndex index : Int) -> Bool{
-        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
-        if persistenceFacade.deleteMedicinePrescription(medPres : self.medicinePrescriptions.find(_byIndex: index)){
-            self.medicinePrescriptions.remove(atIndex : index)
-            return true
-        }else{
-            return false
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,9 +92,25 @@ class PatientMedicinePrescriptionController: UIViewController, UITableViewDataSo
         self.medicinePrescriptionTableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 80.0;//Choose your custom row height
+    // MARK: - Other Methods -
+    
+    func alertError(errorMsg msg : String, userInfo info : String){
+        
+    }
+    
+    
+    /// Delete the prescription at the specified index from the storage.
+    ///
+    /// - Parameter index: of the specified prescription.
+    /// - Returns: Bool if deletion was successful.
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteMedicinePrescription(medPres : self.medicinePrescriptions.find(_byIndex: index)){
+            self.medicinePrescriptions.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
     }
 }
 

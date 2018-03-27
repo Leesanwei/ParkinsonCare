@@ -16,7 +16,7 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var activitiesTableView: UITableView!
     
-    // MARK: - UITableViewDataSource methods
+    // MARK: - UITableViewDataSource methods - 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.activities.count()
     }
@@ -72,7 +72,12 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    // MARK: - ViewController methods
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 50.0;//Choose your custom row height
+    }
+    
+    // MARK: - ViewController methods -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,20 +86,6 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func alertError(errorMsg msg : String, userInfo info : String){
-        
-    }
-    
-    func delete(atIndex index : Int) -> Bool{
-        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
-        if persistenceFacade.deleteActivity(act : self.activities.find(_byIndex: index)){
-            self.activities.remove(atIndex : index)
-            return true
-        }else{
-            return false
-        }
     }
     
     // get the persistence facade that hides the storage business logic.
@@ -113,10 +104,26 @@ class ActivityController: UIViewController, UITableViewDataSource, UITableViewDe
         self.activitiesTableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 50.0;//Choose your custom row height
+    // MARK: - Other Methods -
+    func alertError(errorMsg msg : String, userInfo info : String){
+        
     }
+    
+    
+    /// Delete the activity at the specified index.
+    ///
+    /// - Parameter index: index of the activity to be deleted.
+    /// - Returns: Bool true if the deletion was successful.
+    func delete(atIndex index : Int) -> Bool{
+        let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
+        if persistenceFacade.deleteActivity(act : self.activities.find(_byIndex: index)){
+            self.activities.remove(atIndex : index)
+            return true
+        }else{
+            return false
+        }
+    }
+    
 }
 
 

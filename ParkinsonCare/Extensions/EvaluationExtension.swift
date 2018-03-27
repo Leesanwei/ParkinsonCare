@@ -17,7 +17,7 @@ extension Evaluation {
         self.state = state
     }
     
-    // MARK: - Properties
+    // MARK: - Properties -
     
     var e_state : String {
         get {

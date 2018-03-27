@@ -17,6 +17,10 @@ class PatientAddMeetingController : UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var delayPicker: UIPickerView!
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    /// Button that triggers the add of a new meeting.
+    ///
+    /// - Parameter sender: <#sender description#>
     @IBAction func addMeeting(_ sender: Any) {
         
         let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()

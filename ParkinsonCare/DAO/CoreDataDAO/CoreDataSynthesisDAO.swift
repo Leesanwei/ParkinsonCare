@@ -17,6 +17,11 @@ class CoreDataSynthesisDAO : SynthesisDAO{
         self.context = context
     }
     
+    
+    /// Retrieve all the stored synthesis.
+    ///
+    /// - Returns: A collection of synthesis.
+    /// - Throws: NSError whan cannot fetch the data.
     func findAll() throws -> SynthesisCollection{
         let request : NSFetchRequest<Synthesis> = Synthesis.fetchRequest()
         do{
@@ -28,6 +33,11 @@ class CoreDataSynthesisDAO : SynthesisDAO{
         }
     }
     
+    
+    /// Delete the specified synthesis.
+    ///
+    /// - Parameter syn: the synthesis to be deleted.
+    /// - Returns: Bool if deletion was successful.
     func remove(syn: Synthesis) -> Bool {
         self.context.delete(syn)
         do{
@@ -38,10 +48,20 @@ class CoreDataSynthesisDAO : SynthesisDAO{
         }
     }
     
+    
+    /// Store a new synthesis.
+    ///
+    /// - Parameter syn: the synthesis to be stored.
+    /// - Returns: the newly stored synthesis.
     func add(syn: Synthesis) -> Synthesis?{
         return nil
     }
     
+    
+    /// Retrieve the synthesis related to the next meeting with a neurologist.
+    ///
+    /// - Returns: Synthesis.
+    /// - Throws: NSError if we cannot fetch it.
     func findUpcommingSynthesis() throws -> Synthesis {
         
         let request : NSFetchRequest<Synthesis> = Synthesis.fetchRequest()
@@ -61,6 +81,14 @@ class CoreDataSynthesisDAO : SynthesisDAO{
         
     }
     
+    
+    /// Add a new evaluation to the specified synthesis.
+    ///
+    /// - Parameters:
+    ///   - syn: the synthesis to which the evaluation will be added.
+    ///   - state: state of the evaluation.
+    ///   - date: date of the evaluation.
+    /// - Returns: Bool if the evaluation has been added.
     func addEvaluation(syn: Synthesis, state : String, date : Date) -> Bool {
         let eval : Evaluation = Evaluation(context: self.context, state : state, date: date as NSDate)
         syn.addToEvaluations(eval)

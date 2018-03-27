@@ -68,7 +68,7 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
     }
     
     
-    // MARK: - ViewController methods
+    // MARK: - ViewController methods -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.medicineTableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
@@ -80,10 +80,16 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Other Methods -
     func alertError(errorMsg msg : String, userInfo info : String){
         
     }
     
+    
+    /// Delete the medicine at the specified index from the storage.
+    ///
+    /// - Parameter index: index of the medicine to be deleted.
+    /// - Returns: Bool if deletion is successful.
     func delete(atIndex index : Int) -> Bool{
         let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
         if persistenceFacade.deleteMedicine(med : self.medicines.find(_byIndex: index)){

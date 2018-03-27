@@ -17,6 +17,11 @@ class CoreDataActivityDAO : ActivityDAO{
         self.context = context
     }
     
+    
+    /// Retrieve all the stored activities.
+    ///
+    /// - Returns: A colelction of activities.
+    /// - Throws: NSError when cannot fetch the data.
     func findAll() throws -> ActivityCollection{
         let request : NSFetchRequest<Activity> = Activity.fetchRequest()
         do{
@@ -28,6 +33,11 @@ class CoreDataActivityDAO : ActivityDAO{
         }
     }
     
+    
+    /// Delete the specified activity.
+    ///
+    /// - Parameter act: activity to be deleted.
+    /// - Returns: Bool if the deletion was successful.
     func remove(act : Activity) -> Bool {
         self.context.delete(act)
         do{
@@ -38,6 +48,14 @@ class CoreDataActivityDAO : ActivityDAO{
         }
     }
     
+    
+    /// Create and store a new activity.
+    ///
+    /// - Parameters:
+    ///   - nameSport: name of the activity.
+    ///   - duration: how long it should be practiced.
+    ///   - days: array of Bool to define when it should be practiced.
+    /// - Returns: The newly created activity or nil if something went wrong.
     func add(nameSport: String, duration : Int, days : [Bool]) -> Activity?{
         let activity = Activity(context : self.context, name : nameSport, duration : duration, days : days)
         do{

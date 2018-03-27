@@ -58,7 +58,7 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
-    // MARK: - ViewController methods
+    // MARK: - ViewController methods -
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,10 +79,17 @@ class PatientReportingController: UIViewController, UITableViewDataSource, UITab
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Other Methods -
+    
     func alertError(errorMsg msg : String, userInfo info : String){
         
     }
     
+    
+    /// Delete the reporting at the specified index from the storage.
+    ///
+    /// - Parameter index: of the reporting to be deleted.
+    /// - Returns: Bool true if the deletion was successful.
     func delete(atIndex index : Int) -> Bool{
         let persistenceFacade  : PersistenceFacade = PersistenceFacade.getInstance()
         if persistenceFacade.deleteReporting(rep : self.reportings.find(_byIndex: index)){

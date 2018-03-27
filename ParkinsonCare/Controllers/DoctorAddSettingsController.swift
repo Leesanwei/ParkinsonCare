@@ -15,6 +15,10 @@ class DoctorAddSettingsController : UIViewController, UIPickerViewDelegate, UIPi
     
     @IBOutlet weak var endTime: UIPickerView!
     
+    
+    /// Button that triggers the update of the settings.
+    ///
+    /// - Parameter sender: <#sender description#>
     @IBAction func setTime(_ sender: Any) {
         
         let begin = beginTime.selectedRow(inComponent: 0)

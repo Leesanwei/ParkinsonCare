@@ -70,16 +70,16 @@ else{
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-if (pickerView.tag == 1){
+        if (pickerView.tag == 1){
             return (self.medicines.find(_byIndex: row).name! + " " + self.medicines.find(_byIndex: row).amount!)
         }
-else{
-    if(row==0){
-        return "1 jour"
-    }else{
-        return "\(row+1) jours"
-    }
-    
+        else{
+            if(row==0){
+                return "1 jour"
+            }else{
+                return "\(row+1) jours"
+            }
+            
         }
     }
     

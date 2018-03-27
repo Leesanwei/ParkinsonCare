@@ -17,6 +17,11 @@ class CoreDataMeetingDAO : MeetingDAO{
         self.context = context
     }
     
+    
+    /// Retrieve all the stored meetings.
+    ///
+    /// - Returns: A collection of meetings.
+    /// - Throws: NSError when cannot fetch the data.
     func findAll() throws -> MeetingCollection{
         let request : NSFetchRequest<Meeting> = Meeting.fetchRequest()
         do{
@@ -28,6 +33,11 @@ class CoreDataMeetingDAO : MeetingDAO{
         }
     }
     
+    
+    /// Delete the specified meeting.
+    ///
+    /// - Parameter meet: meeting to be deleted
+    /// - Returns: Bool true if the deletion was successful.
     func remove(meet: Meeting) -> Bool {
         self.context.delete(meet)
         do{
@@ -38,6 +48,14 @@ class CoreDataMeetingDAO : MeetingDAO{
         }
     }
     
+    
+    /// Create and store a new meeting.
+    ///
+    /// - Parameters:
+    ///   - doctor: with who the meeting is.
+    ///   - date: date of the meeting.
+    ///   - delay: necessary time to prepare and arrive on time at the meeting.
+    /// - Returns: The newly created meeting or nil if something went wrong.
     func add(doctor : Doctor, date : Date, delay : Int) -> Meeting? {
        let meeting = Meeting(context : self.context,doctor : doctor, date : date as NSDate, delay : delay)
         _ = Synthesis(context : self.context, meeting : meeting)
