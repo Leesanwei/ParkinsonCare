@@ -81,7 +81,7 @@ class PatientAddReportController: UIViewController, UIPickerViewDataSource, UIPi
         let persistanceFacade : PersistenceFacade = PersistenceFacade.getInstance()
         let date = Date()
         
-        persistanceFacade.addBehaviour(behaviourDescription : self.behaviourDescription, date : date)
+        _ = persistanceFacade.addBehaviour(behaviourDescription : self.behaviourDescription, date : date)
         self.navigationController?.popViewController(animated: true)
     }
     
