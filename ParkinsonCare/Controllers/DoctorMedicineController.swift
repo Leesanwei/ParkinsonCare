@@ -15,8 +15,8 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
     var medicines : MedicineCollection = MedicineCollection()
 
 
+  
     @IBOutlet weak var medicineTableView: UITableView!
-    
     
     // MARK: - UITableViewDataSource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,6 +63,7 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
             return
         }
         self.medicines = meds
+        self.medicines.sort()
         self.medicineTableView.reloadData()
     }
     
@@ -70,7 +71,7 @@ class DoctorMedicineController: UIViewController, UITableViewDataSource, UITable
     // MARK: - ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.medicineTableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
     
     }
     
